@@ -1,0 +1,31 @@
+<%
+// A ruled ledger table: one row per page.
+// template-params: root (path prefix), table (number), caption, empty (empty-row text),
+// hide-domain, hide-date, fields (extra columns: list of { key, label } read from page headers).
+const params = (typeof templateParams !== 'undefined' && templateParams) || {};
+const ROOT = params.root || '';
+const norm = (p) => String(p || '').replace(/\\/g, '/').replace(/^\/+/, '');
+const href = (item) => ROOT + norm(item.outputHref || item.path).replace(/\.qmd$/, '.html');
+const LABELS = { lab: 'Lab', ml: 'Machine Learning', math: 'Math', data: 'Data', system: 'System' };
+const showDomain = !params['hide-domain'];
+const showDate = !params['hide-date'];
+const FIELDS = params.fields || [];
+const span = 1 + (showDate ? 1 : 0) + (showDomain ? 1 : 0) + FIELDS.length;
+%>
+<table class="ledger<%= showDomain ? '' : ' ledger-single' %><%= showDate ? '' : ' ledger-undated' %>">
+<caption><strong>Table <%= params.table || 1 %>.</strong> <%= params.caption || 'Pages, newest first.' %></caption>
+<thead><tr><% if (showDate) { %><th scope="col">Date</th><% } %><% if (showDomain) { %><th scope="col">Domain</th><% } %><th scope="col">Page</th><% for (const f of FIELDS) { %><th scope="col"><%= f.label %></th><% } %></tr></thead>
+<tbody>
+<% if (items.length === 0) { %>
+<tr><td colspan="<%= span %>" class="ledger-empty"><%= params.empty || 'Nothing published yet.' %></td></tr>
+<% } %>
+<% for (const item of items) { const domain = norm(item.path).split('/')[0]; %>
+<tr class="domain-<%= domain %>">
+<% if (showDate) { %><td class="ledger-date"><%= item.date ? new Date(item.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '' %></td><% } %>
+<% if (showDomain) { %><td class="ledger-domain"><span class="domain-mark" aria-hidden="true"></span><%= LABELS[domain] || domain %></td><% } %>
+<td class="ledger-page"><a href="<%= href(item) %>"><%= item.title %></a><% if (item.subtitle) { %> <span class="ledger-sub"><%= item.subtitle %></span><% } %></td>
+<% for (const f of FIELDS) { %><td class="ledger-field"><%= item[f.key] == null ? '' : item[f.key] %></td><% } %>
+</tr>
+<% } %>
+</tbody>
+</table>

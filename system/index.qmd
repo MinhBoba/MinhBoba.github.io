@@ -1,0 +1,54 @@
+---
+title: "System"
+subtitle: "Courses, case studies and applications"
+kind: index
+toc: true
+listing:
+  - id: courses
+    contents: "**/*.qmd"
+    type: custom
+    template: ../_templates/study-map.ejs
+    template-params:
+      domain: system
+      figure: "1"
+      caption: "System courses, each drawn to its real number of lectures; select a filled slot to open that lecture."
+  - id: case-studies
+    contents: "case-studies/*.qmd"
+    type: custom
+    template: ../_templates/ledger.ejs
+    sort: "date desc"
+    template-params:
+      root: "../"
+      hide-domain: true
+      table: "1"
+      caption: "Case studies, newest first: how a real system is designed."
+      empty: "No case studies written up yet."
+  - id: applications
+    contents: "applications/*.qmd"
+    type: custom
+    template: ../_templates/ledger.ejs
+    sort: "date desc"
+    template-params:
+      root: "../"
+      hide-domain: true
+      table: "2"
+      caption: "Applications, newest first: my own builds and walkthroughs."
+      empty: "No applications written up yet."
+---
+
+[How real systems are designed, and the things I've built on top of them.]{.tab-intro}
+
+## Courses {.unnumbered}
+
+::: {#courses}
+:::
+
+## Case studies {.unnumbered}
+
+::: {#case-studies}
+:::
+
+## Applications {.unnumbered}
+
+::: {#applications}
+:::

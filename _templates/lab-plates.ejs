@@ -1,0 +1,33 @@
+<%
+// Lab work as captioned figure plates: one item, one complete composition.
+// template-params: root (path prefix), figure (number), empty (caption text when empty),
+// columns (skeleton table headers for the empty state), link (show "Open the Lab").
+const params = (typeof templateParams !== 'undefined' && templateParams) || {};
+const ROOT = params.root || '';
+const FIG = params.figure || '2';
+const COLUMNS = params.columns || ['Metric', 'Paper', 'Mine'];
+const EMPTY = params.empty || "Lab, not yet published. Each paper reproduction will report its metrics in this form, the paper's number beside mine, with projects alongside.";
+const norm = (p) => String(p || '').replace(/\\/g, '/').replace(/^\/+/, '');
+const href = (item) => ROOT + norm(item.outputHref || item.path).replace(/\.qmd$/, '.html');
+const STATUS = { 'planned': 'is-planned', 'in progress': 'is-progress', 'reproduced': 'is-published', 'partial': 'is-progress' };
+%>
+<div class="lab-plates">
+<% if (items.length === 0) { %>
+<figure class="lab-plate is-empty">
+<table class="lab-skeleton" aria-hidden="true"><thead><tr><% for (const c of COLUMNS) { %><th><%= c %></th><% } %></tr></thead><tbody><% for (let r = 0; r < 3; r++) { %><tr><% for (const c of COLUMNS) { %><td></td><% } %></tr><% } %></tbody></table>
+<figcaption><strong>Figure <%= FIG %>.</strong> <%= EMPTY %><% if (params.link) { %> <a href="<%= ROOT %>lab/index.html">Open the Lab</a><% } %></figcaption>
+</figure>
+<% } %>
+<% items.forEach((item, i) => { const status = item.status ? String(item.status).toLowerCase() : null; %>
+<a class="lab-plate" href="<%= href(item) %>">
+<div class="lab-plate-frame">
+<% if (item.image) { %><img src="<%= ROOT %><%= item.image %>" alt="<%- item['image-alt'] || '' %>" loading="lazy"><% } else { %><span class="lab-plate-initial" aria-hidden="true"><%= String(item.title || '?').trim().charAt(0) %></span><% } %>
+</div>
+<figcaption>
+<strong>Figure <%= FIG %><%= String.fromCharCode(97 + i) %>.</strong> <span class="lab-plate-title"><%= item.title %></span>
+<% if (status) { %><span class="lab-status <%= STATUS[status] || '' %>"><%= item.status %></span><% } %>
+<% if (item.description) { %><span class="lab-plate-desc"><%= item.description %></span><% } %>
+</figcaption>
+</a>
+<% }) %>
+</div>

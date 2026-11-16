@@ -1,0 +1,11 @@
+<script>
+// Navbar tabs open menus rather than navigate, so announce them as buttons.
+document.querySelectorAll(".navbar .nav-link.dropdown-toggle").forEach(function (el) {
+  el.setAttribute("role", "button");
+  el.removeAttribute("href");
+  el.setAttribute("tabindex", "0");
+  el.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" || event.key === " ") { event.preventDefault(); el.click(); }
+  });
+});
+</script>

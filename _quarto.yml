@@ -1,0 +1,119 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - "**/*-assets/**"
+
+website:
+  title: "MJ2706"
+  description: "Paper reproductions, projects, and lecture notes on machine learning, math, data and systems."
+  site-url: https://minhboba.github.io
+  favicon: assets/favicon.svg
+  search:
+    location: navbar
+    type: overlay
+  page-navigation: true
+  back-to-top-navigation: true
+  reader-mode: false
+
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      # Each tab opens a dropdown instead of navigating. Add a course here when
+      # you add its folder; lectures are reached from the course page.
+      - text: Lab
+        menu:
+          - text: Overview
+            href: lab/index.qmd
+          - text: "---"
+          - text: Paper reproductions
+            href: lab/index.qmd#paper-reproductions
+          - text: Projects
+            href: lab/index.qmd#projects
+      - text: Machine Learning
+        menu:
+          - text: Overview
+            href: ml/index.qmd
+          - text: "---"
+          - text: Courses
+          - text: "Stanford CS229"
+            href: ml/cs229/index.qmd
+      # Math becomes a menu once it has a course.
+      - text: Math
+        href: math/index.qmd
+      - text: Data
+        menu:
+          - text: Overview
+            href: data/index.qmd
+          - text: "---"
+          - text: Data structures and algorithms
+            href: data/index.qmd#data-structures-and-algorithms
+          - text: Problems
+            href: data/index.qmd#problems
+          - text: Power BI reports
+            href: data/index.qmd#power-bi-reports
+      - text: System
+        menu:
+          - text: Overview
+            href: system/index.qmd
+          - text: "---"
+          - text: Case studies
+            href: system/index.qmd#case-studies
+          - text: Applications
+            href: system/index.qmd#applications
+    right:
+      - icon: github
+        href: https://github.com/MinhBoba
+        aria-label: GitHub profile
+
+  # One auto-generated sidebar per tab. Quarto shows the sidebar whose
+  # contents include the current page, so each tab gets its own tree.
+  sidebar:
+    - id: lab
+      title: Lab
+      style: docked
+      contents: lab
+    - id: ml
+      title: Machine Learning
+      style: docked
+      contents: ml
+    - id: math
+      title: Math
+      style: docked
+      contents: math
+    - id: data
+      title: Data
+      style: docked
+      contents: data
+    - id: system
+      title: System
+      style: docked
+      contents: system
+
+  page-footer:
+    left: "© 2026 MJ2706"
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme/light.scss]
+      dark: [cosmo, theme/dark.scss]
+    css: styles.css
+    respect-user-color-scheme: true
+    include-after-body: _includes/nav-a11y.html
+    toc: true
+    toc-location: right
+    toc-depth: 3
+    code-fold: false
+    code-tools: false
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: a11y
+    html-math-method: katex
+    smooth-scroll: false
+    link-external-newwindow: true
+    lang: en
+
+execute:
+  freeze: auto

@@ -1,0 +1,56 @@
+/*-- scss:defaults --*/
+
+// The Figure Journal: a research article's page. Serif for reading, a grotesk for
+// labels and captions, a mono only for code. Colour is semantic: four domain inks.
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap");
+
+$font-family-sans-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+$font-family-monospace: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+$headings-font-family: "Source Serif 4", Georgia, serif;
+$headings-font-weight: 600;
+$font-size-root: 18px;
+$line-height-base: 1.6;
+
+$body-bg: #fdfdfc;
+$body-color: #15171c;
+$primary: #15171c;
+$secondary: #545c6a;
+$success: #17784e;
+$info: #15171c;
+$warning: #9a5b00;
+$danger: #c8402a;
+$link-color: #15171c;
+$gray-600: #545c6a;
+$text-muted: #545c6a;
+
+$navbar-bg: #fdfdfc;
+$navbar-fg: #15171c;
+$navbar-hl: #15171c;
+$footer-bg: #fdfdfc;
+$footer-fg: #545c6a;
+
+$border-radius: 2px;
+$border-color: #dcdcd6;
+$code-bg: #f3f3ef;
+$code-color: #8a2d1c;
+
+/*-- scss:rules --*/
+
+:root {
+  --mj-ground: #fdfdfc;
+  --mj-ink: #15171c;
+  --mj-muted: #545c6a;
+  --mj-rule: #dcdcd6;
+  --mj-rule-strong: #15171c;
+  --mj-wash: #f3f3ef;
+  --ink-ml: #c8402a;
+  --ink-math: #2f5bd3;
+  --ink-data: #17784e;
+  --ink-system: #7a4cc2;
+  --ink-lab: #15171c;
+}
+
+// Quarto's light syntax theme leaves `code span.bu` (built-ins like range, len) uncoloured,
+// so with JavaScript off the dark theme's orange would show on the light code background.
+div.sourceCode code span.bu,
+code span.bu { color: #6b4400; }

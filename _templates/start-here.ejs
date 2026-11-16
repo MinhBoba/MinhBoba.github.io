@@ -1,0 +1,34 @@
+<%
+// "Start here" margin list on Home, generated from page headers:
+// the newest lecture, the courses that have at least one lecture, and the Lab.
+const norm = (p) => String(p || '').replace(/\\/g, '/').replace(/^\/+/, '');
+const href = (item) => norm(item.outputHref || item.path).replace(/\.qmd$/, '.html');
+const fmt = (d) => new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const EXTRA = new Set(['notes', 'dsa', 'problems', 'reports', 'case-studies', 'applications']);
+const DOMAIN_OF = (item) => norm(item.path).split('/')[0];
+const courses = {};
+const lectures = [];
+for (const item of items) {
+const parts = norm(item.path).split('/');
+if (parts.length < 3 || EXTRA.has(parts[1])) continue;
+const key = parts[0] + '/' + parts[1];
+if (parts[parts.length - 1] === 'index.qmd') { if (item.course) courses[key] = { item, count: 0 }; continue; }
+lectures.push({ item, key });
+}
+for (const l of lectures) if (courses[l.key]) courses[l.key].count += 1;
+lectures.sort((a, b) => new Date(b.item.date || 0) - new Date(a.item.date || 0));
+const latest = lectures[0];
+const active = Object.values(courses).filter((c) => c.count > 0).slice(0, 2);
+%>
+<nav class="start-here" aria-labelledby="start-here-title">
+<p class="start-here-title" id="start-here-title">Start here</p>
+<ol>
+<% if (latest) { %>
+<li class="domain-<%= DOMAIN_OF(latest.item) %>"><a href="<%= href(latest.item) %>"><%= latest.item.title %></a><span class="start-here-meta">Latest lecture<% if (latest.item.date) { %>, <%= fmt(latest.item.date) %><% } %></span></li>
+<% } %>
+<% for (const c of active) { const total = Number(c.item['lectures-total']) || c.count; %>
+<li class="domain-<%= DOMAIN_OF(c.item) %>"><a href="<%= href(c.item) %>"><%= c.item.title %></a><span class="start-here-meta">Course, <%= c.count %> of <%= total %> lectures written up</span></li>
+<% } %>
+<li class="domain-lab"><a href="lab/index.html">The Lab</a><span class="start-here-meta">Paper reproductions and projects</span></li>
+</ol>
+</nav>

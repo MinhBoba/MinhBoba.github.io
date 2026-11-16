@@ -1,0 +1,66 @@
+---
+title: "MJ2706"
+pagetitle: "MJ2706 · MinhJ, ML engineer and data scientist"
+description: "Lecture notes with the video, maths and code on one page, and paper reproductions set against their reported results."
+kind: index
+toc: false
+body-classes: home
+title-block-banner: false
+page-layout: full
+listing:
+  - id: study-map
+    contents:
+      - "ml/**/*.qmd"
+      - "math/**/*.qmd"
+      - "data/**/*.qmd"
+      - "system/**/*.qmd"
+    type: custom
+    template: _templates/study-map.ejs
+  - id: start-here
+    contents:
+      - "ml/**/*.qmd"
+      - "math/**/*.qmd"
+      - "data/**/*.qmd"
+      - "system/**/*.qmd"
+    type: custom
+    template: _templates/start-here.ejs
+  - id: lab-featured
+    contents: "lab/**/*.qmd"
+    include:
+      featured: true
+    exclude:
+      kind: index
+    type: custom
+    template: _templates/lab-plates.ejs
+    sort: "date desc"
+    max-items: 3
+    template-params:
+      figure: "2"
+      link: true
+---
+
+::: {.home-opening}
+
+::: {.home-about}
+# MinhJ {.home-name}
+
+[ML engineer and data scientist]{.home-role}
+
+I work with data and machine learning. This site holds the hands-on work, paper reproductions and projects in the [Lab](lab/index.qmd), and structured notes from the courses I study: each lecture page puts the video, my notes, the maths and the code together, with its sources at the end.
+
+[[GitHub](https://github.com/MinhBoba)]{.home-links}
+:::
+
+<!-- TODO: add email, LinkedIn and CV beside GitHub once the owner confirms them. -->
+::: {#start-here}
+:::
+
+:::
+
+::: {#study-map}
+:::
+
+## From the Lab {.unnumbered .unlisted}
+
+::: {#lab-featured}
+:::

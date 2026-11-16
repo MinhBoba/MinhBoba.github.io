@@ -1,0 +1,40 @@
+---
+title: "Machine Learning"
+subtitle: "Courses and lectures"
+kind: index
+toc: false
+listing:
+  - id: courses
+    contents: "**/*.qmd"
+    type: custom
+    template: ../_templates/study-map.ejs
+    template-params:
+      domain: ml
+      figure: "1"
+      caption: "Machine Learning courses, each drawn to its real number of lectures; select a filled slot to open that lecture."
+  - id: lectures
+    contents: "*/*.qmd"
+    exclude:
+      kind: index
+    type: custom
+    template: ../_templates/ledger.ejs
+    sort: "date desc"
+    template-params:
+      root: "../"
+      hide-domain: true
+      table: "1"
+      caption: "Machine Learning lectures, newest first."
+      empty: "No lectures written up yet."
+---
+
+[Courses I'm working through, one page per lecture with the video on top, my notes underneath and the sources at the end.]{.tab-intro}
+
+## Courses {.unnumbered}
+
+::: {#courses}
+:::
+
+## Lectures {.unnumbered}
+
+::: {#lectures}
+:::

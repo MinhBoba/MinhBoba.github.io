@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-15T00:00:00Z",
+  "title": "Design System: MJ2706",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "primary", "displayName": "Ink", "canonical": "oklch(20.5% 0.010 268.2)", "tonalRamp": ["#0a0b0d", "#242529", "#404248", "#5f6167", "#808289", "#a2a5ac", "#c7c9ce", "#edeef1"] },
+      "ground": { "role": "neutral", "displayName": "Paper", "canonical": "oklch(99.4% 0.001 106.4)", "tonalRamp": ["#0b0b0b", "#252525", "#424241", "#616160", "#828281", "#a5a5a4", "#c9c9c8", "#eeeeee"] },
+      "muted": { "role": "neutral", "displayName": "Graphite", "canonical": "oklch(47.3% 0.025 261.7)", "tonalRamp": ["#090b0f", "#21252d", "#3b424f", "#5a6270", "#7a8392", "#9da5b5", "#c3c9d4", "#ebeff5"] },
+      "rule": { "role": "neutral", "displayName": "Hairline", "canonical": "oklch(89.3% 0.008 106.6)", "tonalRamp": ["#0b0b0a", "#252522", "#42423e", "#62625c", "#83837d", "#a5a5a0", "#c9c9c5", "#efefec"] },
+      "rule-strong": { "role": "primary", "displayName": "Ink Rule", "canonical": "oklch(20.5% 0.010 268.2)" },
+      "wash": { "role": "neutral", "displayName": "Wash", "canonical": "oklch(96.3% 0.005 106.5)", "tonalRamp": ["#0b0b0a", "#252523", "#42423f", "#61615e", "#82827f", "#a5a5a2", "#c9c9c7", "#eeeeed"] },
+      "ink-ml": { "role": "secondary", "displayName": "Vermilion (Machine Learning)", "canonical": "oklch(56.4% 0.176 31.8)", "tonalRamp": ["#200000", "#500000", "#860000", "#af260f", "#d74e38", "#fd765e", "#ffac99", "#ffdfd3"] },
+      "ink-math": { "role": "secondary", "displayName": "Cobalt (Math)", "canonical": "oklch(51.4% 0.192 265.0)", "tonalRamp": ["#010629", "#061a62", "#0f31a2", "#2954cc", "#4879f3", "#6b9eff", "#a0c7ff", "#d7efff"] },
+      "ink-data": { "role": "secondary", "displayName": "Field Green (Data)", "canonical": "oklch(50.8% 0.109 158.9)", "tonalRamp": ["#001005", "#002f17", "#00522c", "#0e734a", "#3d966a", "#66b98d", "#a0d8b8", "#d8f8e4"] },
+      "ink-system": { "role": "secondary", "displayName": "Violet (System)", "canonical": "oklch(52.8% 0.177 298.0)", "tonalRamp": ["#100323", "#2e0e56", "#501d8e", "#7041b6", "#9165dd", "#b38aff", "#d2b8ff", "#f3e6ff"] },
+      "ink-lab": { "role": "primary", "displayName": "Ink (Lab)" },
+      "code-ink": { "role": "neutral", "displayName": "Code Rust" },
+      "ink-dark": { "role": "primary", "displayName": "Ink, dark theme" },
+      "ground-dark": { "role": "neutral", "displayName": "Paper, dark theme" },
+      "muted-dark": { "role": "neutral", "displayName": "Graphite, dark theme" },
+      "rule-dark": { "role": "neutral", "displayName": "Hairline, dark theme" },
+      "rule-strong-dark": { "role": "primary", "displayName": "Ink Rule, dark theme" },
+      "wash-dark": { "role": "neutral", "displayName": "Wash, dark theme" },
+      "ink-ml-dark": { "role": "secondary", "displayName": "Vermilion (ML), dark theme" },
+      "ink-math-dark": { "role": "secondary", "displayName": "Cobalt (Math), dark theme" },
+      "ink-data-dark": { "role": "secondary", "displayName": "Field Green (Data), dark theme" },
+      "ink-system-dark": { "role": "secondary", "displayName": "Violet (System), dark theme" },
+      "ink-lab-dark": { "role": "primary", "displayName": "Ink (Lab), dark theme" },
+      "code-ink-dark": { "role": "neutral", "displayName": "Code Rust, dark theme" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The owner's name on Home only." },
+      "headline": { "displayName": "Headline", "purpose": "Section heads; on Home each sits under a 1px hairline." },
+      "title": { "displayName": "Title", "purpose": "Ledger page links and listing titles, in serif." },
+      "body": { "displayName": "Body", "purpose": "All reading text: notes, prose, lists." },
+      "lede": { "displayName": "Lede", "purpose": "Tab intros and the home lede, in graphite, 58-60ch." },
+      "caption": { "displayName": "Caption", "purpose": "Italic serif figure and table captions in graphite, 72ch; the number label is upright grotesk." },
+      "label": { "displayName": "Label", "purpose": "Table headers, axis, legend, status tags, callout headers." },
+      "chrome": { "displayName": "Chrome", "purpose": "Navbar and menus, sidebar, TOC, breadcrumbs, footer, Start-here list." },
+      "code": { "displayName": "Code", "purpose": "Code blocks and inline code only." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "none", "value": "none", "purpose": "No page transitions or decorative motion; reduced-motion removes all transitions." }
+    ],
+    "breakpoints": [
+      { "name": "narrow", "value": "760px" }
+    ],
+    "cssCustomProperties": {
+      "light": "theme/light.scss (:root --mj-*, --ink-*)",
+      "dark": "theme/dark.scss (:root --mj-*, --ink-*)",
+      "domainHook": ".domain-ml|math|data|system|lab { --domain: var(--ink-*) } in styles.css"
+    }
+  },
+  "components": [
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Paper navbar with a hairline below; active and hover links take a 2px underline in their domain ink.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-brand\">MJ2706</span><a class=\"ds-nav-link is-active\" href=\"#\">Home</a><a class=\"ds-nav-link\" href=\"#\">Lab</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-ml, #c8402a)\" href=\"#\">Machine Learning</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-math, #2f5bd3)\" href=\"#\">Math</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-data, #17784e)\" href=\"#\">Data</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-system, #7a4cc2)\" href=\"#\">System</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 1.25rem; padding: 0.9rem 1rem; background: var(--mj-ground, #fdfdfc); border-bottom: 1px solid var(--mj-rule, #dcdcd6); font-family: 'Hanken Grotesk', system-ui, sans-serif; } .ds-nav-brand { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: 1.15rem; color: var(--mj-ink, #15171c); margin-right: 0.5rem; } .ds-nav-link { font-weight: 500; color: var(--mj-ink, #15171c); text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 0.2rem; } .ds-nav-link:hover, .ds-nav-link.is-active { border-bottom-color: var(--domain, var(--mj-ink, #15171c)); } .ds-nav-link:focus-visible { outline: 2px solid var(--domain, var(--mj-ink, #15171c)); outline-offset: 3px; border-radius: 1px; }"
+    },
+    {
+      "name": "Page Title with Domain Rule",
+      "kind": "custom",
+      "refersTo": "page-title-rule",
+      "description": "Serif page title with a short rule in the page's domain ink beneath it.",
+      "html": "<div class=\"ds-title-wrap\" style=\"--domain: var(--ink-math, #2f5bd3)\"><h1 class=\"ds-title\">Math</h1></div>",
+      "css": ".ds-title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 2.2rem; letter-spacing: -0.02em; color: var(--mj-ink, #15171c); margin: 0; } .ds-title::after { content: ''; display: block; width: 2.75rem; height: 3px; margin-top: 0.55rem; background: var(--domain, var(--mj-rule-strong, #15171c)); }"
+    },
+    {
+      "name": "Link",
+      "kind": "custom",
+      "description": "Ink by default with a 1px offset underline; inside a tab, prose links take that domain's ink.",
+      "html": "<p class=\"ds-prose\">Default <a class=\"ds-link\" href=\"#\">ink link</a>; on the ML tab <a class=\"ds-link\" style=\"color: var(--ink-ml, #c8402a); --domain: var(--ink-ml, #c8402a)\" href=\"#\">domain link</a>.</p>",
+      "css": ".ds-prose { font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; line-height: 1.6; color: var(--mj-ink, #15171c); } .ds-link { color: var(--mj-ink, #15171c); text-underline-offset: 0.18em; text-decoration-thickness: 1px; } .ds-link:hover { text-decoration-thickness: 2px; } .ds-link:focus-visible { outline: 2px solid var(--domain, var(--mj-ink, #15171c)); outline-offset: 3px; border-radius: 1px; }"
+    },
+    {
+      "name": "Study Map Lane",
+      "kind": "custom",
+      "refersTo": "slot-published",
+      "description": "Signature figure: a domain lane whose course is drawn as lecture slots, status by line form, captioned as Figure 1.",
+      "html": "<figure class=\"ds-map\"><div class=\"ds-lane\" style=\"--domain: var(--ink-ml, #c8402a)\"><a class=\"ds-lane-label\" href=\"#\">Machine Learning</a><div class=\"ds-course\"><span class=\"ds-course-name\">CS229</span><span class=\"ds-seg\"><a class=\"ds-slot is-published\" href=\"#\" aria-label=\"Lecture 1\"></a><a class=\"ds-slot is-progress\" href=\"#\" aria-label=\"Lecture 2, in progress\"></a><span class=\"ds-slot is-planned\"></span><span class=\"ds-slot is-planned\"></span><span class=\"ds-slot is-planned\"></span><span class=\"ds-slot is-planned\"></span></span></div><p class=\"ds-lane-note\">1 of 6 lectures</p></div><figcaption class=\"ds-caption\"><strong>Figure 1.</strong> Study map. Each row is a domain and each bar a course.</figcaption></figure>",
+      "css": ".ds-map { margin: 0; border-top: 2px solid var(--mj-rule-strong, #15171c); font-family: 'Hanken Grotesk', system-ui, sans-serif; } .ds-lane { display: grid; grid-template-columns: 10.5rem minmax(0, 1fr) 9rem; column-gap: 1.25rem; align-items: center; padding: 0.95rem 0; border-bottom: 1px solid var(--mj-rule, #dcdcd6); } .ds-lane-label { font-weight: 700; font-size: 1.02rem; color: var(--domain); text-decoration: none; } .ds-lane-label:hover { text-decoration: underline; } .ds-course { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); align-items: center; } .ds-course-name { font-weight: 600; font-size: 0.95rem; color: var(--mj-ink, #15171c); } .ds-seg { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; height: 1.6rem; } .ds-slot { display: block; height: 100%; } .ds-slot.is-published { background: var(--domain); } .ds-slot.is-progress { border: 2px dotted var(--domain); background: color-mix(in srgb, var(--domain) 14%, transparent); } .ds-slot.is-planned { border: 1.5px dashed color-mix(in srgb, var(--domain) 50%, var(--mj-ground, #fdfdfc)); } a.ds-slot:hover, a.ds-slot:focus-visible { outline: 2px solid var(--mj-ink, #15171c); outline-offset: 2px; } .ds-lane-note { margin: 0; font-size: 0.85rem; color: var(--mj-muted, #545c6a); font-variant-numeric: tabular-nums; } .ds-caption { margin-top: 0.6rem; font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 0.95rem; line-height: 1.5; color: var(--mj-muted, #545c6a); max-width: 72ch; } .ds-caption strong { font-family: 'Hanken Grotesk', system-ui, sans-serif; font-style: normal; color: var(--mj-ink, #15171c); }"
+    },
+    {
+      "name": "Lab Plate",
+      "kind": "card",
+      "refersTo": "lab-plate-frame",
+      "description": "One complete captioned plate: 4:3 hairline frame, numbered caption, status tag marked by line form.",
+      "html": "<a class=\"ds-plate\" href=\"#\"><div class=\"ds-plate-frame\"><span class=\"ds-plate-initial\">A</span></div><p class=\"ds-plate-cap\"><strong>Figure 2a.</strong> <span class=\"ds-plate-title\">Attention Is All You Need</span><span class=\"ds-status is-progress\">in progress</span><span class=\"ds-plate-desc\">Reproduction of the base model.</span></p></a>",
+      "css": ".ds-plate { display: block; max-width: 20rem; color: var(--mj-ink, #15171c); text-decoration: none; } .ds-plate-frame { aspect-ratio: 4 / 3; border: 1px solid var(--mj-rule, #dcdcd6); display: grid; place-items: center; background: var(--mj-wash, #f3f3ef); } .ds-plate:hover .ds-plate-frame { border-color: var(--mj-ink, #15171c); } .ds-plate:hover .ds-plate-title { text-decoration: underline; } .ds-plate:focus-visible { outline: 2px solid var(--mj-ink, #15171c); outline-offset: 3px; } .ds-plate-initial { font-family: 'Source Serif 4', Georgia, serif; font-size: 4rem; font-weight: 600; color: var(--mj-muted, #545c6a); } .ds-plate-cap { margin: 0.6rem 0 0; font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 0.95rem; line-height: 1.5; color: var(--mj-muted, #545c6a); } .ds-plate-cap strong { font-family: 'Hanken Grotesk', system-ui, sans-serif; font-style: normal; color: var(--mj-ink, #15171c); } .ds-plate-title { font-style: normal; font-weight: 600; color: var(--mj-ink, #15171c); } .ds-plate-desc { display: block; margin-top: 0.2rem; } .ds-status { margin-left: 0.4rem; padding-left: 0.45rem; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-style: normal; font-size: 0.8rem; color: var(--mj-ink, #15171c); } .ds-status.is-published { border-left: 3px solid var(--mj-ink, #15171c); } .ds-status.is-progress { border-left: 2px dotted var(--mj-ink, #15171c); } .ds-status.is-planned { border-left: 2px dashed var(--mj-muted, #545c6a); }"
+    },
+    {
+      "name": "Ledger",
+      "kind": "custom",
+      "refersTo": "ledger-header",
+      "description": "Ruled table: grotesk headers under a 2px ink rule, hairline rows, domain ink mark, serif page links, numbered caption below.",
+      "html": "<table class=\"ds-ledger\"><caption><strong>Table 1.</strong> Machine Learning lectures, newest first.</caption><thead><tr><th>Date</th><th>Domain</th><th>Page</th></tr></thead><tbody><tr style=\"--domain: var(--ink-ml, #c8402a)\"><td class=\"ds-ledger-date\">15 Nov 2026</td><td><span class=\"ds-domain-mark\"></span>Machine Learning</td><td class=\"ds-ledger-page\"><a href=\"#\">Linear Regression and Gradient Descent</a> <span class=\"ds-ledger-sub\">CS229 · Lecture 2</span></td></tr></tbody></table>",
+      "css": ".ds-ledger { width: 100%; border-collapse: collapse; caption-side: bottom; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 0.95rem; color: var(--mj-ink, #15171c); } .ds-ledger caption { padding-top: 0.75rem; text-align: left; font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 0.9rem; color: var(--mj-muted, #545c6a); } .ds-ledger caption strong { font-family: 'Hanken Grotesk', system-ui, sans-serif; font-style: normal; color: var(--mj-ink, #15171c); } .ds-ledger thead th { font-size: 0.8rem; font-weight: 600; text-align: left; color: var(--mj-muted, #545c6a); border-bottom: 2px solid var(--mj-rule-strong, #15171c); padding: 0 1rem 0.4rem 0; } .ds-ledger td { padding: 0.7rem 1rem 0.7rem 0; border-bottom: 1px solid var(--mj-rule, #dcdcd6); vertical-align: baseline; } .ds-ledger-date { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--mj-muted, #545c6a); } .ds-domain-mark { display: inline-block; width: 0.9rem; height: 3px; margin-right: 0.5rem; vertical-align: middle; background: var(--domain); } .ds-ledger-page a { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.05rem; font-weight: 600; color: var(--mj-ink, #15171c); text-decoration: none; } .ds-ledger-page a:hover { text-decoration: underline; text-decoration-color: var(--domain); } .ds-ledger-page a:focus-visible { outline: 2px solid var(--domain); outline-offset: 3px; } .ds-ledger-sub { color: var(--mj-muted, #545c6a); font-size: 0.88rem; margin-left: 0.35rem; }"
+    },
+    {
+      "name": "Listing Card",
+      "kind": "card",
+      "description": "Tab-page listing item with no card chrome: a 2px ink rule on top, plain graphite categories.",
+      "html": "<a class=\"ds-listing\" href=\"#\"><h3 class=\"ds-listing-title\">Stanford CS229</h3><p class=\"ds-listing-sub\">Machine learning, 20 lectures</p><span class=\"ds-cat\">supervised</span><span class=\"ds-cat\">regression</span></a>",
+      "css": ".ds-listing { display: block; max-width: 22rem; border-top: 2px solid var(--mj-rule-strong, #15171c); padding-top: 0.75rem; color: var(--mj-ink, #15171c); text-decoration: none; } .ds-listing:hover .ds-listing-title { text-decoration: underline; } .ds-listing:focus-visible { outline: 2px solid var(--mj-ink, #15171c); outline-offset: 3px; } .ds-listing-title { margin: 0 0 0.25rem; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.1rem; } .ds-listing-sub { margin: 0 0 0.4rem; color: var(--mj-muted, #545c6a); font-family: 'Source Serif 4', Georgia, serif; } .ds-cat { font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 0.85rem; color: var(--mj-muted, #545c6a); margin-right: 0.9rem; }"
+    },
+    {
+      "name": "Callout",
+      "kind": "card",
+      "refersTo": "callout",
+      "description": "Hairline box with a Wash header; no side stripe, no shadow.",
+      "html": "<div class=\"ds-callout\"><div class=\"ds-callout-head\">Note</div><div class=\"ds-callout-body\">The closed-form solution needs X transposed X to be invertible.</div></div>",
+      "css": ".ds-callout { border: 1px solid var(--mj-rule, #dcdcd6); border-radius: 2px; background: transparent; max-width: 36rem; } .ds-callout-head { padding: 0.5rem 0.9rem; border-bottom: 1px solid var(--mj-rule, #dcdcd6); background: var(--mj-wash, #f3f3ef); font-family: 'Hanken Grotesk', system-ui, sans-serif; font-weight: 600; font-size: 0.9rem; color: var(--mj-ink, #15171c); } .ds-callout-body { padding: 0.7rem 0.9rem 0.6rem; font-family: 'Source Serif 4', Georgia, serif; color: var(--mj-ink, #15171c); line-height: 1.6; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Figure Journal",
+    "overview": "Every page is a page from a research article. The home page opens with who the owner is and a Start-here list, then Figure 1, a study map read like a plotted figure, and Figure 2, the Lab's captioned plates; tab pages list their contents as ruled ledgers (Table 1, 2, ...). Reading comes first: a serif body at a generous 18px, a grotesk only for labels and chrome, a mono only for code. The page is near-white paper (dark: near-black slate) with ink type and hairline rules.\n\nColour is semantic, never decorative. Four domain inks name the four study domains, Machine Learning, Math, Data and System, and appear wherever that domain is meant: lane labels, slots, the rule under a tab's title, the domain mark in a ledger row, prose links inside that tab. The Lab has no hue of its own; it is set in ink. Everything else is ink, muted grey and rule.\n\nDepth comes from rules and overlap. Heavy 2px ink rules open a figure or table; 1px hairlines separate its rows. Nothing floats: no shadows, no gradients, no card chrome. Status is drawn, not coloured: a solid fill is written up, a dotted outline is in progress, a dashed outline is planned, and an absent course still keeps its dashed slot.",
+    "keyCharacteristics": [
+      "Serif reading voice (Source Serif 4) for body, headings and captions; Hanken Grotesk for labels and chrome; JetBrains Mono for code only.",
+      "Four semantic domain inks, each with a light and a dark value; Lab in ink.",
+      "Numbered Figure and Table captions in italic serif with an upright grotesk label.",
+      "Status by line form (solid, dotted, dashed), never by hue.",
+      "Flat paper: 2px ink rules open blocks, 1px hairlines divide rows, no shadows or gradients.",
+      "A short domain-ink rule under every page title."
+    ],
+    "rules": [
+      { "name": "The One Ink Per Domain Rule", "body": "A domain ink appears only where that domain is meant, set through the `domain-*` class (lane, ledger row, tab page body). It never decorates a neutral element, and two domains never share an ink.", "section": "colors" },
+      { "name": "The Status Is Line Form Rule", "body": "Written up, in progress and planned are told apart by solid fill, dotted 2px outline and dashed 1.5px outline. The legend draws its samples in ink and graphite so it keys form, not colour.", "section": "colors" },
+      { "name": "The Numbered Caption Rule", "body": "Every figure and table carries a caption that opens with an upright grotesk label (\"Figure 1.\", \"Figure 2a.\", \"Table 1.\") in ink, followed by italic serif prose in graphite. Captions sit below the figure.", "section": "typography" },
+      { "name": "The Mono Is For Code Rule", "body": "JetBrains Mono appears only in code blocks and inline code; numbers in tables use the grotesk with tabular figures instead.", "section": "typography" },
+      { "name": "The Paper Rule", "body": "Nothing lifts off the page. If an element needs separation, give it a rule, not a shadow; if it needs emphasis, give it ink weight, not elevation.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** put a domain's work under its `domain-*` class so lane labels, slots, title rules, focus rings and prose links pick up the right ink automatically.",
+      "**Do** caption every figure and table with an upright grotesk number label and italic serif prose below it.",
+      "**Do** draw status as line form: solid fill for written up, 2px dotted for in progress, 1.5px dashed for planned.",
+      "**Do** draw absence: an empty domain or an unwritten lecture keeps its dashed slot rather than disappearing.",
+      "**Do** separate with rules: 2px ink to open a block, 1px hairline between rows.",
+      "**Do** keep reading text in Source Serif 4 at 18px / 1.6 and hold captions and ledes to 58–72ch."
+    ],
+    "donts": [
+      "**Don't** use shadows or gradients on any element.",
+      "**Don't** use hue to encode status, and don't give the Lab a colour of its own.",
+      "**Don't** use a domain ink outside that domain, or as decoration on neutral elements.",
+      "**Don't** put eyebrow or kicker labels above headings; the numbered caption is the only label a figure carries.",
+      "**Don't** set body, headings or captions in the grotesk, or anything but code in the mono.",
+      "**Don't** add card chrome (borders, fills, rounded corners) to listings; a top rule is the whole container.",
+      "**Don't** use pill or uppercase category tags, or callouts with a coloured side stripe."
+    ]
+  }
+}

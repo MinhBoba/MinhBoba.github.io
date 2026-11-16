@@ -1,0 +1,14 @@
+---
+title: "Page not found"
+toc: false
+kind: index
+search: false
+---
+
+[That page does not exist, or it moved when the site was reorganised.]{.tab-intro}
+
+- [Home](/index.html): the study map of everything written up so far
+- [Lab](/lab/index.html): paper reproductions and projects
+- [Machine Learning](/ml/index.html) · [Math](/math/index.html) · [Data](/data/index.html) · [System](/system/index.html)
+
+Use the search in the top bar to find a lecture by name.

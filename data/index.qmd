@@ -1,0 +1,79 @@
+---
+title: "Data"
+subtitle: "Courses, DSA, problems and Power BI reports"
+kind: index
+toc: true
+listing:
+  - id: courses
+    contents: "**/*.qmd"
+    type: custom
+    template: ../_templates/study-map.ejs
+    template-params:
+      domain: data
+      figure: "1"
+      caption: "Data courses, each drawn to its real number of lectures; select a filled slot to open that lecture."
+  - id: dsa
+    contents: "dsa/*.qmd"
+    type: custom
+    template: ../_templates/ledger.ejs
+    sort: "title"
+    template-params:
+      root: "../"
+      hide-domain: true
+      hide-date: true
+      table: "1"
+      caption: "Data structures and algorithms, by name, with their time and space complexity."
+      empty: "No topics written up yet."
+      fields:
+        - { key: "time", label: "Time" }
+        - { key: "space", label: "Space" }
+  - id: problems
+    contents: "problems/*.qmd"
+    type: custom
+    template: ../_templates/ledger.ejs
+    sort: "title"
+    template-params:
+      root: "../"
+      hide-domain: true
+      hide-date: true
+      table: "2"
+      caption: "Python and SQL problems, by name, with the solving pattern each one uses."
+      empty: "No problems written up yet."
+      fields:
+        - { key: "language", label: "Language" }
+        - { key: "difficulty", label: "Difficulty" }
+        - { key: "pattern", label: "Pattern" }
+  - id: reports
+    contents: "reports/*.qmd"
+    type: custom
+    template: ../_templates/ledger.ejs
+    sort: "date desc"
+    template-params:
+      root: "../"
+      hide-domain: true
+      table: "3"
+      caption: "Power BI reports, newest first. Public or synthetic data only."
+      empty: "No reports published yet."
+---
+
+[Data engineering and analytics: courses, data structures and algorithms, a Python and SQL problem bank organised by solving pattern, and interactive Power BI reports.]{.tab-intro}
+
+## Courses {.unnumbered}
+
+::: {#courses}
+:::
+
+## Data structures and algorithms {.unnumbered}
+
+::: {#dsa}
+:::
+
+## Problems {.unnumbered}
+
+::: {#problems}
+:::
+
+## Power BI reports {.unnumbered}
+
+::: {#reports}
+:::

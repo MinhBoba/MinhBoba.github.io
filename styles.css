@@ -1,0 +1,617 @@
+/* The Figure Journal — site-wide components.
+   Tokens (--mj-*, --ink-*) live in theme/light.scss and theme/dark.scss.
+   Rules: colour is semantic (one ink per domain); status is line form, not hue;
+   depth comes from rules and overlap, never shadows or gradients. */
+
+:root {
+  --font-label: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --space-section: clamp(3rem, 2rem + 3vw, 5rem);
+  --tick-h: 1.5rem;
+}
+
+/* ---------- Domain inks ---------- */
+.domain-ml { --domain: var(--ink-ml); }
+.domain-math { --domain: var(--ink-math); }
+.domain-data { --domain: var(--ink-data); }
+.domain-system { --domain: var(--ink-system); }
+.domain-lab { --domain: var(--ink-lab); }
+
+/* ---------- Browser surfaces ---------- */
+::selection { background: color-mix(in srgb, var(--domain, var(--ink-math)) 22%, transparent); }
+html { scrollbar-color: var(--mj-rule) transparent; }
+a { text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--domain, var(--mj-ink));
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* ---------- Labels, captions, chrome use the grotesk ---------- */
+.navbar,
+.sidebar,
+#TOC,
+.quarto-title-meta,
+.breadcrumb,
+.listing-categories,
+.quarto-categories,
+figcaption,
+.figure-caption,
+caption,
+.callout-header,
+.nav-footer,
+.study-map,
+.ledger,
+.start-here {
+  font-family: var(--font-label);
+}
+
+/* ---------- Navbar: plain rule, links underline in their domain ink ---------- */
+.navbar {
+  border-bottom: 1px solid var(--mj-rule);
+  box-shadow: none !important;
+}
+.navbar-brand .navbar-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.navbar .nav-link {
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.2rem !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--mj-ink) !important;
+  border-bottom-color: var(--domain, var(--mj-ink));
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3 { letter-spacing: -0.012em; text-wrap: balance; }
+h2 { margin-top: 2.6rem; margin-bottom: 0.9rem; }
+.title { letter-spacing: -0.02em; }
+/* A short domain-ink rule under the page title, as a journal marks its section */
+.quarto-title h1.title::after {
+  content: "";
+  display: block;
+  width: 2.75rem;
+  height: 3px;
+  margin-top: 0.55rem;
+  background: var(--domain, var(--mj-rule-strong));
+}
+
+/* ---------- Home ---------- */
+.home #title-block-header { display: none; }
+.home main.content { padding-top: 1.5rem; }
+
+.home-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 18rem);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.home h2 {
+  font-size: 1.5rem;
+  margin-top: 3.25rem;
+  margin-bottom: 1.25rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0;
+  border-top: 1px solid var(--mj-rule);
+  border-bottom: 0;
+}
+
+/* ---------- Figure 1: study map ---------- */
+.study-map {
+  --label-w: 10.5rem;
+  --name-w: 5.5rem;
+  --note-w: 11.5rem;
+  --bar-h: 1.6rem;
+  margin: 0;
+  border-top: 2px solid var(--mj-rule-strong);
+}
+.study-axis,
+.study-lane {
+  display: grid;
+  grid-template-columns: var(--label-w) minmax(0, 1fr) var(--note-w);
+  column-gap: 1.25rem;
+}
+.study-axis {
+  padding: 0.45rem 0 0.35rem;
+  font-size: 0.75rem;
+  color: var(--mj-muted);
+  border-bottom: 1px solid var(--mj-rule);
+}
+.study-axis-title { grid-column: 1; }
+.study-axis-scale { grid-column: 2; position: relative; margin-left: var(--name-w); height: 1.1em; }
+.study-axis-mark { position: absolute; transform: translateX(-50%); font-variant-numeric: tabular-nums; }
+.study-lane { align-items: center; padding: 0.95rem 0; border-bottom: 1px solid var(--mj-rule); }
+.study-lane-label {
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--domain);
+  text-decoration: none;
+}
+.study-lane-label:hover { text-decoration: underline; }
+.study-lane-courses { display: grid; row-gap: 0.6rem; }
+.study-course {
+  display: grid;
+  grid-template-columns: var(--name-w) minmax(0, 1fr);
+  align-items: center;
+}
+.study-course-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--mj-ink);
+  text-decoration: none;
+}
+a.study-course-name:hover { text-decoration: underline; text-decoration-color: var(--domain); }
+.study-course.is-empty .study-course-name { font-weight: 500; font-style: italic; color: var(--mj-muted); }
+.study-segment {
+  width: var(--span);
+  height: var(--bar-h);
+  display: grid;
+  grid-template-columns: repeat(var(--n, 1), 1fr);
+  gap: 3px;
+}
+.study-segment.is-empty { border: 1.5px dashed color-mix(in srgb, var(--domain) 45%, var(--mj-ground)); }
+.slot { display: block; height: 100%; min-width: 0; }
+.slot.is-published { background: var(--domain); }
+.slot.is-progress {
+  border: 2px dotted var(--domain);
+  background: color-mix(in srgb, var(--domain) 14%, transparent);
+}
+.slot.is-planned { border: 1.5px dashed color-mix(in srgb, var(--domain) 50%, var(--mj-ground)); }
+a.slot.is-published:hover,
+a.slot:focus-visible { outline: 2px solid var(--mj-ink); outline-offset: 2px; }
+.study-lane-note {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--mj-muted);
+  font-variant-numeric: tabular-nums;
+}
+.study-lane-note a { color: var(--domain); }
+.study-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  color: var(--mj-muted);
+}
+.study-legend span { display: inline-flex; align-items: center; gap: 0.45rem; }
+.study-legend .slot { width: 1.1rem; height: 0.85rem; }
+.study-legend .slot.is-published { background: var(--mj-ink); }
+.study-legend .slot.is-progress { border-color: var(--mj-ink); background: transparent; }
+.study-legend .slot.is-planned { border-color: var(--mj-muted); }
+
+/* Captions: the journal's italic serif, label upright */
+.study-map figcaption,
+.lab-plate figcaption,
+.ledger caption {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--mj-muted);
+  max-width: 72ch;
+}
+.study-map figcaption { margin-top: 0.6rem; }
+.study-map figcaption strong,
+.lab-plate figcaption strong,
+.ledger caption strong {
+  font-family: var(--font-label);
+  font-style: normal;
+  color: var(--mj-ink);
+}
+
+/* ---------- Figure 2: Lab plates ---------- */
+.lab-plates {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 2rem;
+  margin: 0;
+}
+.lab-plate { margin: 0; color: var(--mj-ink); text-decoration: none; }
+.lab-plate-frame {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--mj-rule);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--mj-wash);
+}
+.lab-plate-frame img { width: 100%; height: 100%; object-fit: cover; }
+.lab-plate-initial { font-family: "Source Serif 4", Georgia, serif; font-size: 4rem; font-weight: 600; color: var(--mj-muted); }
+a.lab-plate:hover .lab-plate-frame { border-color: var(--mj-ink); }
+a.lab-plate:hover .lab-plate-title { text-decoration: underline; }
+.lab-plate figcaption { margin-top: 0.6rem; }
+.lab-plate-title { color: var(--mj-ink); font-weight: 600; font-style: normal; }
+.lab-plate-desc { display: block; margin-top: 0.2rem; }
+.lab-status { margin-left: 0.4rem; font-family: var(--font-label); font-style: normal; font-size: 0.8rem; padding-left: 0.45rem; color: var(--mj-ink); }
+.lab-status.is-published { border-left: 3px solid var(--mj-ink); }
+.lab-status.is-progress { border-left: 2px dotted var(--mj-ink); }
+.lab-status.is-planned { border-left: 2px dashed var(--mj-muted); }
+
+.lab-plate.is-empty {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(14rem, 22rem) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: end;
+}
+.lab-plate.is-empty figcaption { margin-top: 0; }
+.lab-skeleton {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+}
+.lab-skeleton th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--mj-muted);
+  padding: 0 0.5rem 0.35rem 0;
+  border-bottom: 2px solid var(--mj-rule-strong);
+}
+.lab-skeleton td { height: 1.9rem; padding: 0.45rem 0.6rem 0.45rem 0; border-bottom: 1px solid var(--mj-rule); }
+.lab-skeleton td::before {
+  content: "";
+  display: block;
+  height: 0.5rem;
+  width: 70%;
+  border: 1.5px dashed var(--mj-rule);
+}
+
+/* ---------- Table 1: ledger ---------- */
+.ledger {
+  width: 100%;
+  border-collapse: collapse;
+  caption-side: bottom;
+  font-size: 0.95rem;
+}
+.ledger caption {
+  padding-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--mj-muted);
+  text-align: left;
+}
+.ledger thead th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: left;
+  color: var(--mj-muted);
+  border-bottom: 2px solid var(--mj-rule-strong);
+  padding: 0 1rem 0.4rem 0;
+}
+.ledger td {
+  padding: 0.7rem 1rem 0.7rem 0;
+  border-bottom: 1px solid var(--mj-rule);
+  vertical-align: baseline;
+}
+.ledger-date { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--mj-muted); width: 8.5rem; }
+.ledger-domain { white-space: nowrap; width: 11rem; }
+.domain-mark {
+  display: inline-block;
+  width: 0.9rem;
+  height: 3px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  background: var(--domain);
+}
+.ledger-page a {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--mj-ink);
+  text-decoration: none;
+}
+.ledger-page a:hover { text-decoration: underline; text-decoration-color: var(--domain); }
+.ledger-sub { color: var(--mj-muted); font-size: 0.88rem; margin-left: 0.35rem; }
+.ledger-empty { color: var(--mj-muted); font-style: italic; }
+
+/* ---------- Listings on tab pages: captioned plates, no card chrome ---------- */
+.quarto-listing .card {
+  background: transparent;
+  border: 0;
+  border-top: 2px solid var(--mj-rule-strong);
+  border-radius: 0;
+}
+.quarto-listing .card-body { padding: 0.75rem 0 0; }
+.quarto-listing .card:hover .card-title { text-decoration: underline; }
+.quarto-listing .card-title { font-weight: 600; font-size: 1.1rem; }
+.quarto-listing .card-subtitle,
+.quarto-listing .listing-subtitle { color: var(--mj-muted); }
+
+/* Category pills: legible, quiet (selectors mirror Quarto's so these win) */
+body .quarto-grid-item .listing-categories .listing-category,
+body div.quarto-post .listing-categories .listing-category,
+body .quarto-title .quarto-categories .quarto-category {
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--mj-muted);
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin-right: 0.9rem;
+  opacity: 1;
+}
+
+/* Title-block labels ("Published"): Quarto fades them to 80%, which fails AA */
+#title-block-header.quarto-title-block.default .quarto-title-meta-heading,
+#title-block-header.quarto-title-block.default .block-title {
+  color: var(--mj-muted);
+  opacity: 1;
+  letter-spacing: 0.04em;
+}
+
+.breadcrumb {
+  --bs-breadcrumb-divider-color: var(--mj-muted);
+  --bs-breadcrumb-item-active-color: var(--mj-muted);
+}
+
+/* ---------- Callouts: hairline box, no side stripe ---------- */
+div.callout {
+  border: 1px solid var(--mj-rule) !important;
+  border-left-width: 1px !important;
+  border-radius: 2px;
+  background: transparent;
+  box-shadow: none;
+}
+div.callout > .callout-header {
+  padding: 0.5rem 0.9rem;
+  border-bottom: 1px solid var(--mj-rule);
+  background: var(--mj-wash) !important;
+}
+div.callout > .callout-body-container { padding: 0.7rem 0.9rem 0.6rem; }
+
+/* ---------- Lecture page ---------- */
+.quarto-video { margin: 0.5rem 0 1.25rem; border: 1px solid var(--mj-rule); }
+div.sourceCode { border: 1px solid var(--mj-rule); border-radius: 2px; }
+
+/* ---------- Footer ---------- */
+.nav-footer { border-top: 1px solid var(--mj-rule); }
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 760px) {
+  .home-opening { grid-template-columns: 1fr; align-items: start; }
+  .study-map { --label-w: 0px; --note-w: 0px; --name-w: 4.5rem; }
+  .study-axis, .study-lane { grid-template-columns: minmax(0, 1fr); row-gap: 0.4rem; }
+  .study-axis-title { display: none; }
+  .study-axis-scale { grid-column: 1; }
+  .lab-plate.is-empty { grid-template-columns: 1fr; }
+
+  .ledger-domain { display: none; }
+  .ledger thead th:nth-child(2) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Home runs full-layout; hold its blocks to one readable measure */
+.home main.content > * { max-width: 74rem; margin-left: auto; margin-right: auto; }
+
+/* Pandoc wraps inline template output in <p>; let its children join the flex/grid flow */
+.study-lane-track > p,
+.lab-plates > p,
+.lab-plate > p { display: contents; }
+
+/* Listing cards without an image: drop Quarto's empty placeholder block */
+.quarto-listing .listing-item-img-placeholder { display: none; }
+
+/* Links take ink by default; on a tab's pages, prose links take that domain's ink */
+body[class*="domain-"] main.content p a,
+body[class*="domain-"] main.content li a,
+body[class*="domain-"] .sidebar-item .active { color: var(--domain); }
+body.domain-lab main.content p a { color: var(--mj-ink); }
+
+/* Tab intros */
+.tab-intro { display: block; color: var(--mj-muted); font-size: 1.05rem; max-width: 60ch; }
+
+/* Empty lane: the label sits on the dashed slot it describes */
+.study-segment.is-empty { display: flex; align-items: center; padding: 0 0.6rem; }
+.study-empty-label { font-size: 0.85rem; font-style: italic; color: var(--mj-muted); }
+
+/* Legend samples carry their own ink (no domain on Home) */
+.study-legend .slot.is-progress { border: 2px dotted var(--mj-ink); background: transparent; }
+.study-legend .slot.is-planned { border: 1.5px dashed var(--mj-muted); background: transparent; }
+
+/* One section rhythm on Home: listings add no margin of their own */
+.home .quarto-listing,
+.home div[id="study-map"],
+.home div[id="lab-featured"],
+.home div[id="latest"] { margin-top: 0 !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
+.home section.level2 { margin-top: 3rem; }
+.home section.level2 > h2 { margin-top: 0; }
+.study-segment.is-empty { height: auto; min-height: var(--bar-h); padding: 0.4rem 0.75rem; }
+
+
+/* Ledgers share one column grid wherever they stack */
+.ledger { table-layout: fixed; }
+.ledger .ledger-date, .ledger thead th:first-child { width: 8.5rem; }
+.ledger .ledger-domain, .ledger:not(.ledger-single) thead th:nth-child(2) { width: 11rem; }
+
+/* Tab pages share Home's section rhythm */
+body[class*="domain-"] section.level2 { margin-top: 3rem; }
+body[class*="domain-"] section.level2 > h2 { margin-top: 0; }
+body[class*="domain-"] .quarto-listing { margin-top: 0 !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
+
+/* ---------- Navbar dropdowns: each tab opens a menu ---------- */
+#nav-menu-lab { --domain: var(--ink-lab); }
+#nav-menu-machine-learning { --domain: var(--ink-ml); }
+#nav-menu-math { --domain: var(--ink-math); }
+#nav-menu-data { --domain: var(--ink-data); }
+#nav-menu-system { --domain: var(--ink-system); }
+#nav-menu-lab + .dropdown-menu { --domain: var(--ink-lab); }
+#nav-menu-machine-learning + .dropdown-menu { --domain: var(--ink-ml); }
+#nav-menu-math + .dropdown-menu { --domain: var(--ink-math); }
+#nav-menu-data + .dropdown-menu { --domain: var(--ink-data); }
+#nav-menu-system + .dropdown-menu { --domain: var(--ink-system); }
+
+/* The open tab, and the tab you are currently inside, carry their domain underline */
+.navbar .nav-link.dropdown-toggle.show,
+body.domain-lab #nav-menu-lab,
+body.domain-ml #nav-menu-machine-learning,
+body.domain-math #nav-menu-math,
+body.domain-data #nav-menu-data,
+body.domain-system #nav-menu-system {
+  color: var(--mj-ink) !important;
+  border-bottom-color: var(--domain);
+}
+.navbar .nav-link.dropdown-toggle::after {
+  border-top-width: 0.28em;
+  border-right-width: 0.28em;
+  border-left-width: 0.28em;
+  margin-left: 0.4em;
+  opacity: 0.6;
+}
+
+.navbar .dropdown-menu {
+  font-family: var(--font-label);
+  background: var(--mj-ground);
+  border: 1px solid var(--mj-rule);
+  border-top: 2px solid var(--domain, var(--mj-rule-strong));
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.35rem 0;
+  min-width: 15rem;
+  margin-top: 0.35rem !important;
+}
+.navbar .dropdown-item {
+  color: var(--mj-ink);
+  font-size: 0.95rem;
+  padding: 0.45rem 1rem;
+}
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus-visible {
+  background: var(--mj-wash);
+  color: var(--domain, var(--mj-ink));
+}
+.navbar .dropdown-item.active,
+.navbar .dropdown-item:active {
+  background: transparent;
+  color: var(--domain, var(--mj-ink));
+  font-weight: 600;
+}
+.navbar .dropdown-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--mj-muted);
+  padding: 0.5rem 1rem 0.2rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.navbar .dropdown-divider {
+  border-top-color: var(--mj-rule);
+  margin: 0.35rem 0;
+  opacity: 1;
+}
+
+/* Collapsed (mobile) navbar: menus open inline, no floating box */
+@media (max-width: 991.98px) {
+  .navbar .dropdown-menu {
+    border: 0;
+    border-left: 1px solid var(--mj-rule);
+    margin: 0 0 0.5rem 0.75rem !important;
+    min-width: 0;
+  }
+}
+
+/* ---------- Home opening: who I am, then contact ---------- */
+.home-about h1.home-name {
+  font-size: clamp(2.4rem, 1.6rem + 2.4vw, 3.4rem);
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin: 0;
+  border: 0;
+}
+.home-role {
+  display: block;
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--mj-muted);
+  margin: 0.45rem 0 1.25rem;
+}
+.home-about p { font-size: 1.12rem; line-height: 1.6; max-width: 60ch; margin: 0; }
+.home-about p + p { margin-top: 0.4rem; }
+
+/* ---------- Home: Start here (generated from page headers) ---------- */
+.start-here {
+  border-top: 2px solid var(--mj-rule-strong);
+  padding-top: 0.7rem;
+  margin-top: 0.5rem;
+}
+.start-here-title { font-size: 0.78rem; font-weight: 600; color: var(--mj-muted); margin: 0 0 0.5rem; }
+.start-here ol { list-style: none; margin: 0; padding: 0; }
+.start-here li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--mj-rule);
+}
+.start-here li:last-child { border-bottom: 0; }
+.start-here li a {
+  display: block;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--mj-ink);
+  text-decoration: none;
+}
+.start-here li a:hover { text-decoration: underline; text-decoration-color: var(--domain, var(--mj-ink)); }
+.start-here-meta { display: block; font-size: 0.82rem; color: var(--mj-muted); margin-top: 0.1rem; }
+.start-here li[class*="domain-"]:not(.domain-lab) .start-here-meta::before {
+  content: "";
+  display: inline-block;
+  width: 0.9rem;
+  height: 3px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+  background: var(--domain);
+}
+
+/* ---------- Study map: latest lecture named in the lane note ---------- */
+.study-latest { display: block; margin-top: 0.15rem; }
+.study-latest a { color: var(--mj-ink); font-weight: 600; text-decoration-color: var(--domain); }
+.study-lane-note.is-empty { visibility: hidden; }
+
+/* ---------- Navbar: Math is a plain link for now ---------- */
+.navbar .nav-link[href$="math/index.html"] { --domain: var(--ink-math); }
+body.domain-math .navbar .nav-link[href$="math/index.html"] { color: var(--mj-ink) !important; border-bottom-color: var(--domain); }
+.navbar .nav-link.dropdown-toggle { cursor: pointer; }
+
+/* ---------- Ledgers with extra columns or no date ---------- */
+.ledger-undated .ledger-page { width: auto; }
+.ledger .ledger-field { color: var(--mj-muted); font-size: 0.9rem; }
+.ledger thead th:not(:first-child):not(:nth-child(2)) { width: auto; }
+
+/* ---------- Phones: study map sized for touch ---------- */
+@media (max-width: 760px) {
+  .study-course { grid-template-columns: var(--name-w) minmax(0, 1fr); }
+  .study-course.is-empty { grid-template-columns: minmax(0, 1fr); }
+  .study-course.is-empty .study-course-name { display: none; }
+  .study-segment:not(.is-empty) {
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    grid-auto-rows: 24px;
+    gap: 4px;
+  }
+  .study-segment .slot { min-height: 24px; }
+  .study-lane-note.is-empty { display: none; }
+  .start-here { margin-top: 0; }
+}
+/* Undated ledgers: the page title takes the room, extra fields stay compact */
+.ledger-undated thead th:first-child { width: 45%; }
+.ledger-undated thead th:not(:first-child) { width: auto; }
+
+/* Home: profile links under the bio */
+.home-links { display: block; margin-top: 1rem; font-family: var(--font-label); font-weight: 600; font-size: 0.95rem; }

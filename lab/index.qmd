@@ -1,0 +1,38 @@
+---
+title: "Lab"
+subtitle: "Paper reproductions and GitHub projects"
+kind: index
+toc: false
+listing:
+  - id: papers
+    contents: "papers/**/*.qmd"
+    type: custom
+    template: ../_templates/lab-plates.ejs
+    sort: "date desc"
+    template-params:
+      root: "../"
+      figure: "1"
+      empty: "Paper reproductions, not yet published. Each one will report its metrics in this form, the paper's number beside mine, with a note on what differed and why."
+  - id: projects
+    contents: "projects/**/*.qmd"
+    type: custom
+    template: ../_templates/lab-plates.ejs
+    sort: "date desc"
+    template-params:
+      root: "../"
+      figure: "2"
+      columns: ["Problem", "Approach", "Stack"]
+      empty: "Projects, not yet published. Each one will state the problem, the approach and the stack, with screenshots and a link to the repository."
+---
+
+[Hands-on work: papers re-implemented from scratch, with my results against the reported ones, and projects with their code.]{.tab-intro}
+
+## Paper reproductions {.unnumbered}
+
+::: {#papers}
+:::
+
+## Projects {.unnumbered}
+
+::: {#projects}
+:::

@@ -1,0 +1,51 @@
+/*-- scss:defaults --*/
+
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap");
+
+$font-family-sans-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+$font-family-monospace: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+$headings-font-family: "Source Serif 4", Georgia, serif;
+$headings-font-weight: 600;
+$font-size-root: 18px;
+$line-height-base: 1.6;
+
+$body-bg: #121417;
+$body-color: #e8e7e2;
+$primary: #e8e7e2;
+$secondary: #a9afba;
+$success: #4cc38a;
+$info: #e8e7e2;
+$warning: #e7b05a;
+$danger: #ff7a5c;
+$link-color: #e8e7e2;
+$gray-600: #a9afba;
+$text-muted: #a9afba;
+
+$navbar-bg: #121417;
+$navbar-fg: #e8e7e2;
+$navbar-hl: #e8e7e2;
+$footer-bg: #121417;
+$footer-fg: #a9afba;
+
+$border-radius: 2px;
+$border-color: #2c3038;
+$code-bg: #1b1e23;
+$code-color: #ffb199;
+
+/*-- scss:rules --*/
+
+:root {
+  --mj-ground: #121417;
+  --mj-ink: #e8e7e2;
+  --mj-muted: #a9afba;
+  --mj-rule: #2c3038;
+  --mj-rule-strong: #e8e7e2;
+  --mj-wash: #1b1e23;
+  --ink-ml: #ff7a5c;
+  --ink-math: #8aaeff;
+  --ink-data: #4cc38a;
+  --ink-system: #b59aff;
+  --ink-lab: #e8e7e2;
+}
+
+.katex { color: inherit; }

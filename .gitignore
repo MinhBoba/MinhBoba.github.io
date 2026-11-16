@@ -1,0 +1,25 @@
+# Quarto output (CI renders and publishes to gh-pages)
+/_site/
+/docs/
+/.quarto/
+**/*.quarto_ipynb
+
+# Python
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+
+# Local Claude Code settings (machine-specific hooks)
+.claude/settings.local.json
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Build plan stays local (not for the public repo)
+MJ2706.pdf
+
+# impeccable: platform binary (reinstall with `npx impeccable install`) and runtime caches
+.claude/skills/impeccable/scripts/bin/
+.impeccable/hook.cache.json
+.impeccable/decision/
