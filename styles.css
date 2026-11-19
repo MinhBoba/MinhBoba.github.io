@@ -615,3 +615,82 @@ body.domain-math .navbar .nav-link[href$="math/index.html"] { color: var(--mj-in
 
 /* Home: profile links under the bio */
 .home-links { display: block; margin-top: 1rem; font-family: var(--font-label); font-weight: 600; font-size: 0.95rem; }
+
+/* ---------- Owner source editor (_includes/owner-edit.html) ----------
+   Only rendered in the owner's browser; visitors never see these. */
+.mj-edit-toggle {
+  display: inline-block;
+  margin: 0.25rem 0 0.5rem;
+  padding: 0.1rem 0.55rem;
+  font-family: var(--bs-font-monospace, monospace);
+  font-size: 0.85rem;
+  color: var(--domain, var(--mj-ink));
+  background: transparent;
+  border: 1px solid var(--domain, var(--mj-rule-strong));
+  border-radius: 2px;
+  cursor: pointer;
+}
+.mj-edit-toggle:hover,
+.mj-edit-toggle[aria-pressed="true"] { background: var(--domain, var(--mj-ink)); color: var(--mj-ground); }
+body.mj-editing { overflow: hidden; }
+.mj-edit-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  background: var(--mj-ground);
+  color: var(--mj-ink);
+}
+.mj-edit-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.6rem 1rem;
+  border-bottom: 2px solid var(--domain, var(--mj-rule-strong));
+  font-family: var(--font-label);
+  font-size: 0.9rem;
+}
+.mj-edit-path { font-family: var(--bs-font-monospace, monospace); font-weight: 600; }
+.mj-edit-status { flex: 1; color: var(--mj-muted); min-width: 10rem; }
+.mj-edit-status.is-error { color: var(--ink-ml); }
+.mj-edit-bar button {
+  padding: 0.25rem 0.8rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--mj-ink);
+  background: transparent;
+  border: 1px solid var(--mj-rule-strong);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.mj-edit-bar .mj-edit-save { background: var(--domain, var(--mj-ink)); border-color: var(--domain, var(--mj-ink)); color: var(--mj-ground); }
+.mj-edit-bar button:disabled { opacity: 0.45; cursor: default; }
+.mj-edit-bar .mj-edit-signout { border-color: transparent; color: var(--mj-muted); font-weight: 400; }
+.mj-edit-body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.mj-edit-source {
+  resize: none;
+  padding: 1rem;
+  border: 0;
+  border-right: 1px solid var(--mj-rule);
+  background: var(--mj-wash);
+  color: var(--mj-ink);
+  font-family: var(--bs-font-monospace, monospace);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  tab-size: 2;
+}
+.mj-edit-source:focus { outline: none; }
+.mj-edit-preview { overflow: auto; padding: 1rem 1.5rem; }
+.mj-edit-shortcode {
+  padding: 0.5rem 0.75rem;
+  border: 1px dashed var(--mj-rule);
+  color: var(--mj-muted);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+}
+@media (max-width: 767.98px) {
+  .mj-edit-body { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+  .mj-edit-source { border-right: 0; border-bottom: 1px solid var(--mj-rule); }
+}

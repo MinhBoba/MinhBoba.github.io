@@ -101,7 +101,9 @@ format:
       dark: [cosmo, theme/dark.scss]
     css: styles.css
     respect-user-color-scheme: true
-    include-after-body: _includes/nav-a11y.html
+    include-after-body:
+      - _includes/nav-a11y.html
+      - _includes/owner-edit.html
     toc: true
     toc-location: right
     toc-depth: 3
