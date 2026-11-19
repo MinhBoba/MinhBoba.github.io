@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://minhboba.github.io/math/index.html</loc>
-    <lastmod>2026-11-19T09:35:37.912Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minhboba.github.io/DESIGN.html</loc>
-    <lastmod>2026-11-19T09:35:37.911Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minhboba.github.io/PRODUCT.html</loc>
-    <lastmod>2026-11-19T09:35:37.911Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minhboba.github.io/lab/index.html</loc>
-    <lastmod>2026-11-19T09:35:37.912Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minhboba.github.io/ml/cs229/lecture02-linear-regression.html</loc>
-    <lastmod>2026-11-19T09:35:37.912Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minhboba.github.io/data/index.html</loc>
-    <lastmod>2026-11-19T09:35:37.912Z</lastmod>
+    <loc>https://minhboba.github.io/ml/index.html</loc>
+    <lastmod>2026-11-19T09:42:33.374Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/cs229/index.html</loc>
-    <lastmod>2026-11-19T09:35:37.912Z</lastmod>
+    <lastmod>2026-11-19T09:42:33.374Z</lastmod>
   </url>
   <url>
-    <loc>https://minhboba.github.io/ml/index.html</loc>
-    <lastmod>2026-11-19T09:35:37.912Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minhboba.github.io/index.html</loc>
-    <lastmod>2026-11-19T09:35:37.912Z</lastmod>
+    <loc>https://minhboba.github.io/DESIGN.html</loc>
+    <lastmod>2026-11-19T09:42:33.373Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/system/index.html</loc>
-    <lastmod>2026-11-19T09:35:37.912Z</lastmod>
+    <lastmod>2026-11-19T09:42:33.374Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/data/index.html</loc>
+    <lastmod>2026-11-19T09:42:33.374Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/math/index.html</loc>
+    <lastmod>2026-11-19T09:42:33.374Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/lab/index.html</loc>
+    <lastmod>2026-11-19T09:42:33.374Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/index.html</loc>
+    <lastmod>2026-11-19T09:42:33.374Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/PRODUCT.html</loc>
+    <lastmod>2026-11-19T09:42:33.373Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/ml/cs229/lecture02-linear-regression.html</loc>
+    <lastmod>2026-11-19T09:42:33.374Z</lastmod>
   </url>
 </urlset>

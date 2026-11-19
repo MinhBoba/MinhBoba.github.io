@@ -51,9 +51,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-91e9b039683610e0c3b71a7e5bce793a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0719612456cf30a1f5d518b633a3d8db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-93f839647bc3a930b1a01e5a6aba629a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-0719612456cf30a1f5d518b633a3d8db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5f00cbbccbbc1b2c1b36ce443d19004e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a093d049744e63d788f0611a93f2c62f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-5f00cbbccbbc1b2c1b36ce443d19004e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -659,22 +659,26 @@ document.querySelectorAll(".navbar .nav-link.dropdown-toggle").forEach(function 
 });
 </script>
 <script>
-// Owner-only source editor for study pages.
-// The button appears only in a browser that holds a GitHub token with push
-// access to this repo. Unlock once by opening any study page with #owner in
-// the URL. Saving commits the .qmd to main; CI re-renders the site.
+// Source panel for study pages.
+// Everyone gets a </> button that shows the page's Markdown/LaTeX source
+// read-only. The owner signs in once with a GitHub token that has push access
+// to this repo; then the panel becomes an editor and Save commits the .qmd to
+// main, after which CI re-renders the site. GitHub enforces who can write.
 (function () {
   "use strict";
 
   var REPO = "MinhBoba/MinhBoba.github.io";
   var BRANCH = "main";
   var TOKEN_KEY = "mj-owner-token";
-  var API = "https://api.github.com/repos/" + REPO + "/contents/";
+  var API_REPO = "https://api.github.com/repos/" + REPO;
+  var API_FILE = API_REPO + "/contents/";
+  var RAW_FILE = "https://raw.githubusercontent.com/" + REPO + "/" + BRANCH + "/";
   var MARKED_SRC = "https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js";
   var PREVIEW_DELAY_MS = 250;
 
   if (!/\bdomain-/.test(document.body.className)) return;
 
+  // ---- Storage and paths -------------------------------------------------
   function readToken() {
     try { return localStorage.getItem(TOKEN_KEY); } catch (e) { return null; }
   }
@@ -682,7 +686,7 @@ document.querySelectorAll(".navbar .nav-link.dropdown-toggle").forEach(function 
     try {
       if (value) localStorage.setItem(TOKEN_KEY, value);
       else localStorage.removeItem(TOKEN_KEY);
-    } catch (e) { /* storage blocked: owner mode lasts this page view only */ }
+    } catch (e) { /* storage blocked: sign-in lasts this page view only */ }
   }
 
   function sourcePath() {
@@ -691,14 +695,14 @@ document.querySelectorAll(".navbar .nav-link.dropdown-toggle").forEach(function 
     return path.replace(/\.html$/, ".qmd");
   }
 
-  function api(path, options) {
-    var token = readToken();
-    var opts = Object.assign({ headers: {} }, options);
+  // ---- GitHub ------------------------------------------------------------
+  function api(url, token, options) {
+    var opts = Object.assign({}, options);
     opts.headers = Object.assign({
       Accept: "application/vnd.github+json",
       Authorization: "Bearer " + token
     }, opts.headers);
-    return fetch(path, opts).then(function (res) {
+    return fetch(url, opts).then(function (res) {
       return res.json().catch(function () { return {}; }).then(function (body) {
         if (!res.ok) {
           var err = new Error(body.message || ("GitHub returned " + res.status));
@@ -712,63 +716,41 @@ document.querySelectorAll(".navbar .nav-link.dropdown-toggle").forEach(function 
 
   function decodeBase64(b64) {
     var bin = atob(b64.replace(/\n/g, ""));
-    var bytes = Uint8Array.from(bin, function (c) { return c.charCodeAt(0); });
-    return new TextDecoder().decode(bytes);
+    return new TextDecoder().decode(Uint8Array.from(bin, function (c) { return c.charCodeAt(0); }));
   }
   function encodeBase64(text) {
-    var bytes = new TextEncoder().encode(text);
     var bin = "";
-    bytes.forEach(function (b) { bin += String.fromCharCode(b); });
+    new TextEncoder().encode(text).forEach(function (b) { bin += String.fromCharCode(b); });
     return btoa(bin);
   }
 
-  // ---- Unlock ----------------------------------------------------------
-  function unlock() {
-    var token = window.prompt(
-      "Owner mode: paste a fine-grained GitHub token with Contents read/write on " + REPO + ".\n" +
-      "It is stored only in this browser."
-    );
-    if (!token) return;
-    writeToken(token.trim());
-    api("https://api.github.com/repos/" + REPO).then(function (repo) {
-      if (!repo.permissions || !repo.permissions.push) throw new Error("Token has no push access.");
-      history.replaceState(null, "", location.pathname + location.search);
-      addButton();
-    }).catch(function (err) {
-      writeToken(null);
-      window.alert("Owner mode not enabled: " + err.message);
+  // Public read for visitors: no token, no API rate limit.
+  function loadPublic(path) {
+    return fetch(RAW_FILE + path, { cache: "no-store" }).then(function (res) {
+      if (!res.ok) throw new Error("source not found (" + res.status + ")");
+      return res.text().then(function (text) { return { text: text, sha: null }; });
+    });
+  }
+  // Owner read: also returns the blob sha needed to save.
+  function loadOwned(path, token) {
+    return api(API_FILE + path + "?ref=" + BRANCH, token).then(function (file) {
+      return { text: decodeBase64(file.content), sha: file.sha };
     });
   }
 
-  // ---- Button ----------------------------------------------------------
-  function addButton() {
-    if (document.querySelector(".mj-edit-toggle")) return;
-    var title = document.querySelector("#title-block-header h1.title") ||
-                document.querySelector("main h1");
-    if (!title) return;
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "mj-edit-toggle";
-    btn.setAttribute("aria-pressed", "false");
-    btn.setAttribute("aria-label", "Edit page source");
-    btn.title = "Edit source (owner only)";
-    btn.textContent = "</>";
-    btn.addEventListener("click", openEditor);
-    title.insertAdjacentElement("afterend", btn);
-  }
-
-  // ---- Preview ---------------------------------------------------------
+  // ---- Preview -----------------------------------------------------------
   var markedReady = null;
   function loadMarked() {
     if (window.marked) return Promise.resolve();
-    if (markedReady) return markedReady;
-    markedReady = new Promise(function (resolve, reject) {
-      var s = document.createElement("script");
-      s.src = MARKED_SRC;
-      s.onload = resolve;
-      s.onerror = function () { reject(new Error("Could not load the Markdown previewer.")); };
-      document.head.appendChild(s);
-    });
+    if (!markedReady) {
+      markedReady = new Promise(function (resolve, reject) {
+        var s = document.createElement("script");
+        s.src = MARKED_SRC;
+        s.onload = resolve;
+        s.onerror = function () { markedReady = null; reject(new Error("could not load the previewer")); };
+        document.head.appendChild(s);
+      });
+    }
     return markedReady;
   }
 
@@ -777,78 +759,151 @@ document.querySelectorAll(".navbar .nav-link.dropdown-toggle").forEach(function 
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
     });
   }
-
   function renderMath(tex, display) {
     if (!window.katex) return escapeHtml(tex);
     return window.katex.renderToString(tex, { displayMode: display, throwOnError: false });
   }
-
   function renderPreview(source) {
-    var math = [];
-    function stash(html) { math.push(html); return "@@MJMATH" + (math.length - 1) + "@@"; }
-
+    var stash = [];
+    function hold(html) { stash.push(html); return "@@MJMATH" + (stash.length - 1) + "@@"; }
     var text = source
       .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "")
       .replace(/\{\{<\s*(\w+)[^>]*>\}\}/g, function (_, name) {
-        return stash('<div class="mj-edit-shortcode">' + escapeHtml(name) + " shortcode</div>");
+        return hold('<div class="mj-edit-shortcode">' + escapeHtml(name) + " shortcode</div>");
       })
       .replace(/^:::.*$/gm, "")
-      .replace(/\$\$([\s\S]+?)\$\$/g, function (_, tex) { return "\n\n" + stash(renderMath(tex, true)) + "\n\n"; })
+      .replace(/\$\$([\s\S]+?)\$\$/g, function (_, tex) { return "\n\n" + hold(renderMath(tex, true)) + "\n\n"; })
       .replace(/(^|[^\\$])\$([^\s$](?:[^$\n]*[^\s$])?)\$/g, function (_, pre, tex) {
-        return pre + stash(renderMath(tex, false));
+        return pre + hold(renderMath(tex, false));
       });
-
-    var html = window.marked.parse(text);
-    return html.replace(/@@MJMATH(\d+)@@/g, function (_, i) { return math[Number(i)]; });
+    return window.marked.parse(text).replace(/@@MJMATH(\d+)@@/g, function (_, i) { return stash[Number(i)]; });
   }
 
-  // ---- Editor ----------------------------------------------------------
-  function openEditor() {
-    var path = sourcePath();
-    var toggle = document.querySelector(".mj-edit-toggle");
-    var sha = null;
-    var original = "";
-
+  // ---- Panel -------------------------------------------------------------
+  function buildPanel(path) {
     var panel = document.createElement("div");
     panel.className = "mj-edit-panel";
     panel.setAttribute("role", "dialog");
     panel.setAttribute("aria-modal", "true");
-    panel.setAttribute("aria-label", "Edit " + path);
+    panel.setAttribute("aria-label", "Source of " + path);
     panel.innerHTML =
       '<div class="mj-edit-bar">' +
         '<span class="mj-edit-path"></span>' +
         '<span class="mj-edit-status" role="status"></span>' +
+        '<button type="button" class="mj-edit-signin">Sign in to edit</button>' +
         '<button type="button" class="mj-edit-save" disabled>Save</button>' +
         '<button type="button" class="mj-edit-close">Close</button>' +
         '<button type="button" class="mj-edit-signout">Sign out</button>' +
       "</div>" +
       '<div class="mj-edit-body">' +
-        '<textarea class="mj-edit-source" spellcheck="false" aria-label="Markdown and LaTeX source" disabled>Loading…</textarea>' +
+        '<textarea class="mj-edit-source" spellcheck="false" readonly aria-label="Markdown and LaTeX source">Loading…</textarea>' +
         '<div class="mj-edit-preview" aria-label="Preview"></div>' +
       "</div>";
     panel.querySelector(".mj-edit-path").textContent = path;
+    return panel;
+  }
+
+  function openPanel() {
+    var path = sourcePath();
+    var toggle = document.querySelector(".mj-edit-toggle");
+    var panel = buildPanel(path);
+    var el = {
+      source: panel.querySelector(".mj-edit-source"),
+      preview: panel.querySelector(".mj-edit-preview"),
+      status: panel.querySelector(".mj-edit-status"),
+      save: panel.querySelector(".mj-edit-save"),
+      signin: panel.querySelector(".mj-edit-signin"),
+      signout: panel.querySelector(".mj-edit-signout")
+    };
+    var state = { sha: null, original: "", timer: null };
+
     document.body.appendChild(panel);
     document.body.classList.add("mj-editing");
     if (toggle) toggle.setAttribute("aria-pressed", "true");
 
-    var source = panel.querySelector(".mj-edit-source");
-    var preview = panel.querySelector(".mj-edit-preview");
-    var status = panel.querySelector(".mj-edit-status");
-    var saveBtn = panel.querySelector(".mj-edit-save");
-    var timer = null;
-
     function setStatus(msg, isError) {
-      status.textContent = msg;
-      status.classList.toggle("is-error", !!isError);
+      el.status.textContent = msg;
+      el.status.classList.toggle("is-error", !!isError);
     }
-    function isDirty() { return source.value !== original; }
+    function isOwner() { return state.sha !== null; }
+    function isDirty() { return isOwner() && el.source.value !== state.original; }
+    function setMode(owner) {
+      panel.classList.toggle("is-owner", owner);
+      el.source.readOnly = !owner;
+      el.signin.hidden = owner;
+      el.save.hidden = !owner;
+      el.signout.hidden = !owner;
+    }
     function refresh() {
-      saveBtn.disabled = !isDirty();
-      clearTimeout(timer);
-      timer = setTimeout(function () {
-        try { preview.innerHTML = renderPreview(source.value); }
+      el.save.disabled = !isDirty();
+      if (!isOwner()) return;
+      clearTimeout(state.timer);
+      state.timer = setTimeout(function () {
+        try { el.preview.innerHTML = renderPreview(el.source.value); }
         catch (e) { setStatus("Preview error: " + e.message, true); }
       }, PREVIEW_DELAY_MS);
+    }
+    function show(file, owner) {
+      state.sha = owner ? file.sha : null;
+      state.original = file.text;
+      el.source.value = file.text;
+      setMode(owner);
+      setStatus(owner ? "Editing" : "Read-only");
+      refresh();
+    }
+
+    function loadAsOwner(token) {
+      setStatus("Loading…");
+      return Promise.all([loadOwned(path, token), loadMarked()]).then(function (r) {
+        show(r[0], true);
+        el.source.focus();
+      });
+    }
+    function loadAsVisitor() {
+      return loadPublic(path).then(function (file) { show(file, false); });
+    }
+
+    function signIn() {
+      var token = window.prompt(
+        "Paste a fine-grained GitHub token with Contents: Read and write on " + REPO +
+        ".\nIt is stored only in this browser."
+      );
+      if (!token) return;
+      token = token.trim();
+      setStatus("Checking token…");
+      api(API_REPO, token).then(function (repo) {
+        if (repo.permissions && repo.permissions.push === false) {
+          throw new Error("this token cannot write to " + REPO);
+        }
+        writeToken(token);
+        return loadAsOwner(token);
+      }).catch(function (err) {
+        setStatus("Sign-in failed: " + err.message, true);
+      });
+    }
+
+    function save() {
+      if (!isDirty()) return;
+      el.save.disabled = true;
+      setStatus("Saving…");
+      api(API_FILE + path, readToken(), {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: "docs: edit " + path,
+          content: encodeBase64(el.source.value),
+          sha: state.sha,
+          branch: BRANCH
+        })
+      }).then(function (res) {
+        state.sha = res.content.sha;
+        state.original = el.source.value;
+        setStatus("Committed " + res.commit.sha.slice(0, 7) + ". The site rebuilds in about 2 minutes.");
+      }).catch(function (err) {
+        var hint = err.status === 409 ? " The file changed on GitHub; close and reopen to load it." : "";
+        setStatus("Save failed: " + err.message + hint, true);
+        el.save.disabled = !isDirty();
+      });
     }
 
     function close() {
@@ -859,68 +914,57 @@ document.querySelectorAll(".navbar .nav-link.dropdown-toggle").forEach(function 
       if (toggle) { toggle.setAttribute("aria-pressed", "false"); toggle.focus(); }
     }
 
-    function save() {
-      if (!isDirty() || !sha) return;
-      saveBtn.disabled = true;
-      setStatus("Saving…");
-      api(API + path, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          message: "docs: edit " + path,
-          content: encodeBase64(source.value),
-          sha: sha,
-          branch: BRANCH
-        })
-      }).then(function (res) {
-        sha = res.content.sha;
-        original = source.value;
-        setStatus("Committed " + res.commit.sha.slice(0, 7) + ". The site rebuilds in about 2 minutes.");
-      }).catch(function (err) {
-        var hint = err.status === 409 ? " The file changed on GitHub; close and reopen to load it." : "";
-        setStatus("Save failed: " + err.message + hint, true);
-        saveBtn.disabled = !isDirty();
-      });
-    }
-
     function onKey(e) {
       if (e.key === "Escape") { e.preventDefault(); close(); }
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "s") { e.preventDefault(); save(); }
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "s" && isOwner()) { e.preventDefault(); save(); }
     }
 
     document.addEventListener("keydown", onKey);
-    source.addEventListener("input", refresh);
-    saveBtn.addEventListener("click", save);
+    el.source.addEventListener("input", refresh);
+    el.save.addEventListener("click", save);
+    el.signin.addEventListener("click", signIn);
     panel.querySelector(".mj-edit-close").addEventListener("click", close);
-    panel.querySelector(".mj-edit-signout").addEventListener("click", function () {
+    el.signout.addEventListener("click", function () {
       if (isDirty() && !window.confirm("Discard unsaved changes and sign out?")) return;
-      original = source.value;
       writeToken(null);
-      close();
-      if (toggle) toggle.remove();
+      setStatus("Signed out");
+      loadAsVisitor().catch(function (err) { setStatus("Could not load source: " + err.message, true); });
     });
 
-    Promise.all([api(API + path + "?ref=" + BRANCH), loadMarked()]).then(function (results) {
-      var file = results[0];
-      sha = file.sha;
-      original = decodeBase64(file.content);
-      source.value = original;
-      source.disabled = false;
-      source.focus();
-      refresh();
-    }).catch(function (err) {
-      source.value = "";
+    setMode(false);
+    var token = readToken();
+    var first = token
+      ? loadAsOwner(token).catch(function (err) {
+          if (err.status === 401) writeToken(null);
+          return loadAsVisitor().then(function () {
+            setStatus("Signed out (" + err.message + "). Read-only", true);
+          });
+        })
+      : loadAsVisitor();
+    first.catch(function (err) {
+      el.source.value = "";
       setStatus("Could not load " + path + ": " + err.message, true);
     });
   }
 
-  // Adding #owner to an open page only changes the hash (no reload), so
-  // listen for that as well as checking on load.
-  window.addEventListener("hashchange", function () {
-    if (location.hash === "#owner") unlock();
-  });
-  if (location.hash === "#owner") unlock();
-  else if (readToken()) addButton();
+  // ---- Button ------------------------------------------------------------
+  function addButton() {
+    var title = document.querySelector("#title-block-header h1.title") ||
+                document.querySelector("main h1");
+    if (!title || document.querySelector(".mj-edit-toggle")) return;
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "mj-edit-toggle";
+    btn.setAttribute("aria-pressed", "false");
+    btn.setAttribute("aria-label", "View page source");
+    btn.title = "View source";
+    btn.textContent = "</>";
+    btn.addEventListener("click", openPanel);
+    title.insertAdjacentElement("afterend", btn);
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addButton);
+  else addButton();
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
