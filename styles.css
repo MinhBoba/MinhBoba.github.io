@@ -694,3 +694,7 @@ body.mj-editing { overflow: hidden; }
   .mj-edit-body { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
   .mj-edit-source { border-right: 0; border-bottom: 1px solid var(--mj-rule); }
 }
+.mj-edit-panel:not(.is-owner) .mj-edit-body { grid-template-columns: 1fr; grid-template-rows: 1fr; }
+.mj-edit-panel:not(.is-owner) .mj-edit-preview { display: none; }
+.mj-edit-panel:not(.is-owner) .mj-edit-source { border: 0; }
+.mj-edit-bar button[hidden] { display: none; }
