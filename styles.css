@@ -632,16 +632,23 @@ body.domain-math .navbar .nav-link[href$="math/index.html"] { color: var(--mj-in
 }
 .mj-edit-toggle:hover,
 .mj-edit-toggle[aria-pressed="true"] { background: var(--domain, var(--mj-ink)); color: var(--mj-ground); }
-body.mj-editing { overflow: hidden; }
+/* A drawer on the right, not a full-page cover: the page stays visible and
+   scrollable beside it. Read-only source is narrow; the owner's editor gets
+   room for source + preview. Phones get the full width. */
 .mj-edit-panel {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   z-index: 2000;
+  width: min(42rem, 100vw);
   display: flex;
   flex-direction: column;
   background: var(--mj-ground);
   color: var(--mj-ink);
+  border-left: 2px solid var(--domain, var(--mj-rule-strong));
 }
+.mj-edit-panel.is-owner { width: min(72rem, 100vw); }
 .mj-edit-bar {
   display: flex;
   flex-wrap: wrap;
@@ -790,7 +797,10 @@ body.mj-editing { overflow: hidden; }
 }
 .mj-notation-body td.mj-tex { width: 45%; padding-right: 0.75rem; white-space: nowrap; font-size: 1rem; }
 .mj-notation-body td:not(.mj-tex) { color: var(--mj-muted); }
-/* Quarto gives <aside> a z-index of 998; out-rank it so the panel sits above the navbar. */
+/* Quarto's `aside:not(.footnotes):not(.sidebar)` sets z-index 998, which
+   outranks a single class and drops the panel (and its close button) under
+   the navbar. The id selector wins. */
+#mj-notation { z-index: 2100; }
 /* Out of the way of the source editor and the open mobile menu */
 body.mj-editing .mj-notation-tab,
 body.mj-editing .mj-notation,

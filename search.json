@@ -1,49 +1,5 @@
 [
   {
-    "objectID": "lab/index.html",
-    "href": "lab/index.html",
-    "title": "Lab",
-    "section": "",
-    "text": "Hands-on work: papers re-implemented from scratch, with my results against the reported ones, and projects with their code.",
-    "crumbs": [
-      "Lab"
-    ]
-  },
-  {
-    "objectID": "lab/index.html#paper-reproductions",
-    "href": "lab/index.html#paper-reproductions",
-    "title": "Lab",
-    "section": "Paper reproductions",
-    "text": "Paper reproductions\n\n\n\n\n\n\n\nMetric\n\n\nPaper\n\n\nMine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1. Paper reproductions, not yet published. Each one will report its metrics in this form, the paper’s number beside mine, with a note on what differed and why.\n\n\n\nNo matching items",
-    "crumbs": [
-      "Lab"
-    ]
-  },
-  {
-    "objectID": "lab/index.html#projects",
-    "href": "lab/index.html#projects",
-    "title": "Lab",
-    "section": "Projects",
-    "text": "Projects\n\n\n\n\n\n\n\nProblem\n\n\nApproach\n\n\nStack\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2. Projects, not yet published. Each one will state the problem, the approach and the stack, with screenshots and a link to the repository.\n\n\n\nNo matching items",
-    "crumbs": [
-      "Lab"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "mdrat",
-    "section": "",
-    "text": "ML engineer and data scientist\nI work with data and machine learning. This site holds the hands-on work, paper reproductions and projects in the Lab, and structured notes from the courses I study: each lecture page puts the video, my notes, the maths and the code together, with its sources at the end.\nGitHub\n\n\n\n\n\nStart here\n\n\n\nLinear Regression and Gradient DescentLatest lecture, 15 Nov 2026\n\n\nStanford CS229: Machine LearningCourse, 1 of 20 lectures written up\n\n\nThe LabPaper reproductions and projects\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#from-the-lab",
-    "href": "index.html#from-the-lab",
-    "title": "mdrat",
-    "section": "From the Lab",
-    "text": "From the Lab\n\n\n\n\n\n\n\nMetric\n\n\nPaper\n\n\nMine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2. Lab, not yet published. Each paper reproduction will report its metrics in this form, the paper’s number beside mine, with projects alongside. Open the Lab\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "system/index.html",
     "href": "system/index.html",
     "title": "System",
@@ -82,69 +38,6 @@
     "crumbs": [
       "System"
     ]
-  },
-  {
-    "objectID": "DESIGN.html",
-    "href": "DESIGN.html",
-    "title": "Design System: mdrat",
-    "section": "",
-    "text": "Creative North Star: “The Figure Journal”\nEvery page is a page from a research article. The home page opens with who the owner is and a Start-here list, then Figure 1, a study map read like a plotted figure, and Figure 2, the Lab’s captioned plates; tab pages list their contents as ruled ledgers (Table 1, 2, …). Reading comes first: a serif body at a generous 18px, a grotesk only for labels and chrome, a mono only for code. The page is near-white paper (dark: near-black slate) with ink type and hairline rules.\nColour is semantic, never decorative. Four domain inks name the four study domains, Machine Learning, Math, Data and System, and appear wherever that domain is meant: lane labels, slots, the rule under a tab’s title, the domain mark in a ledger row, prose links inside that tab. The Lab has no hue of its own; it is set in ink. Everything else is ink, muted grey and rule.\nDepth comes from rules and overlap. Heavy 2px ink rules open a figure or table; 1px hairlines separate its rows. Nothing floats: no shadows, no gradients, no card chrome. Status is drawn, not coloured: a solid fill is written up, a dotted outline is in progress, a dashed outline is planned, and an absent course still keeps its dashed slot.\nKey Characteristics: - Serif reading voice (Source Serif 4) for body, headings and captions; Hanken Grotesk for labels and chrome; JetBrains Mono for code only. - Four semantic domain inks, each with a light and a dark value; Lab in ink. - Numbered Figure and Table captions in italic serif with an upright grotesk label. - Status by line form (solid, dotted, dashed), never by hue. - Flat paper: 2px ink rules open blocks, 1px hairlines divide rows, no shadows or gradients. - A short domain-ink rule under every page title.\n\n\n\nInk on paper, with four semantic inks that each mean exactly one domain.\n\n\n\nInk (#15171c; dark #e8e7e2): body text, headings, default link colour, the Lab’s domain ink, heavy opening rules, and the navbar’s active underline outside a domain.\n\n\n\n\n\nVermilion, Machine Learning (#c8402a; dark #ff7a5c): everything that belongs to the ML domain.\nCobalt, Math (#2f5bd3; dark #8aaeff): everything that belongs to Math; also the selection tint on pages without a domain.\nField Green, Data (#17784e; dark #4cc38a): everything that belongs to Data.\nViolet, System (#7a4cc2; dark #b59aff): everything that belongs to System.\n\n\n\n\n\nPaper (#fdfdfc; dark #121417): page, navbar and footer ground.\nGraphite (#545c6a; dark #a9afba): captions, ledger dates, table headers, lane notes, ledes, legend samples.\nHairline (#dcdcd6; dark #2c3038): 1px row rules, navbar and footer rules, plate frames, callout borders.\nWash (#f3f3ef; dark #1b1e23): code background, empty plate frames, callout headers. The only tinted surface.\nCode Rust (#8a2d1c; dark #ffb199): inline code text.\n\n\n\n\nThe One Ink Per Domain Rule. A domain ink appears only where that domain is meant, set through the domain-* class (lane, ledger row, tab page body). It never decorates a neutral element, and two domains never share an ink.\nThe Status Is Line Form Rule. Written up, in progress and planned are told apart by solid fill, dotted 2px outline and dashed 1.5px outline. The legend draws its samples in ink and graphite so it keys form, not colour.\n\n\n\n\nDisplay Font: Source Serif 4 (with Georgia, serif) Body Font: Source Serif 4 (with Georgia, Times New Roman, serif) Label/Chrome Font: Hanken Grotesk (with system-ui, Segoe UI, sans-serif) Code Font: JetBrains Mono (with ui-monospace, Cascadia Code, Consolas, monospace)\nCharacter: A journal serif carries every sentence a reader studies; a plain grotesk does the cataloguing work of labels, axes, headers and navigation, the way a journal sets its figure furniture.\n\n\n\nDisplay (600, clamp(2.4rem, 1.6rem + 2.4vw, 3.4rem), 1.05, -0.025em): the owner’s name on Home only. The role sits under it in grotesk 500 at 1.05rem in graphite.\nHeadline (600, 1.5rem on Home; Bootstrap scale elsewhere, -0.012em, balanced wrap): section heads, each sitting under a 1px hairline on Home.\nTitle (600, 1.05–1.1rem): ledger page links and listing titles, in serif.\nBody (400, 18px root, 1.6): all reading text. Ledes run 1.12rem at 1.55 in graphite, held to 58–60ch.\nCaption (italic 400, 0.9–0.95rem, 1.5): figure and table captions in graphite, held to 72ch.\nLabel (Hanken Grotesk 600, 0.8rem): table headers, axis text (0.75rem), legend (0.82rem), lab status (0.8rem). Lane labels step up to 700 at 1.02rem in their domain ink.\n\n\n\n\nThe Numbered Caption Rule. Every figure and table carries a caption that opens with an upright grotesk label (“Figure 1.”, “Figure 2a.”, “Table 1.”) in ink, followed by italic serif prose in graphite. Captions sit below the figure.\nThe Mono Is For Code Rule. JetBrains Mono appears only in code blocks and inline code; numbers in tables use the grotesk with tabular figures instead.\n\n\n\n\nHome runs full-width with every block held to a 74rem measure. The opening is a two-column grid: the About block (name, role, bio at 1.12rem held to 60ch) at minmax(0, 1fr) and the Start-here list at minmax(14rem, 18rem), gap clamp(1.5rem, 4vw, 4rem). The Start-here list opens with a 2px ink rule.\nThe study map is a three-column grid per lane: label (10.5rem), track (1fr), note (11.5rem), with a 1.25rem gutter; inside the track each course is a name column (5.5rem) and a segment drawn to its real lecture count against a shared axis. Lab plates use an auto-fill grid of minmax(16rem, 1fr) with a 2rem gap; the empty state spans the row. Ledgers are fixed-layout tables with date (8.5rem) and domain (11rem) columns so stacked ledgers align; undated ledgers give the page column 45% and extra field columns share the rest.\nSections on Home and tab pages share one rhythm: 3rem between level-2 sections, with listings adding no margin of their own.\nBelow 760px the opening and the empty Lab plate collapse to one column; the study map stacks label, course and note, wraps each course into rows of 10 slots at least 24px tall (touch target), runs empty bars full width and hides their note; ledgers drop the domain column (and its ink mark), keeping date and page.\n\n\n\nThe system is flat. There are no shadows and no gradients anywhere; Bootstrap’s navbar and callout shadows are explicitly removed. Hierarchy and grouping come from rules: a 2px ink rule opens each figure, table header and the Start-here list; 1px hairlines separate rows, the navbar, the footer and section heads. The one tonal surface is Wash, used for code, empty plate frames and callout headers. In-progress slots use a 14% mix of the domain ink as a faint fill under the dotted outline.\n\n\nThe Paper Rule. Nothing lifts off the page. If an element needs separation, give it a rule, not a shadow; if it needs emphasis, give it ink weight, not elevation.\n\n\n\n\nSquare by default. Listing cards, plate frames and category labels have 0 radius; callouts, code blocks and focus outlines take a 2px (hairline) corner at most. Recurring geometry is linear: the 2.75rem × 3px title rule, the 0.9rem × 3px domain mark in ledger rows, and slot rectangles separated by 3px gaps.\n\n\n\n\n\n\nStyle: Paper ground, 1px hairline below, no shadow. Brand set in Source Serif 4 700 at -0.01em; links in Hanken Grotesk 500.\nMenus: Lab, Machine Learning, Data and System open dropdown menus (Overview, courses, sections) rather than navigating; Math is a plain link until it has a course. Menus are paper with a 1px hairline and a 2px top rule in the tab’s domain ink, no shadow, 0 radius; items hover to Wash with domain-ink text; headers are grotesk 600 at 0.75rem in graphite, sentence case. Toggles are exposed to assistive tech as buttons.\nStates: Hover, an open menu and the tab you are inside keep the text in ink and draw a 2px underline in the tab’s domain ink (ML, Math, Data, System); Home and Lab underline in ink.\n\n\n\n\n\nStyle: Serif title at -0.02em with a short domain-ink rule beneath (2.75rem × 3px, 0.55rem gap). Pages without a domain draw the rule in ink. Home hides the title block and leads with the owner’s name instead.\n\n\n\n\n\nDefault: Ink, 1px underline offset 0.18em; hover thickens the underline to 2px.\nInside a tab: Prose and list links and the active sidebar item take the tab’s domain ink; the Lab keeps them in ink.\nFocus: 2px outline in the domain ink (ink outside a domain), 3px offset.\n\n\n\n\nA figure, not a card grid. Opens with a 2px ink rule and a grotesk lecture axis. Each lane is a domain: label in its ink, courses as segments of equal-width slots (1.6rem tall, 3px gaps). Published slots fill solid in the domain ink and link to the lecture; in-progress slots are a 2px dotted outline with a 14% tint; planned slots are a 1.5px dashed outline at 50% ink. A domain with no course keeps a full-width dashed slot labelled “Planned” in italic, with no separate note. Lane notes in graphite with tabular figures report counts and name the latest lecture as an ink link (date in its title). Legend and numbered caption follow.\n\n\n\nEach item is one complete captioned plate: a 4:3 frame with a 1px hairline (ink on hover), image covering, or a large serif initial on Wash when there is none; then a numbered caption (“Figure 2a.”) with a serif title and a grotesk status tag marked by a left border in line form (3px solid, 2px dotted, 2px dashed). The empty state is a skeleton table with dashed placeholder cells beside its caption: Metric / Paper / Mine for reproductions, Problem / Approach / Stack for projects.\n\n\n\nA ruled table with the caption below, generated from page headers; an empty ledger keeps its header and one italic “nothing yet” row. Optional columns (time and space for DSA; language, difficulty and pattern for problems) render in graphite. Grotesk headers in graphite under a 2px ink rule; 1px hairline rows; dates in graphite with tabular figures; domain column with a 3px ink mark before the domain name; page titles as serif 600 links in ink whose hover underline takes the domain ink; subtitles in graphite.\n\n\n\nNo card chrome: transparent ground, no border except a 2px ink rule on top, 0 radius, body padded 0.75rem above only. Title underlines on hover. Categories render as plain graphite text at 0.85rem with no pill, no border and no uppercase.\n\n\n\n\nStyle: 1px hairline box on all four sides, 2px radius, transparent body, no side stripe and no shadow. Header in grotesk on Wash with a hairline below.\n\n\n\n\nA generated list under a 2px ink rule: the latest lecture, up to two courses with written-up lectures, and the Lab. Each item is a serif 600 link in ink with a grotesk graphite line beneath, led by a 0.9rem × 3px domain mark; rows separated by hairlines. Contact details join it only once the owner supplies them.\n\n\n\n\n\n\n\nDo put a domain’s work under its domain-* class so lane labels, slots, title rules, focus rings and prose links pick up the right ink automatically.\nDo caption every figure and table with an upright grotesk number label and italic serif prose below it.\nDo draw status as line form: solid fill for written up, 2px dotted for in progress, 1.5px dashed for planned.\nDo draw absence: an empty domain or an unwritten lecture keeps its dashed slot rather than disappearing.\nDo separate with rules: 2px ink to open a block, 1px hairline between rows.\nDo keep reading text in Source Serif 4 at 18px / 1.6 and hold captions and ledes to 58–72ch.\n\n\n\n\n\nDon’t use shadows or gradients on any element.\nDon’t use hue to encode status, and don’t give the Lab a colour of its own.\nDon’t use a domain ink outside that domain, or as decoration on neutral elements.\nDon’t put eyebrow or kicker labels above headings; the numbered caption is the only label a figure carries.\nDon’t set body, headings or captions in the grotesk, or anything but code in the mono.\nDon’t add card chrome (borders, fills, rounded corners) to listings; a top rule is the whole container.\nDon’t use pill or uppercase category tags, or callouts with a coloured side stripe.\n\n\n\n\n\nNotation panel: on Math and Machine Learning pages only. A paper tab on the right edge (a corner label on phones) opens a flat paper panel with a 2px domain-ink rule, grotesk section heads in domain ink, and hairline rows of KaTeX symbol and graphite meaning. No shadow, no slide; it opens closed on every page. KaTeX loads on demand (_includes/katex-loader.html) on pages without maths of their own."
-  },
-  {
-    "objectID": "DESIGN.html#overview",
-    "href": "DESIGN.html#overview",
-    "title": "Design System: mdrat",
-    "section": "",
-    "text": "Creative North Star: “The Figure Journal”\nEvery page is a page from a research article. The home page opens with who the owner is and a Start-here list, then Figure 1, a study map read like a plotted figure, and Figure 2, the Lab’s captioned plates; tab pages list their contents as ruled ledgers (Table 1, 2, …). Reading comes first: a serif body at a generous 18px, a grotesk only for labels and chrome, a mono only for code. The page is near-white paper (dark: near-black slate) with ink type and hairline rules.\nColour is semantic, never decorative. Four domain inks name the four study domains, Machine Learning, Math, Data and System, and appear wherever that domain is meant: lane labels, slots, the rule under a tab’s title, the domain mark in a ledger row, prose links inside that tab. The Lab has no hue of its own; it is set in ink. Everything else is ink, muted grey and rule.\nDepth comes from rules and overlap. Heavy 2px ink rules open a figure or table; 1px hairlines separate its rows. Nothing floats: no shadows, no gradients, no card chrome. Status is drawn, not coloured: a solid fill is written up, a dotted outline is in progress, a dashed outline is planned, and an absent course still keeps its dashed slot.\nKey Characteristics: - Serif reading voice (Source Serif 4) for body, headings and captions; Hanken Grotesk for labels and chrome; JetBrains Mono for code only. - Four semantic domain inks, each with a light and a dark value; Lab in ink. - Numbered Figure and Table captions in italic serif with an upright grotesk label. - Status by line form (solid, dotted, dashed), never by hue. - Flat paper: 2px ink rules open blocks, 1px hairlines divide rows, no shadows or gradients. - A short domain-ink rule under every page title."
-  },
-  {
-    "objectID": "DESIGN.html#colors",
-    "href": "DESIGN.html#colors",
-    "title": "Design System: mdrat",
-    "section": "",
-    "text": "Ink on paper, with four semantic inks that each mean exactly one domain.\n\n\n\nInk (#15171c; dark #e8e7e2): body text, headings, default link colour, the Lab’s domain ink, heavy opening rules, and the navbar’s active underline outside a domain.\n\n\n\n\n\nVermilion, Machine Learning (#c8402a; dark #ff7a5c): everything that belongs to the ML domain.\nCobalt, Math (#2f5bd3; dark #8aaeff): everything that belongs to Math; also the selection tint on pages without a domain.\nField Green, Data (#17784e; dark #4cc38a): everything that belongs to Data.\nViolet, System (#7a4cc2; dark #b59aff): everything that belongs to System.\n\n\n\n\n\nPaper (#fdfdfc; dark #121417): page, navbar and footer ground.\nGraphite (#545c6a; dark #a9afba): captions, ledger dates, table headers, lane notes, ledes, legend samples.\nHairline (#dcdcd6; dark #2c3038): 1px row rules, navbar and footer rules, plate frames, callout borders.\nWash (#f3f3ef; dark #1b1e23): code background, empty plate frames, callout headers. The only tinted surface.\nCode Rust (#8a2d1c; dark #ffb199): inline code text.\n\n\n\n\nThe One Ink Per Domain Rule. A domain ink appears only where that domain is meant, set through the domain-* class (lane, ledger row, tab page body). It never decorates a neutral element, and two domains never share an ink.\nThe Status Is Line Form Rule. Written up, in progress and planned are told apart by solid fill, dotted 2px outline and dashed 1.5px outline. The legend draws its samples in ink and graphite so it keys form, not colour."
-  },
-  {
-    "objectID": "DESIGN.html#typography",
-    "href": "DESIGN.html#typography",
-    "title": "Design System: mdrat",
-    "section": "",
-    "text": "Display Font: Source Serif 4 (with Georgia, serif) Body Font: Source Serif 4 (with Georgia, Times New Roman, serif) Label/Chrome Font: Hanken Grotesk (with system-ui, Segoe UI, sans-serif) Code Font: JetBrains Mono (with ui-monospace, Cascadia Code, Consolas, monospace)\nCharacter: A journal serif carries every sentence a reader studies; a plain grotesk does the cataloguing work of labels, axes, headers and navigation, the way a journal sets its figure furniture.\n\n\n\nDisplay (600, clamp(2.4rem, 1.6rem + 2.4vw, 3.4rem), 1.05, -0.025em): the owner’s name on Home only. The role sits under it in grotesk 500 at 1.05rem in graphite.\nHeadline (600, 1.5rem on Home; Bootstrap scale elsewhere, -0.012em, balanced wrap): section heads, each sitting under a 1px hairline on Home.\nTitle (600, 1.05–1.1rem): ledger page links and listing titles, in serif.\nBody (400, 18px root, 1.6): all reading text. Ledes run 1.12rem at 1.55 in graphite, held to 58–60ch.\nCaption (italic 400, 0.9–0.95rem, 1.5): figure and table captions in graphite, held to 72ch.\nLabel (Hanken Grotesk 600, 0.8rem): table headers, axis text (0.75rem), legend (0.82rem), lab status (0.8rem). Lane labels step up to 700 at 1.02rem in their domain ink.\n\n\n\n\nThe Numbered Caption Rule. Every figure and table carries a caption that opens with an upright grotesk label (“Figure 1.”, “Figure 2a.”, “Table 1.”) in ink, followed by italic serif prose in graphite. Captions sit below the figure.\nThe Mono Is For Code Rule. JetBrains Mono appears only in code blocks and inline code; numbers in tables use the grotesk with tabular figures instead."
-  },
-  {
-    "objectID": "DESIGN.html#layout",
-    "href": "DESIGN.html#layout",
-    "title": "Design System: mdrat",
-    "section": "",
-    "text": "Home runs full-width with every block held to a 74rem measure. The opening is a two-column grid: the About block (name, role, bio at 1.12rem held to 60ch) at minmax(0, 1fr) and the Start-here list at minmax(14rem, 18rem), gap clamp(1.5rem, 4vw, 4rem). The Start-here list opens with a 2px ink rule.\nThe study map is a three-column grid per lane: label (10.5rem), track (1fr), note (11.5rem), with a 1.25rem gutter; inside the track each course is a name column (5.5rem) and a segment drawn to its real lecture count against a shared axis. Lab plates use an auto-fill grid of minmax(16rem, 1fr) with a 2rem gap; the empty state spans the row. Ledgers are fixed-layout tables with date (8.5rem) and domain (11rem) columns so stacked ledgers align; undated ledgers give the page column 45% and extra field columns share the rest.\nSections on Home and tab pages share one rhythm: 3rem between level-2 sections, with listings adding no margin of their own.\nBelow 760px the opening and the empty Lab plate collapse to one column; the study map stacks label, course and note, wraps each course into rows of 10 slots at least 24px tall (touch target), runs empty bars full width and hides their note; ledgers drop the domain column (and its ink mark), keeping date and page."
-  },
-  {
-    "objectID": "DESIGN.html#elevation-depth",
-    "href": "DESIGN.html#elevation-depth",
-    "title": "Design System: mdrat",
-    "section": "",
-    "text": "The system is flat. There are no shadows and no gradients anywhere; Bootstrap’s navbar and callout shadows are explicitly removed. Hierarchy and grouping come from rules: a 2px ink rule opens each figure, table header and the Start-here list; 1px hairlines separate rows, the navbar, the footer and section heads. The one tonal surface is Wash, used for code, empty plate frames and callout headers. In-progress slots use a 14% mix of the domain ink as a faint fill under the dotted outline.\n\n\nThe Paper Rule. Nothing lifts off the page. If an element needs separation, give it a rule, not a shadow; if it needs emphasis, give it ink weight, not elevation."
-  },
-  {
-    "objectID": "DESIGN.html#shapes",
-    "href": "DESIGN.html#shapes",
-    "title": "Design System: mdrat",
-    "section": "",
-    "text": "Square by default. Listing cards, plate frames and category labels have 0 radius; callouts, code blocks and focus outlines take a 2px (hairline) corner at most. Recurring geometry is linear: the 2.75rem × 3px title rule, the 0.9rem × 3px domain mark in ledger rows, and slot rectangles separated by 3px gaps."
-  },
-  {
-    "objectID": "DESIGN.html#components",
-    "href": "DESIGN.html#components",
-    "title": "Design System: mdrat",
-    "section": "",
-    "text": "Style: Paper ground, 1px hairline below, no shadow. Brand set in Source Serif 4 700 at -0.01em; links in Hanken Grotesk 500.\nMenus: Lab, Machine Learning, Data and System open dropdown menus (Overview, courses, sections) rather than navigating; Math is a plain link until it has a course. Menus are paper with a 1px hairline and a 2px top rule in the tab’s domain ink, no shadow, 0 radius; items hover to Wash with domain-ink text; headers are grotesk 600 at 0.75rem in graphite, sentence case. Toggles are exposed to assistive tech as buttons.\nStates: Hover, an open menu and the tab you are inside keep the text in ink and draw a 2px underline in the tab’s domain ink (ML, Math, Data, System); Home and Lab underline in ink.\n\n\n\n\n\nStyle: Serif title at -0.02em with a short domain-ink rule beneath (2.75rem × 3px, 0.55rem gap). Pages without a domain draw the rule in ink. Home hides the title block and leads with the owner’s name instead.\n\n\n\n\n\nDefault: Ink, 1px underline offset 0.18em; hover thickens the underline to 2px.\nInside a tab: Prose and list links and the active sidebar item take the tab’s domain ink; the Lab keeps them in ink.\nFocus: 2px outline in the domain ink (ink outside a domain), 3px offset.\n\n\n\n\nA figure, not a card grid. Opens with a 2px ink rule and a grotesk lecture axis. Each lane is a domain: label in its ink, courses as segments of equal-width slots (1.6rem tall, 3px gaps). Published slots fill solid in the domain ink and link to the lecture; in-progress slots are a 2px dotted outline with a 14% tint; planned slots are a 1.5px dashed outline at 50% ink. A domain with no course keeps a full-width dashed slot labelled “Planned” in italic, with no separate note. Lane notes in graphite with tabular figures report counts and name the latest lecture as an ink link (date in its title). Legend and numbered caption follow.\n\n\n\nEach item is one complete captioned plate: a 4:3 frame with a 1px hairline (ink on hover), image covering, or a large serif initial on Wash when there is none; then a numbered caption (“Figure 2a.”) with a serif title and a grotesk status tag marked by a left border in line form (3px solid, 2px dotted, 2px dashed). The empty state is a skeleton table with dashed placeholder cells beside its caption: Metric / Paper / Mine for reproductions, Problem / Approach / Stack for projects.\n\n\n\nA ruled table with the caption below, generated from page headers; an empty ledger keeps its header and one italic “nothing yet” row. Optional columns (time and space for DSA; language, difficulty and pattern for problems) render in graphite. Grotesk headers in graphite under a 2px ink rule; 1px hairline rows; dates in graphite with tabular figures; domain column with a 3px ink mark before the domain name; page titles as serif 600 links in ink whose hover underline takes the domain ink; subtitles in graphite.\n\n\n\nNo card chrome: transparent ground, no border except a 2px ink rule on top, 0 radius, body padded 0.75rem above only. Title underlines on hover. Categories render as plain graphite text at 0.85rem with no pill, no border and no uppercase.\n\n\n\n\nStyle: 1px hairline box on all four sides, 2px radius, transparent body, no side stripe and no shadow. Header in grotesk on Wash with a hairline below.\n\n\n\n\nA generated list under a 2px ink rule: the latest lecture, up to two courses with written-up lectures, and the Lab. Each item is a serif 600 link in ink with a grotesk graphite line beneath, led by a 0.9rem × 3px domain mark; rows separated by hairlines. Contact details join it only once the owner supplies them."
-  },
-  {
-    "objectID": "DESIGN.html#dos-and-donts",
-    "href": "DESIGN.html#dos-and-donts",
-    "title": "Design System: mdrat",
-    "section": "",
-    "text": "Do put a domain’s work under its domain-* class so lane labels, slots, title rules, focus rings and prose links pick up the right ink automatically.\nDo caption every figure and table with an upright grotesk number label and italic serif prose below it.\nDo draw status as line form: solid fill for written up, 2px dotted for in progress, 1.5px dashed for planned.\nDo draw absence: an empty domain or an unwritten lecture keeps its dashed slot rather than disappearing.\nDo separate with rules: 2px ink to open a block, 1px hairline between rows.\nDo keep reading text in Source Serif 4 at 18px / 1.6 and hold captions and ledes to 58–72ch.\n\n\n\n\n\nDon’t use shadows or gradients on any element.\nDon’t use hue to encode status, and don’t give the Lab a colour of its own.\nDon’t use a domain ink outside that domain, or as decoration on neutral elements.\nDon’t put eyebrow or kicker labels above headings; the numbered caption is the only label a figure carries.\nDon’t set body, headings or captions in the grotesk, or anything but code in the mono.\nDon’t add card chrome (borders, fills, rounded corners) to listings; a top rule is the whole container.\nDon’t use pill or uppercase category tags, or callouts with a coloured side stripe.\n\n\n\n\n\nNotation panel: on Math and Machine Learning pages only. A paper tab on the right edge (a corner label on phones) opens a flat paper panel with a 2px domain-ink rule, grotesk section heads in domain ink, and hairline rows of KaTeX symbol and graphite meaning. No shadow, no slide; it opens closed on every page. KaTeX loads on demand (_includes/katex-loader.html) on pages without maths of their own."
   },
   {
     "objectID": "ml/cs229/lecture02-linear-regression.html",
@@ -207,122 +100,48 @@
     ]
   },
   {
-    "objectID": "ml/index.html",
-    "href": "ml/index.html",
-    "title": "Machine Learning",
+    "objectID": "math/index.html",
+    "href": "math/index.html",
+    "title": "Math",
     "section": "",
-    "text": "Courses I’m working through, one page per lecture with the video on top, my notes underneath and the sources at the end.",
+    "text": "The mathematics behind the ML: linear algebra, probability, optimisation, with every formula rendered on the page.",
     "crumbs": [
-      "Machine Learning"
+      "Math"
     ]
   },
   {
-    "objectID": "ml/index.html#courses",
-    "href": "ml/index.html#courses",
-    "title": "Machine Learning",
+    "objectID": "math/index.html#courses",
+    "href": "math/index.html#courses",
+    "title": "Math",
     "section": "Courses",
-    "text": "Courses\n\n\n\nLecture15101520\n\n\nMachine Learning\n\n\nCS229\n\n\n\n1 of 20 lecturesLatest: Linear Regression and Gradient Descent\n\n\n\nWritten upIn progressPlanned\n\n\nFigure 1. Machine Learning courses, each drawn to its real number of lectures; select a filled slot to open that lecture.\n\n\nNo matching items",
+    "text": "Courses\n\n\n\nLecture15101520\n\n\nMath\n\n\nPlanned\n\n\n\n\n\n\nWritten upIn progressPlanned\n\n\nFigure 1. Math courses, each drawn to its real number of lectures; select a filled slot to open that lecture.\n\n\nNo matching items",
     "crumbs": [
-      "Machine Learning"
+      "Math"
     ]
   },
   {
-    "objectID": "ml/index.html#lectures",
-    "href": "ml/index.html#lectures",
-    "title": "Machine Learning",
+    "objectID": "math/index.html#lectures",
+    "href": "math/index.html#lectures",
+    "title": "Math",
     "section": "Lectures",
-    "text": "Lectures\n\n\n\nTable 1. Machine Learning lectures, newest first.\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\n15 Nov 2026\n\n\nLinear Regression and Gradient Descent CS229 · Lecture 2\n\n\n\n\nNo matching items",
+    "text": "Lectures\n\n\n\nTable 1. Math lectures, newest first.\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\nNo lectures written up yet.\n\n\n\n\nNo matching items",
     "crumbs": [
-      "Machine Learning"
+      "Math"
     ]
   },
   {
-    "objectID": "ml/cs229/index.html",
-    "href": "ml/cs229/index.html",
-    "title": "Stanford CS229: Machine Learning",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "mdrat",
     "section": "",
-    "text": "Official links: course page · Autumn 2018 playlist\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nLecture\n\n\n\nTitle\n\n\n\nDescription\n\n\n\n\n\n\n\n\nCS229 · Lecture 2\n\n\nLinear Regression and Gradient Descent\n\n\nLeast squares, batch and stochastic gradient descent, and the normal equations.\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Stanford CS229: Machine Learning"
-    ]
+    "text": "ML engineer and data scientist\nI work with data and machine learning. This site holds the hands-on work, paper reproductions and projects in the Lab, and structured notes from the courses I study: each lecture page puts the video, my notes, the maths and the code together, with its sources at the end.\nGitHub\n\n\n\n\n\nStart here\n\n\n\nLinear Regression and Gradient DescentLatest lecture, 15 Nov 2026\n\n\nStanford CS229: Machine LearningCourse, 1 of 20 lectures written up\n\n\nThe LabPaper reproductions and projects\n\n\n\nNo matching items"
   },
   {
-    "objectID": "PRODUCT.html",
-    "href": "PRODUCT.html",
-    "title": "Product",
-    "section": "",
-    "text": "web\n\n\n\nTwo audiences, weighted equally (confirmed 2026-11-15):\n\nHiring managers and recruiters evaluating an ML engineer / data scientist. They scan quickly for proof of skill: reproduced papers, shipped projects, depth of study.\nPeers and learners (engineers, students) who come for the lecture notes, formulas, algorithm animations and the Python/SQL problem bank, and return to them.\n\nThe owner also uses the site as a personal, public study hub.\n\n\n\nA static portfolio and learning hub. It shows hands-on work (paper reproductions and GitHub projects in Lab) and organises learning material by domain (Machine Learning, Math, Data, System), with lecture videos, notes, formulas, code and animations on the same page. Success: a hiring visitor sees credible depth within a minute, and a learner finds and returns to useful notes.\n\n\n\nLearning in the open, structured: each lecture page puts the video, the owner’s notes, the maths and the code together, and Lab pages report reproduced results against the paper’s reported ones. The domain map is the front door; the work is the proof.\n\n\n\n\nContent is authored as Quarto .qmd files in the Git repo; one file per page, folder decides the tab.\nListings build index pages and cards from page headers; new content appears automatically.\nHosted on GitHub Pages, rendered by GitHub Actions on every push.\n\n\n\n\n\nSix tabs: Home, Lab, Machine Learning, Math, Data, System. Data adds DSA, a problem bank by pattern, and Power BI reports; System adds case studies and applications.\nStatic only: no backend, no runnable code in the browser. Formulas via KaTeX; code is static, highlighted.\nYouTube embeds only where the owner allows embedding (many university channels, e.g. Stanford CS229, do not).\nNo page transitions, scroll effects or decorative motion; animation is limited to animated figures and algorithm step players inside notes.\nPower BI embeds show public or synthetic data only.\nEnglish only for now; Vietnamese may be added later (undecided).\nOpen decisions (from the build plan): custom domain, Manim vs matplotlib only, Power BI account, own vs curated lecture videos.\n\n\n\n\n\nSite name: mdrat (renamed from MJ2706 on 2026-11-21). The owner presents as an ML engineer / data scientist.\nOwner presents as “MinhJ” (confirmed 2026-11-16). GitHub: https://github.com/MinhBoba; site at https://minhboba.github.io.\nPublic email, LinkedIn, photo and CV are not yet provided; do not invent them, and do not publish the owner’s private email without confirmation.\n\n\n\n\n\nOne complete lecture page: ml/cs229/lecture02-linear-regression.qmd.\nNo Lab papers or projects written yet; no metrics, testimonials, employers or results exist. Do not fabricate any.\n\n\n\n\n\nLead with the learning map; let the work prove it.\nEvery claim of skill links to an artifact (a reproduction, a repo, a notes page).\nAdding content must stay as cheap as dropping one Markdown file into a folder; no hand-maintained card grids or counts.\nReading comes first: notes, formulas and code must be comfortable to study in both light and dark themes.\n\n\n\n\nWCAG 2.2 AA: contrast, keyboard navigation, alt text on every figure and animation, reduced-motion respected."
-  },
-  {
-    "objectID": "PRODUCT.html#platform",
-    "href": "PRODUCT.html#platform",
-    "title": "Product",
-    "section": "",
-    "text": "web"
-  },
-  {
-    "objectID": "PRODUCT.html#users",
-    "href": "PRODUCT.html#users",
-    "title": "Product",
-    "section": "",
-    "text": "Two audiences, weighted equally (confirmed 2026-11-15):\n\nHiring managers and recruiters evaluating an ML engineer / data scientist. They scan quickly for proof of skill: reproduced papers, shipped projects, depth of study.\nPeers and learners (engineers, students) who come for the lecture notes, formulas, algorithm animations and the Python/SQL problem bank, and return to them.\n\nThe owner also uses the site as a personal, public study hub."
-  },
-  {
-    "objectID": "PRODUCT.html#product-purpose",
-    "href": "PRODUCT.html#product-purpose",
-    "title": "Product",
-    "section": "",
-    "text": "A static portfolio and learning hub. It shows hands-on work (paper reproductions and GitHub projects in Lab) and organises learning material by domain (Machine Learning, Math, Data, System), with lecture videos, notes, formulas, code and animations on the same page. Success: a hiring visitor sees credible depth within a minute, and a learner finds and returns to useful notes."
-  },
-  {
-    "objectID": "PRODUCT.html#positioning",
-    "href": "PRODUCT.html#positioning",
-    "title": "Product",
-    "section": "",
-    "text": "Learning in the open, structured: each lecture page puts the video, the owner’s notes, the maths and the code together, and Lab pages report reproduced results against the paper’s reported ones. The domain map is the front door; the work is the proof."
-  },
-  {
-    "objectID": "PRODUCT.html#operating-context",
-    "href": "PRODUCT.html#operating-context",
-    "title": "Product",
-    "section": "",
-    "text": "Content is authored as Quarto .qmd files in the Git repo; one file per page, folder decides the tab.\nListings build index pages and cards from page headers; new content appears automatically.\nHosted on GitHub Pages, rendered by GitHub Actions on every push."
-  },
-  {
-    "objectID": "PRODUCT.html#capabilities-and-constraints",
-    "href": "PRODUCT.html#capabilities-and-constraints",
-    "title": "Product",
-    "section": "",
-    "text": "Six tabs: Home, Lab, Machine Learning, Math, Data, System. Data adds DSA, a problem bank by pattern, and Power BI reports; System adds case studies and applications.\nStatic only: no backend, no runnable code in the browser. Formulas via KaTeX; code is static, highlighted.\nYouTube embeds only where the owner allows embedding (many university channels, e.g. Stanford CS229, do not).\nNo page transitions, scroll effects or decorative motion; animation is limited to animated figures and algorithm step players inside notes.\nPower BI embeds show public or synthetic data only.\nEnglish only for now; Vietnamese may be added later (undecided).\nOpen decisions (from the build plan): custom domain, Manim vs matplotlib only, Power BI account, own vs curated lecture videos."
-  },
-  {
-    "objectID": "PRODUCT.html#brand-commitments",
-    "href": "PRODUCT.html#brand-commitments",
-    "title": "Product",
-    "section": "",
-    "text": "Site name: mdrat (renamed from MJ2706 on 2026-11-21). The owner presents as an ML engineer / data scientist.\nOwner presents as “MinhJ” (confirmed 2026-11-16). GitHub: https://github.com/MinhBoba; site at https://minhboba.github.io.\nPublic email, LinkedIn, photo and CV are not yet provided; do not invent them, and do not publish the owner’s private email without confirmation."
-  },
-  {
-    "objectID": "PRODUCT.html#evidence-on-hand",
-    "href": "PRODUCT.html#evidence-on-hand",
-    "title": "Product",
-    "section": "",
-    "text": "One complete lecture page: ml/cs229/lecture02-linear-regression.qmd.\nNo Lab papers or projects written yet; no metrics, testimonials, employers or results exist. Do not fabricate any."
-  },
-  {
-    "objectID": "PRODUCT.html#product-principles",
-    "href": "PRODUCT.html#product-principles",
-    "title": "Product",
-    "section": "",
-    "text": "Lead with the learning map; let the work prove it.\nEvery claim of skill links to an artifact (a reproduction, a repo, a notes page).\nAdding content must stay as cheap as dropping one Markdown file into a folder; no hand-maintained card grids or counts.\nReading comes first: notes, formulas and code must be comfortable to study in both light and dark themes."
-  },
-  {
-    "objectID": "PRODUCT.html#accessibility-inclusion",
-    "href": "PRODUCT.html#accessibility-inclusion",
-    "title": "Product",
-    "section": "",
-    "text": "WCAG 2.2 AA: contrast, keyboard navigation, alt text on every figure and animation, reduced-motion respected."
+    "objectID": "index.html#from-the-lab",
+    "href": "index.html#from-the-lab",
+    "title": "mdrat",
+    "section": "From the Lab",
+    "text": "From the Lab\n\n\n\n\n\n\n\nMetric\n\n\nPaper\n\n\nMine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2. Lab, not yet published. Each paper reproduction will report its metrics in this form, the paper’s number beside mine, with projects alongside. Open the Lab\n\n\n\nNo matching items"
   },
   {
     "objectID": "data/index.html",
@@ -375,33 +194,74 @@
     ]
   },
   {
-    "objectID": "math/index.html",
-    "href": "math/index.html",
-    "title": "Math",
+    "objectID": "lab/index.html",
+    "href": "lab/index.html",
+    "title": "Lab",
     "section": "",
-    "text": "The mathematics behind the ML: linear algebra, probability, optimisation, with every formula rendered on the page.",
+    "text": "Hands-on work: papers re-implemented from scratch, with my results against the reported ones, and projects with their code.",
     "crumbs": [
-      "Math"
+      "Lab"
     ]
   },
   {
-    "objectID": "math/index.html#courses",
-    "href": "math/index.html#courses",
-    "title": "Math",
+    "objectID": "lab/index.html#paper-reproductions",
+    "href": "lab/index.html#paper-reproductions",
+    "title": "Lab",
+    "section": "Paper reproductions",
+    "text": "Paper reproductions\n\n\n\n\n\n\n\nMetric\n\n\nPaper\n\n\nMine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1. Paper reproductions, not yet published. Each one will report its metrics in this form, the paper’s number beside mine, with a note on what differed and why.\n\n\n\nNo matching items",
+    "crumbs": [
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "lab/index.html#projects",
+    "href": "lab/index.html#projects",
+    "title": "Lab",
+    "section": "Projects",
+    "text": "Projects\n\n\n\n\n\n\n\nProblem\n\n\nApproach\n\n\nStack\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2. Projects, not yet published. Each one will state the problem, the approach and the stack, with screenshots and a link to the repository.\n\n\n\nNo matching items",
+    "crumbs": [
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "ml/cs229/index.html",
+    "href": "ml/cs229/index.html",
+    "title": "Stanford CS229: Machine Learning",
+    "section": "",
+    "text": "Official links: course page · Autumn 2018 playlist\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nLecture\n\n\n\nTitle\n\n\n\nDescription\n\n\n\n\n\n\n\n\nCS229 · Lecture 2\n\n\nLinear Regression and Gradient Descent\n\n\nLeast squares, batch and stochastic gradient descent, and the normal equations.\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Machine Learning",
+      "Stanford CS229: Machine Learning"
+    ]
+  },
+  {
+    "objectID": "ml/index.html",
+    "href": "ml/index.html",
+    "title": "Machine Learning",
+    "section": "",
+    "text": "Courses I’m working through, one page per lecture with the video on top, my notes underneath and the sources at the end.",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "ml/index.html#courses",
+    "href": "ml/index.html#courses",
+    "title": "Machine Learning",
     "section": "Courses",
-    "text": "Courses\n\n\n\nLecture15101520\n\n\nMath\n\n\nPlanned\n\n\n\n\n\n\nWritten upIn progressPlanned\n\n\nFigure 1. Math courses, each drawn to its real number of lectures; select a filled slot to open that lecture.\n\n\nNo matching items",
+    "text": "Courses\n\n\n\nLecture15101520\n\n\nMachine Learning\n\n\nCS229\n\n\n\n1 of 20 lecturesLatest: Linear Regression and Gradient Descent\n\n\n\nWritten upIn progressPlanned\n\n\nFigure 1. Machine Learning courses, each drawn to its real number of lectures; select a filled slot to open that lecture.\n\n\nNo matching items",
     "crumbs": [
-      "Math"
+      "Machine Learning"
     ]
   },
   {
-    "objectID": "math/index.html#lectures",
-    "href": "math/index.html#lectures",
-    "title": "Math",
+    "objectID": "ml/index.html#lectures",
+    "href": "ml/index.html#lectures",
+    "title": "Machine Learning",
     "section": "Lectures",
-    "text": "Lectures\n\n\n\nTable 1. Math lectures, newest first.\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\nNo lectures written up yet.\n\n\n\n\nNo matching items",
+    "text": "Lectures\n\n\n\nTable 1. Machine Learning lectures, newest first.\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\n15 Nov 2026\n\n\nLinear Regression and Gradient Descent CS229 · Lecture 2\n\n\n\n\nNo matching items",
     "crumbs": [
-      "Math"
+      "Machine Learning"
     ]
   }
 ]

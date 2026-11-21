@@ -1,6 +1,10 @@
 [
   {
-    "listing": "/lab/index.html",
+    "listing": "/system/index.html",
+    "items": []
+  },
+  {
+    "listing": "/math/index.html",
     "items": []
   },
   {
@@ -15,15 +19,12 @@
     ]
   },
   {
-    "listing": "/system/index.html",
+    "listing": "/data/index.html",
     "items": []
   },
   {
-    "listing": "/ml/index.html",
-    "items": [
-      "/ml/cs229/lecture02-linear-regression.html",
-      "/ml/cs229/index.html"
-    ]
+    "listing": "/lab/index.html",
+    "items": []
   },
   {
     "listing": "/ml/cs229/index.html",
@@ -32,11 +33,10 @@
     ]
   },
   {
-    "listing": "/data/index.html",
-    "items": []
-  },
-  {
-    "listing": "/math/index.html",
-    "items": []
+    "listing": "/ml/index.html",
+    "items": [
+      "/ml/cs229/lecture02-linear-regression.html",
+      "/ml/cs229/index.html"
+    ]
   }
 ]
