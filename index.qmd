@@ -1,6 +1,6 @@
 ---
-title: "MJ2706"
-pagetitle: "MJ2706 · MinhJ, ML engineer and data scientist"
+title: "mdrat"
+pagetitle: "mdrat · MinhJ, ML engineer and data scientist"
 description: "Lecture notes with the video, maths and code on one page, and paper reproductions set against their reported results."
 kind: index
 toc: false

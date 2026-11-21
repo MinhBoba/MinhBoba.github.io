@@ -1,0 +1,43 @@
+<script>
+// Shared on-demand KaTeX loader. Quarto only loads KaTeX on pages that contain maths,
+// but the notation panel and the source preview need it on every study page.
+// Same pinned version as `html-math-method.url` in _quarto.yml.
+window.mjEnsureKatex = (function () {
+  "use strict";
+  var BASE = "https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/";
+  var pending = null;
+
+  function addStylesheet() {
+    if (document.querySelector('link[href*="katex"]')) return;
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = BASE + "katex.min.css";
+    document.head.appendChild(link);
+  }
+
+  return function ensureKatex() {
+    if (window.katex) return Promise.resolve(window.katex);
+    if (pending) return pending;
+    pending = new Promise(function (resolve, reject) {
+      addStylesheet();
+      // Like Quarto, hide an AMD loader so KaTeX attaches to window instead of registering a module.
+      var savedDefine = window.define;
+      window.define = undefined;
+      var script = document.createElement("script");
+      script.src = BASE + "katex.min.js";
+      script.onload = function () {
+        window.define = savedDefine;
+        if (window.katex) resolve(window.katex);
+        else { pending = null; reject(new Error("KaTeX loaded but did not initialise")); }
+      };
+      script.onerror = function () {
+        window.define = savedDefine;
+        pending = null;
+        reject(new Error("could not load the maths renderer"));
+      };
+      document.head.appendChild(script);
+    });
+    return pending;
+  };
+})();
+</script>

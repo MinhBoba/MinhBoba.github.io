@@ -1,5 +1,5 @@
 ---
-name: MJ2706
+name: mdrat
 description: Notes and work in machine learning, math, data and systems, set as a research article's figures.
 colors:
   ink: "#15171c"
@@ -114,7 +114,7 @@ components:
     height: "3px"
 ---
 
-# Design System: MJ2706
+# Design System: mdrat
 
 ## Overview
 
@@ -253,3 +253,7 @@ A generated list under a 2px ink rule: the latest lecture, up to two courses wit
 - **Don't** set body, headings or captions in the grotesk, or anything but code in the mono.
 - **Don't** add card chrome (borders, fills, rounded corners) to listings; a top rule is the whole container.
 - **Don't** use pill or uppercase category tags, or callouts with a coloured side stripe.
+
+### Study-page tools
+
+- **Notation panel:** on Math and Machine Learning pages only. A paper tab on the right edge (a corner label on phones) opens a flat paper panel with a 2px domain-ink rule, grotesk section heads in domain ink, and hairline rows of KaTeX symbol and graphite meaning. No shadow, no slide; it opens closed on every page. KaTeX loads on demand (`_includes/katex-loader.html`) on pages without maths of their own.

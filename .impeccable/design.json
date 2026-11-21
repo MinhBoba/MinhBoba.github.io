@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-11-15T00:00:00Z",
-  "title": "Design System: MJ2706",
+  "title": "Design System: mdrat",
   "extensions": {
     "colorMeta": {
       "ink": { "role": "primary", "displayName": "Ink", "canonical": "oklch(20.5% 0.010 268.2)", "tonalRamp": ["#0a0b0d", "#242529", "#404248", "#5f6167", "#808289", "#a2a5ac", "#c7c9ce", "#edeef1"] },
@@ -59,7 +59,7 @@
       "kind": "nav",
       "refersTo": "nav-link",
       "description": "Paper navbar with a hairline below; active and hover links take a 2px underline in their domain ink.",
-      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-brand\">MJ2706</span><a class=\"ds-nav-link is-active\" href=\"#\">Home</a><a class=\"ds-nav-link\" href=\"#\">Lab</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-ml, #c8402a)\" href=\"#\">Machine Learning</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-math, #2f5bd3)\" href=\"#\">Math</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-data, #17784e)\" href=\"#\">Data</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-system, #7a4cc2)\" href=\"#\">System</a></nav>",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-brand\">mdrat</span><a class=\"ds-nav-link is-active\" href=\"#\">Home</a><a class=\"ds-nav-link\" href=\"#\">Lab</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-ml, #c8402a)\" href=\"#\">Machine Learning</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-math, #2f5bd3)\" href=\"#\">Math</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-data, #17784e)\" href=\"#\">Data</a><a class=\"ds-nav-link\" style=\"--domain: var(--ink-system, #7a4cc2)\" href=\"#\">System</a></nav>",
       "css": ".ds-nav { display: flex; align-items: center; gap: 1.25rem; padding: 0.9rem 1rem; background: var(--mj-ground, #fdfdfc); border-bottom: 1px solid var(--mj-rule, #dcdcd6); font-family: 'Hanken Grotesk', system-ui, sans-serif; } .ds-nav-brand { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; font-size: 1.15rem; color: var(--mj-ink, #15171c); margin-right: 0.5rem; } .ds-nav-link { font-weight: 500; color: var(--mj-ink, #15171c); text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 0.2rem; } .ds-nav-link:hover, .ds-nav-link.is-active { border-bottom-color: var(--domain, var(--mj-ink, #15171c)); } .ds-nav-link:focus-visible { outline: 2px solid var(--domain, var(--mj-ink, #15171c)); outline-offset: 3px; border-radius: 1px; }"
     },
     {

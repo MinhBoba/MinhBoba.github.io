@@ -41,7 +41,7 @@ Learning in the open, structured: each lecture page puts the video, the owner's 
 
 ## Brand Commitments
 
-- Site name: MJ2706. The owner presents as an ML engineer / data scientist.
+- Site name: mdrat (renamed from MJ2706 on 2026-11-21). The owner presents as an ML engineer / data scientist.
 - Owner presents as "MinhJ" (confirmed 2026-11-16). GitHub: https://github.com/MinhBoba; site at https://minhboba.github.io.
 - Public email, LinkedIn, photo and CV are not yet provided; do not invent them, and do not publish the owner's private email without confirmation.
 

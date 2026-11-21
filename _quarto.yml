@@ -5,7 +5,7 @@ project:
     - "**/*-assets/**"
 
 website:
-  title: "MJ2706"
+  title: "mdrat"
   description: "Paper reproductions, projects, and lecture notes on machine learning, math, data and systems."
   site-url: https://minhboba.github.io
   favicon: assets/favicon.svg
@@ -92,7 +92,7 @@ website:
       contents: system
 
   page-footer:
-    left: "© 2026 MJ2706"
+    left: "© 2026 mdrat"
 
 format:
   html:
@@ -103,7 +103,9 @@ format:
     respect-user-color-scheme: true
     include-after-body:
       - _includes/nav-a11y.html
+      - _includes/katex-loader.html
       - _includes/owner-edit.html
+      - _includes/notation.html
     toc: true
     toc-location: right
     toc-depth: 3
@@ -112,7 +114,9 @@ format:
     code-copy: true
     code-overflow: wrap
     highlight-style: a11y
-    html-math-method: katex
+    html-math-method:
+      method: katex
+      url: "https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/"
     smooth-scroll: false
     link-external-newwindow: true
     lang: en

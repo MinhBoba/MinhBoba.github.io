@@ -9,17 +9,19 @@ __pycache__/
 .venv/
 .ipynb_checkpoints/
 
-# Local Claude Code settings (machine-specific hooks)
-.claude/settings.local.json
+# Claude Code files stay local
+CLAUDE.md
+.claude/
 
 # OS
 Thumbs.db
 .DS_Store
 
-# Build plan stays local (not for the public repo)
+# Build plan and study roadmap stay local (not for the public repo)
 MJ2706.pdf
+ML-Math-Roadmap.pdf
+scripts/build_roadmap.py
 
-# impeccable: platform binary (reinstall with `npx impeccable install`) and runtime caches
-.claude/skills/impeccable/scripts/bin/
+# impeccable runtime caches
 .impeccable/hook.cache.json
 .impeccable/decision/
