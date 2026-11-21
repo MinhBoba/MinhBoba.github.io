@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>System – MJ2706</title>
+<title>System – mdrat</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -51,9 +51,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-91e9b039683610e0c3b71a7e5bce793a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5f00cbbccbbc1b2c1b36ce443d19004e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a093d049744e63d788f0611a93f2c62f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5f00cbbccbbc1b2c1b36ce443d19004e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f5bf65a0e0e54176caa42c38fadd8cbf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1c857a6dd090c057bea2234d7166669f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-f5bf65a0e0e54176caa42c38fadd8cbf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -163,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
    });
 }}});
   </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -383,7 +383,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">MJ2706</span>
+    <span class="navbar-title">mdrat</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -657,6 +657,49 @@ document.querySelectorAll(".navbar .nav-link.dropdown-toggle").forEach(function 
     if (event.key === "Enter" || event.key === " ") { event.preventDefault(); el.click(); }
   });
 });
+</script>
+<script>
+// Shared on-demand KaTeX loader. Quarto only loads KaTeX on pages that contain maths,
+// but the notation panel and the source preview need it on every study page.
+// Same pinned version as `html-math-method.url` in _quarto.yml.
+window.mjEnsureKatex = (function () {
+  "use strict";
+  var BASE = "https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/";
+  var pending = null;
+
+  function addStylesheet() {
+    if (document.querySelector('link[href*="katex"]')) return;
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = BASE + "katex.min.css";
+    document.head.appendChild(link);
+  }
+
+  return function ensureKatex() {
+    if (window.katex) return Promise.resolve(window.katex);
+    if (pending) return pending;
+    pending = new Promise(function (resolve, reject) {
+      addStylesheet();
+      // Like Quarto, hide an AMD loader so KaTeX attaches to window instead of registering a module.
+      var savedDefine = window.define;
+      window.define = undefined;
+      var script = document.createElement("script");
+      script.src = BASE + "katex.min.js";
+      script.onload = function () {
+        window.define = savedDefine;
+        if (window.katex) resolve(window.katex);
+        else { pending = null; reject(new Error("KaTeX loaded but did not initialise")); }
+      };
+      script.onerror = function () {
+        window.define = savedDefine;
+        pending = null;
+        reject(new Error("could not load the maths renderer"));
+      };
+      document.head.appendChild(script);
+    });
+    return pending;
+  };
+})();
 </script>
 <script>
 // Source panel for study pages.
@@ -965,6 +1008,322 @@ document.querySelectorAll(".navbar .nav-link.dropdown-toggle").forEach(function 
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addButton);
   else addButton();
+})();
+</script>
+<!-- Notation reference: on Math and Machine Learning pages, a tab on the right
+     edge (bottom corner on phones) opens a panel of the notation used across the
+     notes. Edit the rows below; each first cell is TeX, rendered with KaTeX
+     (loaded on demand by _includes/katex-loader.html) the first time it opens. -->
+<button type="button" class="mj-notation-tab" aria-expanded="false" aria-controls="mj-notation" hidden="">
+  <svg class="mj-notation-chevron" viewbox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"></path></svg>
+  <span class="mj-notation-label">Notation</span>
+</button>
+<aside id="mj-notation" class="mj-notation" aria-label="Notation reference" hidden="">
+  <div class="mj-notation-head">
+    <h2>Notation</h2>
+    <button type="button" class="mj-notation-close" aria-label="Close notation">
+      <svg viewbox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"></path></svg>
+    </button>
+  </div>
+  <p class="mj-notation-status" role="status" hidden=""></p>
+  <div class="mj-notation-body">
+    <h3>Numbers and arrays</h3>
+    
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td class="mj-tex">a</td>
+<td>Scalar (italic lowercase)</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\mathbf{x}</td>
+<td>Vector (bold lowercase), a column by default</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\mathbf{A}</td>
+<td>Matrix (bold uppercase)</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\mathsf{A}</td>
+<td>Tensor (sans-serif)</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">x_i</td>
+<td>Element <em>i</em> of vector <em>x</em></td>
+</tr>
+<tr class="even">
+<td class="mj-tex">A_{ij}</td>
+<td>Element in row <em>i</em>, column <em>j</em></td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\mathbf{A}_{i,:}\;\; \mathbf{A}_{:,j}</td>
+<td>Row <em>i</em>; column <em>j</em></td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\mathbf{I}_n</td>
+<td>Identity matrix, <em>n</em> by <em>n</em></td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\mathbf{0}\;\; \mathbf{1}</td>
+<td>All-zeros, all-ones vector</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\mathbf{e}_i</td>
+<td>Standard basis vector (1 at position <em>i</em>)</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\operatorname{diag}(\mathbf{a})</td>
+<td>Diagonal matrix with <em>a</em> on the diagonal</td>
+</tr>
+</tbody>
+</table>
+
+
+    <h3>Linear algebra</h3>
+    
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td class="mj-tex">\mathbf{A}^\top</td>
+<td>Transpose</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\mathbf{A}^{-1}\;\; \mathbf{A}^{+}</td>
+<td>Inverse; Moore–Penrose pseudo-inverse</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\mathbf{x}^\top \mathbf{y} = \langle \mathbf{x}, \mathbf{y} \rangle</td>
+<td>Dot (inner) product</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\mathbf{x} \mathbf{y}^\top</td>
+<td>Outer product</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\mathbf{A} \odot \mathbf{B}</td>
+<td>Element-wise (Hadamard) product</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\det(\mathbf{A})\;\; \operatorname{tr}(\mathbf{A})</td>
+<td>Determinant; trace</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\operatorname{rank}(\mathbf{A})</td>
+<td>Rank</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\|\mathbf{x}\|_2\;\; \|\mathbf{x}\|_1</td>
+<td>Euclidean norm; L1 norm</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\|\mathbf{A}\|_F</td>
+<td>Frobenius norm</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\lambda_i\;\; \mathbf{v}_i</td>
+<td>Eigenvalue; eigenvector</td>
+</tr>
+</tbody>
+</table>
+
+
+    <h3>Sets</h3>
+    
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td class="mj-tex">\mathbb{R}\;\; \mathbb{R}^n</td>
+<td>Real numbers; real <em>n</em>-vectors</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\mathbb{R}^{m \times n}</td>
+<td>Real matrices with <em>m</em> rows, <em>n</em> columns</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\{0, 1\}\;\; \{1, \dots, n\}</td>
+<td>Discrete sets</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">[a, b]\;\; (a, b)</td>
+<td>Closed; open interval</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\mathbb{S}^n_{+}</td>
+<td>Positive semidefinite <em>n</em> by <em>n</em> matrices</td>
+</tr>
+</tbody>
+</table>
+
+
+    <h3>Calculus</h3>
+    
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td class="mj-tex">\frac{dy}{dx}\;\; \frac{\partial y}{\partial x}</td>
+<td>Derivative; partial derivative</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\nabla_{\mathbf{x}} f</td>
+<td>Gradient of <em>f</em> with respect to <em>x</em></td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\mathbf{J} = \frac{\partial \mathbf{f}}{\partial \mathbf{x}}</td>
+<td>Jacobian matrix</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\nabla^2 f = \mathbf{H}</td>
+<td>Hessian matrix</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\int f(x)\, dx</td>
+<td>Integral</td>
+</tr>
+</tbody>
+</table>
+
+
+    <h3>Probability</h3>
+    
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td class="mj-tex">P(a)\;\; p(x)</td>
+<td>Probability; density</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">x \sim P</td>
+<td><em>x</em> is drawn from <em>P</em></td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">P(a \mid b)</td>
+<td>Conditional probability</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\mathbb{E}_{x \sim P}[f(x)]</td>
+<td>Expectation</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\operatorname{Var}(x)\;\; \operatorname{Cov}(x, y)</td>
+<td>Variance; covariance</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma})</td>
+<td>Gaussian with mean μ, covariance Σ</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">D_{\mathrm{KL}}(P \,\|\, Q)</td>
+<td>KL divergence</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">H(x)</td>
+<td>Entropy</td>
+</tr>
+</tbody>
+</table>
+
+
+    <h3>Data and models</h3>
+    
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td class="mj-tex">\mathbf{x}^{(i)}\;\; y^{(i)}</td>
+<td>Input and target of example <em>i</em></td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\mathbf{X} \in \mathbb{R}^{n \times d}</td>
+<td>Design matrix: <em>n</em> examples (rows), <em>d</em> features</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\theta\;\; \boldsymbol{\theta}</td>
+<td>Model parameters</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">h_\theta(\mathbf{x})</td>
+<td>Hypothesis (model prediction)</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">J(\theta)\;\; \mathcal{L}</td>
+<td>Cost; loss</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\alpha</td>
+<td>Learning rate</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\sigma(z) = \frac{1}{1 + e^{-z}}</td>
+<td>Logistic sigmoid</td>
+</tr>
+<tr class="even">
+<td class="mj-tex">\mathbb{1}\{\cdot\}</td>
+<td>Indicator: 1 if true, else 0</td>
+</tr>
+<tr class="odd">
+<td class="mj-tex">\log x</td>
+<td>Natural logarithm</td>
+</tr>
+</tbody>
+</table>
+
+  </div>
+</aside>
+<script>
+(function () {
+  "use strict";
+  var tab = document.querySelector(".mj-notation-tab");
+  var panel = document.getElementById("mj-notation");
+  if (!tab || !panel) return;
+  // Notation belongs with the maths: only Math and Machine Learning pages get it.
+  if (!/\bdomain-(math|ml)\b/.test(document.body.className)) { tab.remove(); panel.remove(); return; }
+  // Quarto places includes inside #quarto-content, whose stacking context
+  // sits under the fixed navbar; lift both to <body> so they layer on top.
+  document.body.appendChild(tab);
+  document.body.appendChild(panel);
+  document.body.classList.add("has-mj-notation");
+  tab.hidden = false;
+
+  var status = panel.querySelector(".mj-notation-status");
+  var rendered = false;
+
+  function showStatus(message) {
+    status.textContent = message;
+    status.hidden = !message;
+  }
+
+  function renderTex() {
+    if (rendered) return;
+    var ensure = window.mjEnsureKatex || function () { return Promise.reject(new Error("no loader")); };
+    ensure().then(function (katex) {
+      panel.querySelectorAll(".mj-tex").forEach(function (cell) {
+        katex.render(cell.textContent, cell, { throwOnError: false });
+      });
+      rendered = true;
+      showStatus("");
+    }).catch(function () {
+      panel.classList.add("is-raw");
+      showStatus("The maths renderer could not load, so symbols are shown as TeX source. Reload the page to try again.");
+    });
+  }
+
+  // Open state is deliberately not remembered: the panel covers the page,
+  // so each page starts closed.
+  function setOpen(open, focus) {
+    panel.hidden = !open;
+    tab.hidden = open;
+    tab.setAttribute("aria-expanded", String(open));
+    document.body.classList.toggle("mj-notation-open", open);
+    if (open) renderTex();
+    if (focus) (open ? panel.querySelector(".mj-notation-close") : tab).focus();
+  }
+
+  tab.addEventListener("click", function () { setOpen(true, true); });
+  panel.querySelector(".mj-notation-close").addEventListener("click", function () { setOpen(false, true); });
+  document.addEventListener("keydown", function (e) {
+    // The source editor handles its own Escape while it is open.
+    if (e.key !== "Escape" || panel.hidden || document.body.classList.contains("mj-editing")) return;
+    setOpen(false, panel.contains(document.activeElement));
+  });
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1519,7 +1878,7 @@ document.querySelectorAll(".navbar .nav-link.dropdown-toggle").forEach(function 
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 MJ2706</p>
+<p>© 2026 mdrat</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

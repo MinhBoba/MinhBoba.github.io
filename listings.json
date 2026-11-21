@@ -1,30 +1,5 @@
 [
   {
-    "listing": "/ml/index.html",
-    "items": [
-      "/ml/cs229/lecture02-linear-regression.html",
-      "/ml/cs229/index.html"
-    ]
-  },
-  {
-    "listing": "/ml/cs229/index.html",
-    "items": [
-      "/ml/cs229/lecture02-linear-regression.html"
-    ]
-  },
-  {
-    "listing": "/system/index.html",
-    "items": []
-  },
-  {
-    "listing": "/data/index.html",
-    "items": []
-  },
-  {
-    "listing": "/math/index.html",
-    "items": []
-  },
-  {
     "listing": "/lab/index.html",
     "items": []
   },
@@ -38,5 +13,30 @@
       "/ml/cs229/index.html",
       "/system/index.html"
     ]
+  },
+  {
+    "listing": "/system/index.html",
+    "items": []
+  },
+  {
+    "listing": "/ml/index.html",
+    "items": [
+      "/ml/cs229/lecture02-linear-regression.html",
+      "/ml/cs229/index.html"
+    ]
+  },
+  {
+    "listing": "/ml/cs229/index.html",
+    "items": [
+      "/ml/cs229/lecture02-linear-regression.html"
+    ]
+  },
+  {
+    "listing": "/data/index.html",
+    "items": []
+  },
+  {
+    "listing": "/math/index.html",
+    "items": []
   }
 ]
