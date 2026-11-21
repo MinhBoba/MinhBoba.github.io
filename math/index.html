@@ -36,6 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../math/calculus/index.html" rel="next">
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
@@ -51,9 +52,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-91e9b039683610e0c3b71a7e5bce793a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5f00cbbccbbc1b2c1b36ce443d19004e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a093d049744e63d788f0611a93f2c62f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5f00cbbccbbc1b2c1b36ce443d19004e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0719612456cf30a1f5d518b633a3d8db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-93f839647bc3a930b1a01e5a6aba629a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0719612456cf30a1f5d518b633a3d8db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -90,9 +91,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-body-classes','listing-title','listing-description','listing-kind','listing-course','listing-lectures-total','listing-toc','listing-listing','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-body-classes","listing-title","listing-description","listing-kind","listing-course","listing-lectures-total","listing-toc","listing-listing","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -403,17 +404,82 @@ window.Quarto = {
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
-        <li class="dropdown-header">Courses</li>
+        <li class="dropdown-header">Topics</li>
         <li>
     <a class="dropdown-item" href="../ml/cs229/index.html">
- <span class="dropdown-text">Stanford CS229</span></a>
+ <span class="dropdown-text">Classical Machine Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ml/deep-learning-book/index.html">
+ <span class="dropdown-text">Deep Learning Theory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ml/dlsys/index.html">
+ <span class="dropdown-text">Deep Learning Systems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ml/nlp/index.html">
+ <span class="dropdown-text">Natural Language Processing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ml/rl/index.html">
+ <span class="dropdown-text">Reinforcement Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ml/cs336/index.html">
+ <span class="dropdown-text">Large Language Models</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ml/efficient-ml/index.html">
+ <span class="dropdown-text">Efficient ML</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ml/jax/index.html">
+ <span class="dropdown-text">JAX</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ml/llm-agents/index.html">
+ <span class="dropdown-text">LLM Agents</span></a>
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link active" href="../math/index.html" aria-current="page"> 
-<span class="menu-text">Math</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-math" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Math</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-math">    
+        <li>
+    <a class="dropdown-item" href="../math/index.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Topics</li>
+        <li>
+    <a class="dropdown-item" href="../math/calculus/index.html">
+ <span class="dropdown-text">Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../math/mit1806/index.html">
+ <span class="dropdown-text">Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../math/mit6041/index.html">
+ <span class="dropdown-text">Probability</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../math/mit18065/index.html">
+ <span class="dropdown-text">Matrix Methods for Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../math/ee364a/index.html">
+ <span class="dropdown-text">Convex Optimization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../math/information-theory/index.html">
+ <span class="dropdown-text">Information Theory</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Data</span>
@@ -490,12 +556,83 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Section">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../math/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Math</span></a>
-  </div>
-</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Math</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: Math">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math/calculus/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Calculus</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section: Calculus">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth2 ">  
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math/ee364a/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Convex Optimization</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section: Convex Optimization">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth2 ">  
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math/information-theory/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Information Theory</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section: Information Theory">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth2 ">  
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math/mit1806/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-5-label">Linear Algebra</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section: Linear Algebra">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth2 ">  
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math/mit18065/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Matrix Methods for Data</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section: Matrix Methods for Data">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth2 ">  
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math/mit6041/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-7-label">Probability</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section: Probability">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth2 ">  
+      </ul>
+  </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -532,16 +669,32 @@ window.Quarto = {
 <div id="listing-courses" class="quarto-listing quarto-listing-container-custom">
 <figure class="study-map figure" aria-labelledby="study-map-caption-1">
 <div class="study-axis" aria-hidden="true">
-<span class="study-axis-title">Lecture</span><span class="study-axis-scale"><span class="study-axis-mark" style="left: 2.500%">1</span><span class="study-axis-mark" style="left: 22.500%">5</span><span class="study-axis-mark" style="left: 47.500%">10</span><span class="study-axis-mark" style="left: 72.500%">15</span><span class="study-axis-mark" style="left: 97.500%">20</span></span>
+<span class="study-axis-title">Lecture</span><span class="study-axis-scale"><span class="study-axis-mark" style="left: 1.471%">1</span><span class="study-axis-mark" style="left: 13.235%">5</span><span class="study-axis-mark" style="left: 27.941%">10</span><span class="study-axis-mark" style="left: 42.647%">15</span><span class="study-axis-mark" style="left: 57.353%">20</span><span class="study-axis-mark" style="left: 72.059%">25</span><span class="study-axis-mark" style="left: 86.765%">30</span></span>
 </div>
 <div class="study-lane domain-math">
 <a class="study-lane-label" href="../math/index.html">Math</a>
 <div class="study-lane-courses">
-<div class="study-course is-empty">
-<span class="study-course-name" aria-hidden="true"></span><span class="study-segment is-empty" style="--span: 100%"><span class="study-empty-label">Planned</span></span>
+<div class="study-course">
+<a class="study-course-name" href="../math/calculus/index.html">Calculus</a><span class="study-segment" style="--span: 47.059%; --n: 16" role="list" aria-label="Calculus, 0 of 16 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
+</div>
+<div class="study-course">
+<a class="study-course-name" href="../math/ee364a/index.html">Convex Optimization</a><span class="study-segment" style="--span: 55.882%; --n: 19" role="list" aria-label="Convex Optimization, 0 of 19 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
+</div>
+<div class="study-course">
+<a class="study-course-name" href="../math/information-theory/index.html">Information Theory</a><span class="study-segment" style="--span: 17.647%; --n: 6" role="list" aria-label="Information Theory, 0 of 6 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
+</div>
+<div class="study-course">
+<a class="study-course-name" href="../math/mit1806/index.html">Linear Algebra</a><span class="study-segment" style="--span: 100.000%; --n: 34" role="list" aria-label="Linear Algebra, 0 of 34 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
+</div>
+<div class="study-course">
+<a class="study-course-name" href="../math/mit18065/index.html">Matrix Methods for Data</a><span class="study-segment" style="--span: 94.118%; --n: 32" role="list" aria-label="Matrix Methods for Data, 0 of 32 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
+</div>
+<div class="study-course">
+<a class="study-course-name" href="../math/mit6041/index.html">Probability</a><span class="study-segment" style="--span: 73.529%; --n: 25" role="list" aria-label="Probability, 0 of 25 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
 </div>
 </div>
-<p class="study-lane-note is-empty">
+<p class="study-lane-note">
+0 of 132 lectures
 </p>
 </div>
 <div class="study-legend" aria-hidden="true">
@@ -1814,6 +1967,15 @@ window.mjEnsureKatex = (function () {
   <script type="application/javascript">
   window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../math/calculus/index.html" class="pagination-link" aria-label="Calculus">
+        <span class="nav-page-text">Calculus</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

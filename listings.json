@@ -4,17 +4,55 @@
     "items": []
   },
   {
-    "listing": "/math/index.html",
+    "listing": "/ml/nlp/index.html",
+    "items": []
+  },
+  {
+    "listing": "/ml/jax/index.html",
+    "items": []
+  },
+  {
+    "listing": "/ml/deep-learning-book/index.html",
+    "items": []
+  },
+  {
+    "listing": "/ml/cs336/index.html",
+    "items": []
+  },
+  {
+    "listing": "/math/mit18065/index.html",
+    "items": []
+  },
+  {
+    "listing": "/math/information-theory/index.html",
+    "items": []
+  },
+  {
+    "listing": "/math/calculus/index.html",
     "items": []
   },
   {
     "listing": "/index.html",
     "items": [
+      "/math/calculus/index.html",
+      "/ml/cs229/index.html",
+      "/math/ee364a/index.html",
       "/data/index.html",
+      "/ml/dlsys/index.html",
+      "/ml/deep-learning-book/index.html",
+      "/ml/efficient-ml/index.html",
+      "/math/information-theory/index.html",
+      "/ml/jax/index.html",
+      "/ml/llm-agents/index.html",
+      "/ml/cs336/index.html",
+      "/math/mit1806/index.html",
       "/ml/cs229/lecture02-linear-regression.html",
       "/ml/index.html",
       "/math/index.html",
-      "/ml/cs229/index.html",
+      "/math/mit18065/index.html",
+      "/ml/nlp/index.html",
+      "/math/mit6041/index.html",
+      "/ml/rl/index.html",
       "/system/index.html"
     ]
   },
@@ -27,16 +65,63 @@
     "items": []
   },
   {
+    "listing": "/math/ee364a/index.html",
+    "items": []
+  },
+  {
+    "listing": "/math/index.html",
+    "items": [
+      "/math/calculus/index.html",
+      "/math/ee364a/index.html",
+      "/math/information-theory/index.html",
+      "/math/mit1806/index.html",
+      "/math/mit18065/index.html",
+      "/math/mit6041/index.html"
+    ]
+  },
+  {
+    "listing": "/math/mit1806/index.html",
+    "items": []
+  },
+  {
+    "listing": "/math/mit6041/index.html",
+    "items": []
+  },
+  {
     "listing": "/ml/cs229/index.html",
     "items": [
       "/ml/cs229/lecture02-linear-regression.html"
     ]
   },
   {
+    "listing": "/ml/dlsys/index.html",
+    "items": []
+  },
+  {
+    "listing": "/ml/efficient-ml/index.html",
+    "items": []
+  },
+  {
     "listing": "/ml/index.html",
     "items": [
+      "/ml/cs229/index.html",
+      "/ml/dlsys/index.html",
+      "/ml/deep-learning-book/index.html",
+      "/ml/efficient-ml/index.html",
+      "/ml/jax/index.html",
+      "/ml/llm-agents/index.html",
+      "/ml/cs336/index.html",
       "/ml/cs229/lecture02-linear-regression.html",
-      "/ml/cs229/index.html"
+      "/ml/nlp/index.html",
+      "/ml/rl/index.html"
     ]
+  },
+  {
+    "listing": "/ml/llm-agents/index.html",
+    "items": []
+  },
+  {
+    "listing": "/ml/rl/index.html",
+    "items": []
   }
 ]

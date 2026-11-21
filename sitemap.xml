@@ -2,34 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://minhboba.github.io/system/index.html</loc>
-    <lastmod>2026-11-21T07:23:16.833Z</lastmod>
+    <lastmod>2026-11-21T11:03:18.930Z</lastmod>
   </url>
   <url>
-    <loc>https://minhboba.github.io/ml/cs229/lecture02-linear-regression.html</loc>
-    <lastmod>2026-11-21T07:23:16.833Z</lastmod>
+    <loc>https://minhboba.github.io/ml/nlp/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.929Z</lastmod>
   </url>
   <url>
-    <loc>https://minhboba.github.io/math/index.html</loc>
-    <lastmod>2026-11-21T07:23:16.833Z</lastmod>
+    <loc>https://minhboba.github.io/ml/jax/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.928Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/ml/deep-learning-book/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.926Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/ml/cs336/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.925Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/math/mit18065/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/math/information-theory/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/math/calculus/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/index.html</loc>
-    <lastmod>2026-11-21T07:23:16.833Z</lastmod>
+    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/data/index.html</loc>
-    <lastmod>2026-11-21T07:23:16.833Z</lastmod>
+    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/lab/index.html</loc>
-    <lastmod>2026-11-21T07:23:16.833Z</lastmod>
+    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/math/ee364a/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/math/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/math/mit1806/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/math/mit6041/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.924Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/cs229/index.html</loc>
-    <lastmod>2026-11-21T07:23:16.833Z</lastmod>
+    <lastmod>2026-11-21T11:03:18.925Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/ml/cs229/lecture02-linear-regression.html</loc>
+    <lastmod>2026-11-21T11:03:18.925Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/ml/dlsys/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.926Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/ml/efficient-ml/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.928Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/index.html</loc>
-    <lastmod>2026-11-21T07:23:16.833Z</lastmod>
+    <lastmod>2026-11-21T11:03:18.928Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/ml/llm-agents/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/ml/rl/index.html</loc>
+    <lastmod>2026-11-21T11:03:18.929Z</lastmod>
   </url>
 </urlset>
