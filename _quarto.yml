@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: _site
+  # Only .qmd pages are published; DESIGN.md and PRODUCT.md are design notes, not pages.
+  render:
+    - "**/*.qmd"
   resources:
     - "**/*-assets/**"
 
