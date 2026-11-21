@@ -1,0 +1,8 @@
+---
+title: "Approximation and fitting"
+subtitle: "Convex Optimization · Lecture 17"
+lecture: 17
+draft: true
+description: ""
+categories: ["Convex Optimization"]
+---

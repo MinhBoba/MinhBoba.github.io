@@ -1,0 +1,8 @@
+---
+title: "Conjugate and quasiconvex functions"
+subtitle: "Convex Optimization · Lecture 5"
+lecture: 5
+draft: true
+description: ""
+categories: ["Convex Optimization"]
+---

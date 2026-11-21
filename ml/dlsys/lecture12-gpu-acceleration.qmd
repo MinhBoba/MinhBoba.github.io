@@ -1,0 +1,8 @@
+---
+title: "GPU acceleration"
+subtitle: "DL Systems · Lecture 12"
+lecture: 12
+draft: true
+description: ""
+categories: ["DL Systems"]
+---

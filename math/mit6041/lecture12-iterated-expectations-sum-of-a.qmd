@@ -1,0 +1,8 @@
+---
+title: "Iterated expectations; sum of a random number of variables"
+subtitle: "Probability · Lecture 12"
+lecture: 12
+draft: true
+description: ""
+categories: ["Probability"]
+---

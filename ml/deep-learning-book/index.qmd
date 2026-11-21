@@ -1,0 +1,21 @@
+---
+title: "Deep Learning Theory"
+description: "The theory reference for modern deep nets, one page per section."
+kind: index
+course: true
+lectures-total: 64
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Section"
+---
+
+Source: Deep Learning (the book) · Goodfellow, Bengio, Courville
+
+::: {#lectures}
+:::

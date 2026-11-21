@@ -1,0 +1,21 @@
+---
+title: "Efficient ML"
+description: "Pruning, quantization, distillation and LLM deployment: hardware–software co-design."
+kind: index
+course: true
+lectures-total: 21
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: MIT 6.5940 Efficient ML (TinyML) · Song Han
+
+::: {#lectures}
+:::

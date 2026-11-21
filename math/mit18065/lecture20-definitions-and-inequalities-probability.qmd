@@ -1,0 +1,8 @@
+---
+title: "Definitions and inequalities (probability)"
+subtitle: "Matrix Methods · Lecture 20"
+lecture: 20
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

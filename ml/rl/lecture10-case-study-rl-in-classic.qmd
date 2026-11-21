@@ -1,0 +1,8 @@
+---
+title: "Case study: RL in classic games"
+subtitle: "RL · Lecture 10"
+lecture: 10
+draft: true
+description: ""
+categories: ["RL"]
+---

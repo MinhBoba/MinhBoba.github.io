@@ -1,0 +1,8 @@
+---
+title: "Six functions, six rules, six theorems"
+subtitle: "Calculus · Lecture 16"
+lecture: 16
+draft: true
+description: ""
+categories: ["Calculus"]
+---

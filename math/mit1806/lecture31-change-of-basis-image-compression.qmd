@@ -1,0 +1,8 @@
+---
+title: "Change of basis; image compression"
+subtitle: "Linear Algebra · Lecture 31"
+lecture: 31
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

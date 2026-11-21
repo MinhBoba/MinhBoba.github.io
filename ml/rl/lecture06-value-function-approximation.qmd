@@ -1,0 +1,8 @@
+---
+title: "Value function approximation"
+subtitle: "RL · Lecture 6"
+lecture: 6
+draft: true
+description: ""
+categories: ["RL"]
+---

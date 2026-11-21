@@ -1,0 +1,8 @@
+---
+title: "Distributed training II"
+subtitle: "Efficient ML · Lecture 19"
+lecture: 19
+draft: true
+description: ""
+categories: ["Efficient ML"]
+---

@@ -1,0 +1,8 @@
+---
+title: "Factorization into A = LU"
+subtitle: "Linear Algebra · Lecture 4"
+lecture: 4
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

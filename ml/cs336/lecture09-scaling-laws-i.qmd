@@ -1,0 +1,8 @@
+---
+title: "Scaling laws I"
+subtitle: "LLMs · Lecture 9"
+lecture: 9
+draft: true
+description: ""
+categories: ["LLMs"]
+---

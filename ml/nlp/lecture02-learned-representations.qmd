@@ -1,0 +1,8 @@
+---
+title: "Learned representations"
+subtitle: "NLP · Lecture 2"
+lecture: 2
+draft: true
+description: ""
+categories: ["NLP"]
+---

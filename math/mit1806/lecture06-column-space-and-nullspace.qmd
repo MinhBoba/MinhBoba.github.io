@@ -1,0 +1,8 @@
+---
+title: "Column space and nullspace"
+subtitle: "Linear Algebra · Lecture 6"
+lecture: 6
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

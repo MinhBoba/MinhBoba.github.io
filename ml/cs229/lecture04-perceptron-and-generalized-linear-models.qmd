@@ -1,0 +1,8 @@
+---
+title: "Perceptron and generalized linear models"
+subtitle: "Classical ML · Lecture 4"
+lecture: 4
+draft: true
+description: ""
+categories: ["Classical ML"]
+---

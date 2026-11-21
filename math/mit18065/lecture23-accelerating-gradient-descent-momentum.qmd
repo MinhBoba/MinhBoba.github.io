@@ -1,0 +1,8 @@
+---
+title: "Accelerating gradient descent (momentum)"
+subtitle: "Matrix Methods · Lecture 23"
+lecture: 23
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

@@ -1,0 +1,8 @@
+---
+title: "Deep generative models"
+subtitle: "DL Theory · Ch 13–20 · Section 64"
+lecture: 64
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

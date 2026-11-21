@@ -1,0 +1,8 @@
+---
+title: "Differential equations and exp(At)"
+subtitle: "Linear Algebra · Lecture 23"
+lecture: 23
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

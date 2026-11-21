@@ -1,0 +1,21 @@
+---
+title: "Deep Learning Systems"
+description: "Build a deep learning library from scratch: autodiff, kernels, GPUs, transformers."
+kind: index
+course: true
+lectures-total: 21
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: CMU 10-414 Deep Learning Systems · Zico Kolter, Tianqi Chen
+
+::: {#lectures}
+:::

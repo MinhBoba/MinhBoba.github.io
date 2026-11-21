@@ -1,0 +1,8 @@
+---
+title: "Optimization problems"
+subtitle: "Convex Optimization · Lecture 8"
+lecture: 8
+draft: true
+description: ""
+categories: ["Convex Optimization"]
+---

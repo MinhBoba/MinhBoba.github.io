@@ -1,0 +1,21 @@
+---
+title: "Information Theory"
+description: "Entropy, KL divergence and coding: the theory behind cross-entropy loss and compression."
+kind: index
+course: true
+lectures-total: 6
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: Information Theory · University of Oxford lectures
+
+::: {#lectures}
+:::

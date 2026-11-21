@@ -1,0 +1,8 @@
+---
+title: "Growth rate and log graphs"
+subtitle: "Calculus · Lecture 11"
+lecture: 11
+draft: true
+description: ""
+categories: ["Calculus"]
+---

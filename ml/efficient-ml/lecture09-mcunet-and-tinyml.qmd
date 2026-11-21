@@ -1,0 +1,8 @@
+---
+title: "MCUNet and TinyML"
+subtitle: "Efficient ML · Lecture 9"
+lecture: 9
+draft: true
+description: ""
+categories: ["Efficient ML"]
+---

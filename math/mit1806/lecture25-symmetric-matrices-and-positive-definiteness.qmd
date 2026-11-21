@@ -1,0 +1,8 @@
+---
+title: "Symmetric matrices and positive definiteness"
+subtitle: "Linear Algebra · Lecture 25"
+lecture: 25
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

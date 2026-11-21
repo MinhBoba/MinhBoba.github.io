@@ -1,0 +1,8 @@
+---
+title: "Vision transformers"
+subtitle: "Efficient ML · Lecture 15"
+lecture: 15
+draft: true
+description: ""
+categories: ["Efficient ML"]
+---

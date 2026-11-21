@@ -1,0 +1,8 @@
+---
+title: "Pooling"
+subtitle: "DL Theory · Ch 9 · Section 31"
+lecture: 31
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

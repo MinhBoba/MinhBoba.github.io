@@ -1,0 +1,8 @@
+---
+title: "Continuous Bayes' rule; derived distributions"
+subtitle: "Probability · Lecture 10"
+lecture: 10
+draft: true
+description: ""
+categories: ["Probability"]
+---

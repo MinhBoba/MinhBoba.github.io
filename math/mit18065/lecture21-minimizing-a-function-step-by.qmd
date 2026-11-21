@@ -1,0 +1,8 @@
+---
+title: "Minimizing a function step by step"
+subtitle: "Matrix Methods · Lecture 21"
+lecture: 21
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

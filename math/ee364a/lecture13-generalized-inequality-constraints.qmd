@@ -1,0 +1,8 @@
+---
+title: "Generalized inequality constraints"
+subtitle: "Convex Optimization · Lecture 13"
+lecture: 13
+draft: true
+description: ""
+categories: ["Convex Optimization"]
+---

@@ -1,0 +1,8 @@
+---
+title: "Data types"
+subtitle: "DL Theory · Ch 9 · Section 35"
+lecture: 35
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

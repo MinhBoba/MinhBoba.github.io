@@ -1,0 +1,8 @@
+---
+title: "Planning by dynamic programming"
+subtitle: "RL · Lecture 3"
+lecture: 3
+draft: true
+description: ""
+categories: ["RL"]
+---

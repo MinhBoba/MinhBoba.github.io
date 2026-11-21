@@ -1,0 +1,21 @@
+---
+title: "Calculus"
+description: "Derivatives, chain rule, exponentials and series: the language every gradient is written in."
+kind: index
+course: true
+lectures-total: 16
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: Highlights of Calculus · Gilbert Strang (MIT OCW)
+
+::: {#lectures}
+:::

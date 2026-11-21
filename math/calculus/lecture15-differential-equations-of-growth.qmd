@@ -1,0 +1,8 @@
+---
+title: "Differential equations of growth"
+subtitle: "Calculus · Lecture 15"
+lecture: 15
+draft: true
+description: ""
+categories: ["Calculus"]
+---

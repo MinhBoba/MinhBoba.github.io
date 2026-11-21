@@ -1,0 +1,8 @@
+---
+title: "Pruning and sparsity II"
+subtitle: "Efficient ML · Lecture 3"
+lecture: 3
+draft: true
+description: ""
+categories: ["Efficient ML"]
+---

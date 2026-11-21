@@ -21,6 +21,7 @@ Thumbs.db
 MJ2706.pdf
 ML-Math-Roadmap.pdf
 scripts/build_roadmap.py
+scripts/scaffold_courses.py
 
 # impeccable runtime caches
 .impeccable/hook.cache.json

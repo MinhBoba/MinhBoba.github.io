@@ -1,0 +1,8 @@
+---
+title: "Adversarial training"
+subtitle: "DL Theory · Ch 7 · Section 19"
+lecture: 19
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

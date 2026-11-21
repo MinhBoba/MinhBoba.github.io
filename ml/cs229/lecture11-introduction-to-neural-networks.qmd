@@ -1,0 +1,8 @@
+---
+title: "Introduction to neural networks"
+subtitle: "Classical ML · Lecture 11"
+lecture: 11
+draft: true
+description: ""
+categories: ["Classical ML"]
+---

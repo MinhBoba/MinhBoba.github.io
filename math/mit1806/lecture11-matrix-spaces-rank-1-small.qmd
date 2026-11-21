@@ -1,0 +1,8 @@
+---
+title: "Matrix spaces; rank 1; small world graphs"
+subtitle: "Linear Algebra · Lecture 11"
+lecture: 11
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

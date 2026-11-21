@@ -1,0 +1,8 @@
+---
+title: "Sparse representations"
+subtitle: "DL Theory · Ch 7 · Section 16"
+lecture: 16
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

@@ -1,0 +1,21 @@
+---
+title: "Probability"
+description: "Random variables, Bayes, limit theorems and inference: the maths behind every loss function."
+kind: index
+course: true
+lectures-total: 25
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: MIT 6.041 Probabilistic Systems Analysis · John Tsitsiklis
+
+::: {#lectures}
+:::

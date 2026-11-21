@@ -1,0 +1,8 @@
+---
+title: "Open training recipes for reasoning"
+subtitle: "LLM Agents · Lecture 4"
+lecture: 4
+draft: true
+description: ""
+categories: ["LLM Agents"]
+---

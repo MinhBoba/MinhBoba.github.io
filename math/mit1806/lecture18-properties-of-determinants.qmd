@@ -1,0 +1,8 @@
+---
+title: "Properties of determinants"
+subtitle: "Linear Algebra · Lecture 18"
+lecture: 18
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

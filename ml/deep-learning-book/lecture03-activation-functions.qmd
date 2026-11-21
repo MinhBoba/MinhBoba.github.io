@@ -1,0 +1,8 @@
+---
+title: "Activation functions"
+subtitle: "DL Theory · Ch 6 · Section 3"
+lecture: 3
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

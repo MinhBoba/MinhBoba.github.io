@@ -1,0 +1,8 @@
+---
+title: "Image preprocessing and normalization"
+subtitle: "DL Theory · Ch 11–12 · Section 53"
+lecture: 53
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

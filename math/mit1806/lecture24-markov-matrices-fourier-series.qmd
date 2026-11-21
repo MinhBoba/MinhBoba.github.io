@@ -1,0 +1,8 @@
+---
+title: "Markov matrices; Fourier series"
+subtitle: "Linear Algebra · Lecture 24"
+lecture: 24
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

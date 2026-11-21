@@ -1,0 +1,8 @@
+---
+title: "Data splits, models and cross-validation"
+subtitle: "Classical ML · Lecture 8"
+lecture: 8
+draft: true
+description: ""
+categories: ["Classical ML"]
+---

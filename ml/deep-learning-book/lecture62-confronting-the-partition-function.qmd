@@ -1,0 +1,8 @@
+---
+title: "Confronting the partition function"
+subtitle: "DL Theory · Ch 13–20 · Section 62"
+lecture: 62
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

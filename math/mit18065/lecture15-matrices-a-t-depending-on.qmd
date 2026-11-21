@@ -1,0 +1,8 @@
+---
+title: "Matrices A(t) depending on t; derivative dA/dt"
+subtitle: "Matrix Methods · Lecture 15"
+lecture: 15
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

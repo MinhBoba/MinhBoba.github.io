@@ -1,0 +1,8 @@
+---
+title: "Chains f(g(x)) and the chain rule"
+subtitle: "Calculus · Lecture 8"
+lecture: 8
+draft: true
+description: ""
+categories: ["Calculus"]
+---

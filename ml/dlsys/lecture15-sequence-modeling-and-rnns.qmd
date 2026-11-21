@@ -1,0 +1,8 @@
+---
+title: "Sequence modeling and RNNs"
+subtitle: "DL Systems · Lecture 15"
+lecture: 15
+draft: true
+description: ""
+categories: ["DL Systems"]
+---

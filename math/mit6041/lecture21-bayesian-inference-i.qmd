@@ -1,0 +1,8 @@
+---
+title: "Bayesian inference I"
+subtitle: "Probability · Lecture 21"
+lecture: 21
+draft: true
+description: ""
+categories: ["Probability"]
+---

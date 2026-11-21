@@ -1,0 +1,8 @@
+---
+title: "JAX NumPy"
+subtitle: "JAX · Lecture 1"
+lecture: 1
+draft: true
+description: ""
+categories: ["JAX"]
+---

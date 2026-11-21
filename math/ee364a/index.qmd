@@ -1,0 +1,21 @@
+---
+title: "Convex Optimization"
+description: "Convex sets and functions, duality: why some training problems are easy and others aren't."
+kind: index
+course: true
+lectures-total: 19
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: Stanford EE364A Convex Optimization · Stephen Boyd
+
+::: {#lectures}
+:::

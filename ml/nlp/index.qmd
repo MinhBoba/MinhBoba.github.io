@@ -1,0 +1,21 @@
+---
+title: "Natural Language Processing"
+description: "From word vectors to pretraining, decoding, RAG and RL for LLMs."
+kind: index
+course: true
+lectures-total: 12
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: CMU 11-711 Advanced NLP · Graham Neubig
+
+::: {#lectures}
+:::

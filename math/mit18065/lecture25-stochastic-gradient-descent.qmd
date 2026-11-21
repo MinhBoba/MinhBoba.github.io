@@ -1,0 +1,8 @@
+---
+title: "Stochastic gradient descent"
+subtitle: "Matrix Methods · Lecture 25"
+lecture: 25
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

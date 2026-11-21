@@ -1,0 +1,8 @@
+---
+title: "Scaling up"
+subtitle: "JAX · Lecture 4"
+lecture: 4
+draft: true
+description: ""
+categories: ["JAX"]
+---

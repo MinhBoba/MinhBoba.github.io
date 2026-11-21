@@ -1,0 +1,8 @@
+---
+title: "Regularization and under-constrained problems"
+subtitle: "DL Theory · Ch 7 · Section 9"
+lecture: 9
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

@@ -1,0 +1,8 @@
+---
+title: "Recursive neural networks"
+subtitle: "DL Theory · Ch 10 · Section 44"
+lecture: 44
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

@@ -1,0 +1,8 @@
+---
+title: "Convolution as an infinitely strong prior"
+subtitle: "DL Theory · Ch 9 · Section 32"
+lecture: 32
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

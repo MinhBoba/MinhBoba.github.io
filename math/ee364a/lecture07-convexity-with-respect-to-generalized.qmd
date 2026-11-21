@@ -1,0 +1,8 @@
+---
+title: "Convexity with respect to generalized inequalities"
+subtitle: "Convex Optimization · Lecture 7"
+lecture: 7
+draft: true
+description: ""
+categories: ["Convex Optimization"]
+---

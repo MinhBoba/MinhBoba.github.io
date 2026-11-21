@@ -1,0 +1,8 @@
+---
+title: "Backpropagation: find partial derivatives"
+subtitle: "Matrix Methods · Lecture 27"
+lecture: 27
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

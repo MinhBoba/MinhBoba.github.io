@@ -1,0 +1,8 @@
+---
+title: "Graphs, networks, incidence matrices"
+subtitle: "Linear Algebra · Lecture 12"
+lecture: 12
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

@@ -1,0 +1,8 @@
+---
+title: "RL with verifiable rewards"
+subtitle: "LLMs · Lecture 16"
+lecture: 16
+draft: true
+description: ""
+categories: ["LLMs"]
+---

@@ -1,0 +1,8 @@
+---
+title: "Adaptive learning rates"
+subtitle: "DL Theory · Ch 8 · Section 25"
+lecture: 25
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

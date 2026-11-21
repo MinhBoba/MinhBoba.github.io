@@ -1,0 +1,8 @@
+---
+title: "Orthonormal columns in Q"
+subtitle: "Matrix Methods · Lecture 3"
+lecture: 3
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

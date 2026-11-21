@@ -1,0 +1,8 @@
+---
+title: "GDA and naive Bayes"
+subtitle: "Classical ML · Lecture 5"
+lecture: 5
+draft: true
+description: ""
+categories: ["Classical ML"]
+---

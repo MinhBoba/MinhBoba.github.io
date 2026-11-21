@@ -1,6 +1,6 @@
 ---
-title: "Stanford CS229: Machine Learning"
-description: "Andrew Ng's graduate ML course: supervised learning, generative models, kernels, unsupervised learning and RL."
+title: "Classical Machine Learning"
+description: "Supervised learning, generative models, kernels, unsupervised learning and RL."
 kind: index
 course: true
 lectures-total: 20
@@ -9,11 +9,13 @@ listing:
   id: lectures
   contents: "lecture*.qmd"
   type: table
-  sort: "subtitle"
+  sort: "lecture"
   fields: [subtitle, title, description]
   field-display-names:
     subtitle: "Lecture"
 ---
+
+Source: Stanford CS229 Machine Learning · Andrew Ng (Autumn 2018)
 
 Official links: [course page](https://cs229.stanford.edu/) · [Autumn 2018 playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
 

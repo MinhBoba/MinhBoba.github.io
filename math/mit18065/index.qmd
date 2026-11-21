@@ -1,0 +1,21 @@
+---
+title: "Matrix Methods for Data"
+description: "Linear algebra applied: low rank, norms, gradient descent, SGD and the structure of neural nets."
+kind: index
+course: true
+lectures-total: 32
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: MIT 18.065 Matrix Methods in Data Analysis · Gilbert Strang
+
+::: {#lectures}
+:::

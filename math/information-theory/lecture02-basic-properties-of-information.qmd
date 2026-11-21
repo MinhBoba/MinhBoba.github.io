@@ -1,0 +1,8 @@
+---
+title: "Basic properties of information"
+subtitle: "Information Theory · Lecture 2"
+lecture: 2
+draft: true
+description: ""
+categories: ["Information Theory"]
+---

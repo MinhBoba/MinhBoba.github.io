@@ -1,0 +1,8 @@
+---
+title: "Unfolding computational graphs"
+subtitle: "DL Theory · Ch 10 · Section 39"
+lecture: 39
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

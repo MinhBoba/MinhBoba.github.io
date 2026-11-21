@@ -1,0 +1,8 @@
+---
+title: "Positive definite and semidefinite matrices"
+subtitle: "Matrix Methods · Lecture 5"
+lecture: 5
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

@@ -1,0 +1,8 @@
+---
+title: "Linear programming and two-person games"
+subtitle: "Matrix Methods · Lecture 24"
+lecture: 24
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

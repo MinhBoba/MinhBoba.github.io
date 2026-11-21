@@ -1,0 +1,8 @@
+---
+title: "ML refresher / softmax regression"
+subtitle: "DL Systems · Lecture 1"
+lecture: 1
+draft: true
+description: ""
+categories: ["DL Systems"]
+---

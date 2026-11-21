@@ -6,6 +6,9 @@ project:
     - "**/*.qmd"
   resources:
     - "**/*-assets/**"
+  # Lecture pages start as `draft: true`; drop prev/next links that point at them.
+  post-render:
+    - scripts/strip_draft_links.py
 
 website:
   title: "mdrat"
@@ -39,12 +42,43 @@ website:
           - text: Overview
             href: ml/index.qmd
           - text: "---"
-          - text: Courses
-          - text: "Stanford CS229"
+          - text: Topics
+          - text: "Classical Machine Learning"
             href: ml/cs229/index.qmd
-      # Math becomes a menu once it has a course.
+          - text: "Deep Learning Theory"
+            href: ml/deep-learning-book/index.qmd
+          - text: "Deep Learning Systems"
+            href: ml/dlsys/index.qmd
+          - text: "Natural Language Processing"
+            href: ml/nlp/index.qmd
+          - text: "Reinforcement Learning"
+            href: ml/rl/index.qmd
+          - text: "Large Language Models"
+            href: ml/cs336/index.qmd
+          - text: "Efficient ML"
+            href: ml/efficient-ml/index.qmd
+          - text: "JAX"
+            href: ml/jax/index.qmd
+          - text: "LLM Agents"
+            href: ml/llm-agents/index.qmd
       - text: Math
-        href: math/index.qmd
+        menu:
+          - text: Overview
+            href: math/index.qmd
+          - text: "---"
+          - text: Topics
+          - text: "Calculus"
+            href: math/calculus/index.qmd
+          - text: "Linear Algebra"
+            href: math/mit1806/index.qmd
+          - text: "Probability"
+            href: math/mit6041/index.qmd
+          - text: "Matrix Methods for Data"
+            href: math/mit18065/index.qmd
+          - text: "Convex Optimization"
+            href: math/ee364a/index.qmd
+          - text: "Information Theory"
+            href: math/information-theory/index.qmd
       - text: Data
         menu:
           - text: Overview

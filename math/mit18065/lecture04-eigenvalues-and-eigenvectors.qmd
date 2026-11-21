@@ -1,0 +1,8 @@
+---
+title: "Eigenvalues and eigenvectors"
+subtitle: "Matrix Methods · Lecture 4"
+lecture: 4
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

@@ -1,0 +1,8 @@
+---
+title: "Final course review"
+subtitle: "Linear Algebra · Lecture 34"
+lecture: 34
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

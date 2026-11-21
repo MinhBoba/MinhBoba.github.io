@@ -1,0 +1,8 @@
+---
+title: "L2 regularization"
+subtitle: "DL Theory · Ch 7 · Section 6"
+lecture: 6
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

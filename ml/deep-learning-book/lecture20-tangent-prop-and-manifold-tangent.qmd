@@ -1,0 +1,8 @@
+---
+title: "Tangent prop and manifold tangent classifier"
+subtitle: "DL Theory · Ch 7 · Section 20"
+lecture: 20
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

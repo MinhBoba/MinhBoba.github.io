@@ -1,0 +1,8 @@
+---
+title: "Echo state networks"
+subtitle: "DL Theory · Ch 10 · Section 46"
+lecture: 46
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

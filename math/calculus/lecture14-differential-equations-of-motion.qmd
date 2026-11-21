@@ -1,0 +1,8 @@
+---
+title: "Differential equations of motion"
+subtitle: "Calculus · Lecture 14"
+lecture: 14
+draft: true
+description: ""
+categories: ["Calculus"]
+---

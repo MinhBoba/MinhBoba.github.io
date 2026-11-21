@@ -1,0 +1,8 @@
+---
+title: "Linear approximation and Newton's method"
+subtitle: "Calculus · Lecture 12"
+lecture: 12
+draft: true
+description: ""
+categories: ["Calculus"]
+---

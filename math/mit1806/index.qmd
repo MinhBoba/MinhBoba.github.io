@@ -1,0 +1,21 @@
+---
+title: "Linear Algebra"
+description: "The core of ML maths: subspaces, projections, eigenvalues and the SVD."
+kind: index
+course: true
+lectures-total: 34
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: MIT 18.06 Linear Algebra · Gilbert Strang
+
+::: {#lectures}
+:::

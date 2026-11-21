@@ -1,0 +1,8 @@
+---
+title: "Automatic differentiation implementation"
+subtitle: "DL Systems · Lecture 5"
+lecture: 5
+draft: true
+description: ""
+categories: ["DL Systems"]
+---

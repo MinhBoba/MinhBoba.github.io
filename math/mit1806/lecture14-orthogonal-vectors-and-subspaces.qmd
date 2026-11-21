@@ -1,0 +1,8 @@
+---
+title: "Orthogonal vectors and subspaces"
+subtitle: "Linear Algebra · Lecture 14"
+lecture: 14
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

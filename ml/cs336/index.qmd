@@ -1,0 +1,21 @@
+---
+title: "Large Language Models"
+description: "Train an LLM end to end: tokenizers, kernels, parallelism, scaling laws, alignment."
+kind: index
+course: true
+lectures-total: 17
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: Stanford CS336 Language Modeling from Scratch · Percy Liang, Tatsunori Hashimoto
+
+::: {#lectures}
+:::

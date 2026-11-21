@@ -1,0 +1,8 @@
+---
+title: "Dataset augmentation"
+subtitle: "DL Theory · Ch 7 · Section 10"
+lecture: 10
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

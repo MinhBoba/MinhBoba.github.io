@@ -1,0 +1,8 @@
+---
+title: "Completing a rank-one matrix; circulants"
+subtitle: "Matrix Methods · Lecture 28"
+lecture: 28
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

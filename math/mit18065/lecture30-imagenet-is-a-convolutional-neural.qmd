@@ -1,0 +1,8 @@
+---
+title: "ImageNet is a convolutional neural network; convolution rule"
+subtitle: "Matrix Methods · Lecture 30"
+lecture: 30
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

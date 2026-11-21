@@ -1,0 +1,8 @@
+---
+title: "Multiple continuous random variables"
+subtitle: "Probability · Lecture 9"
+lecture: 9
+draft: true
+description: ""
+categories: ["Probability"]
+---

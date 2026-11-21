@@ -1,0 +1,8 @@
+---
+title: "Autoencoders"
+subtitle: "DL Theory · Ch 13–20 · Section 58"
+lecture: 58
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

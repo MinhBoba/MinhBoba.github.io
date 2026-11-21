@@ -1,0 +1,8 @@
+---
+title: "Singular value decomposition"
+subtitle: "Matrix Methods · Lecture 6"
+lecture: 6
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

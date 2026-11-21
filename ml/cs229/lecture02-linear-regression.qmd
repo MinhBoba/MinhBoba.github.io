@@ -1,10 +1,10 @@
 ---
 title: "Linear Regression and Gradient Descent"
-subtitle: "CS229 · Lecture 2"
+subtitle: "Classical ML · Lecture 2"
 lecture: 2
 date: "2026-11-15"
 description: "Least squares, batch and stochastic gradient descent, and the normal equations."
-categories: [CS229, Regression, Optimization]
+categories: ["Classical ML", Regression, Optimization]
 ---
 
 {{< video https://www.youtube.com/watch?v=sDv4f4s2SB8 title="StatQuest: Gradient Descent, Step-by-Step" >}}

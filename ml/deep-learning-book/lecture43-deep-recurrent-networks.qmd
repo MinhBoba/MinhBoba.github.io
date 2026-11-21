@@ -1,0 +1,8 @@
+---
+title: "Deep recurrent networks"
+subtitle: "DL Theory · Ch 10 · Section 43"
+lecture: 43
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

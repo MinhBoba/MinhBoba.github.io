@@ -1,0 +1,8 @@
+---
+title: "Solving Ax = b: row reduced form R"
+subtitle: "Linear Algebra · Lecture 8"
+lecture: 8
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

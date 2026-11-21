@@ -1,0 +1,8 @@
+---
+title: "Training large models"
+subtitle: "DL Systems · Lecture 19"
+lecture: 19
+draft: true
+description: ""
+categories: ["DL Systems"]
+---

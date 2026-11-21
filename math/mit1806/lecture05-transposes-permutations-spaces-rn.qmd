@@ -1,0 +1,8 @@
+---
+title: "Transposes, permutations, spaces Rⁿ"
+subtitle: "Linear Algebra · Lecture 5"
+lecture: 5
+draft: true
+description: ""
+categories: ["Linear Algebra"]
+---

@@ -1,0 +1,8 @@
+---
+title: "Power series and Euler's great formula"
+subtitle: "Calculus · Lecture 13"
+lecture: 13
+draft: true
+description: ""
+categories: ["Calculus"]
+---

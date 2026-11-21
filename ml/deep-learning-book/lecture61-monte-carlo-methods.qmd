@@ -1,0 +1,8 @@
+---
+title: "Monte Carlo methods"
+subtitle: "DL Theory · Ch 13–20 · Section 61"
+lecture: 61
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

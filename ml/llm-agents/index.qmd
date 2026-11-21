@@ -1,0 +1,21 @@
+---
+title: "LLM Agents"
+description: "Reasoning, planning, coding agents, theorem proving and agent safety."
+kind: index
+course: true
+lectures-total: 12
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: Berkeley Advanced LLM Agents · Dawn Song et al. (Spring 2025)
+
+::: {#lectures}
+:::

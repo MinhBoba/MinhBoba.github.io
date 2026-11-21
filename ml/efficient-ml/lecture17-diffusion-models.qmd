@@ -1,0 +1,8 @@
+---
+title: "Diffusion models"
+subtitle: "Efficient ML · Lecture 17"
+lecture: 17
+draft: true
+description: ""
+categories: ["Efficient ML"]
+---

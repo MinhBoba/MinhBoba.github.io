@@ -1,0 +1,21 @@
+---
+title: "Reinforcement Learning"
+description: "MDPs to policy gradients: the foundation for RLHF and agents."
+kind: index
+course: true
+lectures-total: 10
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: Reinforcement Learning (UCL) · David Silver
+
+::: {#lectures}
+:::

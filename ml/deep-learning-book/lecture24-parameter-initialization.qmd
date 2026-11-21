@@ -1,0 +1,8 @@
+---
+title: "Parameter initialization"
+subtitle: "DL Theory · Ch 8 · Section 24"
+lecture: 24
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

@@ -1,0 +1,8 @@
+---
+title: "Leaky units"
+subtitle: "DL Theory · Ch 10 · Section 47"
+lecture: 47
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

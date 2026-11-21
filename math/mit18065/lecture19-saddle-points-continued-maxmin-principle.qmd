@@ -1,0 +1,8 @@
+---
+title: "Saddle points continued; maxmin principle"
+subtitle: "Matrix Methods · Lecture 19"
+lecture: 19
+draft: true
+description: ""
+categories: ["Matrix Methods"]
+---

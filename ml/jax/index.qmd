@@ -1,0 +1,21 @@
+---
+title: "JAX"
+description: "A second framework: functional NumPy, Flax NNX and scaling across devices."
+kind: index
+course: true
+lectures-total: 4
+toc: false
+listing:
+  id: lectures
+  contents: "lecture*.qmd"
+  type: table
+  sort: "lecture"
+  fields: [subtitle, title, description]
+  field-display-names:
+    subtitle: "Lecture"
+---
+
+Source: JAX AI Stack · Google JAX docs
+
+::: {#lectures}
+:::

@@ -1,0 +1,8 @@
+---
+title: "Representation learning"
+subtitle: "DL Theory · Ch 13–20 · Section 59"
+lecture: 59
+draft: true
+description: ""
+categories: ["DL Theory"]
+---

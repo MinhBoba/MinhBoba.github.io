@@ -1,0 +1,8 @@
+---
+title: "Manual neural networks (part 2)"
+subtitle: "DL Systems · Lecture 3"
+lecture: 3
+draft: true
+description: ""
+categories: ["DL Systems"]
+---

@@ -1,0 +1,8 @@
+---
+title: "Attention alternatives and mixture of experts"
+subtitle: "LLMs · Lecture 4"
+lecture: 4
+draft: true
+description: ""
+categories: ["LLMs"]
+---
