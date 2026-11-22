@@ -516,21 +516,6 @@ body.domain-system #nav-menu-system {
 .concept-graph figcaption { margin-top: 0.4rem; }
 .home div[id="concept-graph"] { margin: 0 !important; padding: 0 !important; }
 
-/* ---------- Concepts page: A–Z, one anchored entry per concept ---------- */
-.concepts { border-top: 2px solid var(--mj-rule-strong); padding-top: 0.75rem; }
-.concepts-letter { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); padding: 0.6rem 0; border-bottom: 1px solid var(--mj-rule); }
-.concepts-letter:last-child { border-bottom: 0; }
-.concepts-letter-mark { font-family: "Source Serif 4", Georgia, serif; font-size: 1.5rem; font-weight: 600; line-height: 1.2; }
-.concepts-entry { padding: 0.25rem 0.5rem 0.6rem; margin-left: -0.5rem; scroll-margin-top: 5rem; }
-/* The concept you arrived at from the graph is marked on Wash, without motion */
-.concepts-entry:target { background: var(--mj-wash); }
-.concepts-term { font-family: "Source Serif 4", Georgia, serif; font-size: 1.1rem; font-weight: 600; margin: 0 0 0.2rem; }
-.concepts-entry ul { list-style: none; margin: 0; padding: 0; }
-.concepts-entry li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.75rem; padding: 0.15rem 0; }
-.concepts-entry li a { color: var(--mj-ink); text-decoration-color: var(--domain, var(--mj-ink)); }
-.concepts-locator { font-family: var(--font-label); font-size: 0.8rem; font-weight: 500; color: var(--mj-muted); }
-.concepts-locator::before { content: ""; display: inline-block; width: 0.9rem; height: 3px; margin-right: 0.4rem; vertical-align: middle; background: var(--domain, var(--mj-ink)); }
-div[id="concepts"] { margin-top: 0 !important; }
 
 /* ---------- Navbar: Math is a plain link for now ---------- */
 .navbar .nav-link[href$="math/index.html"] { --domain: var(--ink-math); }
@@ -793,7 +778,7 @@ body:has(.navbar-collapse.show) .mj-notation-tab { display: none; }
 }
 .home #quarto-content .home-card h1 {
   margin: 0 0 0 -0.04em; padding: 0; border: 0;
-  font-family: var(--font-label); font-weight: 800; font-size: 31cqi; line-height: 0.82; letter-spacing: -0.04em;
+  font-family: var(--font-label); font-weight: 800; font-size: 20cqi; line-height: 0.82; letter-spacing: -0.04em;
   color: var(--mj-band-ink);
 }
 .home-card p { margin: 0; }
@@ -860,6 +845,16 @@ section.level2 .notes-map { border-top: 0; }
    inside it instead of widening the page. */
 .table-responsive { position: relative; }
 .table-responsive td { line-height: 1.75; }
+/* What each part of a formula means: one formula and its part table per cell, two across */
+.formula-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem 2.5rem; margin: 1rem 0 2.5rem; }
+.formula-part { min-width: 0; }
+.formula-part h4 { margin: 0 0 0.5rem; padding-top: 0.6rem; border-top: 2px solid var(--mj-rule-strong); font-size: 1.1rem; }
+.formula-part .katex-display { position: relative; overflow-x: auto; overflow-y: hidden; padding: 0.25rem 0; margin: 0.5rem 0; }
+.formula-part td { line-height: 1.6; }
+.formula-part td:first-child .katex { white-space: nowrap; }
+.formula-part th:first-child, .formula-part col:first-child { width: 32% !important; }
+.formula-part .katex-display > .katex { font-size: 1.05em; }
+@media (max-width: 1199.98px) { .formula-grid { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 767.98px) { .table-responsive > table { min-width: 44rem; } }
 
 /* Footer: line up with the navbar, and drop its empty columns where they would stack */
