@@ -2,90 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://minhboba.github.io/system/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.930Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.639Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/nlp/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.929Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.638Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/jax/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.928Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.637Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/deep-learning-book/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.926Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.634Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/cs336/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.925Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.634Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/math/mit18065/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.923Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.631Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/math/information-theory/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.630Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/math/calculus/lecture16-six-functions-six-rules-six.html</loc>
+    <lastmod>2026-11-22T04:08:04.630Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/math/calculus/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.630Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.630Z</lastmod>
+  </url>
+  <url>
+    <loc>https://minhboba.github.io/concepts.html</loc>
+    <lastmod>2026-11-22T04:08:04.629Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/data/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.630Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/lab/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.630Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/math/ee364a/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.630Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/math/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.922Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.630Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/math/mit1806/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.923Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.631Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/math/mit6041/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.924Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.632Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/cs229/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.925Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.634Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/cs229/lecture02-linear-regression.html</loc>
-    <lastmod>2026-11-21T11:03:18.925Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.634Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/dlsys/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.926Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.636Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/efficient-ml/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.928Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.637Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.928Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.637Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/llm-agents/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.929Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.638Z</lastmod>
   </url>
   <url>
     <loc>https://minhboba.github.io/ml/rl/index.html</loc>
-    <lastmod>2026-11-21T11:03:18.929Z</lastmod>
+    <lastmod>2026-11-22T04:08:04.638Z</lastmod>
   </url>
 </urlset>

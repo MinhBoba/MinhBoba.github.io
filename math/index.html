@@ -52,9 +52,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-91e9b039683610e0c3b71a7e5bce793a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0719612456cf30a1f5d518b633a3d8db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-93f839647bc3a930b1a01e5a6aba629a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-0719612456cf30a1f5d518b633a3d8db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-635e83d0155ff97d7aad78873f25f6fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-530c27d82cecfeee2dedd46cbac4b6f1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-635e83d0155ff97d7aad78873f25f6fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,9 +91,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-body-classes','listing-title','listing-description','listing-kind','listing-course','listing-lectures-total','listing-toc','listing-listing','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-body-classes','listing-title','listing-description','listing-kind','listing-course','listing-lectures-total','listing-toc','listing-listing','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-subtitle','listing-lecture','listing-date','listing-categories','listing-index','listing-date-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-body-classes","listing-title","listing-description","listing-kind","listing-course","listing-lectures-total","listing-toc","listing-listing","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-body-classes","listing-title","listing-description","listing-kind","listing-course","listing-lectures-total","listing-toc","listing-listing","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-subtitle","listing-lecture","listing-date","listing-categories","listing-index","listing-date-modified"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -113,9 +113,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-body-classes','listing-title','listing-subtitle','listing-lecture','listing-date','listing-description','listing-categories','listing-index','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-body-classes","listing-title","listing-subtitle","listing-lecture","listing-date","listing-description","listing-categories","listing-index","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -574,6 +574,12 @@ window.Quarto = {
             </button> 
       </div>
       <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/calculus/lecture16-six-functions-six-rules-six.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6 Functions, 6 Rules, 6 Theorems</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -667,53 +673,26 @@ window.Quarto = {
 <section id="courses" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="courses">Courses</h2>
 <div id="listing-courses" class="quarto-listing quarto-listing-container-custom">
-<figure class="study-map figure" aria-labelledby="study-map-caption-1">
-<div class="study-axis" aria-hidden="true">
-<span class="study-axis-title">Lecture</span><span class="study-axis-scale"><span class="study-axis-mark" style="left: 1.471%">1</span><span class="study-axis-mark" style="left: 13.235%">5</span><span class="study-axis-mark" style="left: 27.941%">10</span><span class="study-axis-mark" style="left: 42.647%">15</span><span class="study-axis-mark" style="left: 57.353%">20</span><span class="study-axis-mark" style="left: 72.059%">25</span><span class="study-axis-mark" style="left: 86.765%">30</span></span>
-</div>
-<div class="study-lane domain-math">
-<a class="study-lane-label" href="../math/index.html">Math</a>
-<div class="study-lane-courses">
-<div class="study-course">
-<a class="study-course-name" href="../math/calculus/index.html">Calculus</a><span class="study-segment" style="--span: 47.059%; --n: 16" role="list" aria-label="Calculus, 0 of 16 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="../math/ee364a/index.html">Convex Optimization</a><span class="study-segment" style="--span: 55.882%; --n: 19" role="list" aria-label="Convex Optimization, 0 of 19 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="../math/information-theory/index.html">Information Theory</a><span class="study-segment" style="--span: 17.647%; --n: 6" role="list" aria-label="Information Theory, 0 of 6 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="../math/mit1806/index.html">Linear Algebra</a><span class="study-segment" style="--span: 100.000%; --n: 34" role="list" aria-label="Linear Algebra, 0 of 34 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="../math/mit18065/index.html">Matrix Methods for Data</a><span class="study-segment" style="--span: 94.118%; --n: 32" role="list" aria-label="Matrix Methods for Data, 0 of 32 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="../math/mit6041/index.html">Probability</a><span class="study-segment" style="--span: 73.529%; --n: 25" role="list" aria-label="Probability, 0 of 25 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-</div>
-<p class="study-lane-note">
-0 of 132 lectures
+<div class="notes-map">
+<div class="notes-row domain-math">
+<a class="notes-label" href="../math/calculus/index.html">Calculus</a>
+<ul class="notes-blocks" aria-label="Calculus, 1 lecture">
+<li>
+<a class="notes-block" href="../math/calculus/lecture16-six-functions-six-rules-six.html" title="6 Functions, 6 Rules, 6 Theorems" aria-label="6 Functions, 6 Rules, 6 Theorems"></a>
+</li>
+</ul>
+<p class="notes-note">
+1 lecture<span class="notes-latest">Latest: <a href="../math/calculus/lecture16-six-functions-six-rules-six.html">6 Functions, 6 Rules, 6 Theorems</a></span>
 </p>
 </div>
-<div class="study-legend" aria-hidden="true">
-<span><i class="slot is-published"></i>Written up</span><span><i class="slot is-progress"></i>In progress</span><span><i class="slot is-planned"></i>Planned</span>
 </div>
-<figcaption id="study-map-caption-1">
-<strong>Figure 1.</strong> Math courses, each drawn to its real number of lectures; select a filled slot to open that lecture.
-</figcaption>
-</figure>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
 <section id="lectures" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="lectures">Lectures</h2>
 <div id="listing-lectures" class="quarto-listing quarto-listing-container-custom">
-<table class="ledger ledger-single">
-<caption>
-<strong>Table 1.</strong> Math lectures, newest first.
-</caption>
+<table class="ledger ledger-single" aria-label="Math lectures, newest first.">
 <thead>
 <tr>
 <th scope="col">
@@ -725,9 +704,12 @@ Page
 </tr>
 </thead>
 <tbody>
-<tr>
-<td colspan="2" class="ledger-empty">
-No lectures written up yet.
+<tr class="domain-math">
+<td class="ledger-date">
+22 Nov 2026
+</td>
+<td class="ledger-page">
+<a href="../math/calculus/lecture16-six-functions-six-rules-six.html">6 Functions, 6 Rules, 6 Theorems</a> <span class="ledger-sub">Calculus · Lecture 16</span>
 </td>
 </tr>
 </tbody>

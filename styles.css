@@ -28,7 +28,6 @@ summary:focus-visible {
   outline-offset: 3px;
   border-radius: 1px;
 }
-
 /* ---------- Labels, captions, chrome use the grotesk ---------- */
 .navbar,
 .sidebar,
@@ -42,7 +41,7 @@ figcaption,
 caption,
 .callout-header,
 .nav-footer,
-.study-map,
+.notes-map,
 .ledger,
 .start-here {
   font-family: var(--font-label);
@@ -87,14 +86,6 @@ h2 { margin-top: 2.6rem; margin-bottom: 0.9rem; }
 .home #title-block-header { display: none; }
 .home main.content { padding-top: 1.5rem; }
 
-.home-opening {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(14rem, 18rem);
-  gap: clamp(1.5rem, 4vw, 4rem);
-  align-items: start;
-  margin-bottom: 2.5rem;
-}
-
 .home h2 {
   font-size: 1.5rem;
   margin-top: 3.25rem;
@@ -105,93 +96,8 @@ h2 { margin-top: 2.6rem; margin-bottom: 0.9rem; }
   border-bottom: 0;
 }
 
-/* ---------- Figure 1: study map ---------- */
-.study-map {
-  --label-w: 10.5rem;
-  --name-w: 5.5rem;
-  --note-w: 11.5rem;
-  --bar-h: 1.6rem;
-  margin: 0;
-  border-top: 2px solid var(--mj-rule-strong);
-}
-.study-axis,
-.study-lane {
-  display: grid;
-  grid-template-columns: var(--label-w) minmax(0, 1fr) var(--note-w);
-  column-gap: 1.25rem;
-}
-.study-axis {
-  padding: 0.45rem 0 0.35rem;
-  font-size: 0.75rem;
-  color: var(--mj-muted);
-  border-bottom: 1px solid var(--mj-rule);
-}
-.study-axis-title { grid-column: 1; }
-.study-axis-scale { grid-column: 2; position: relative; margin-left: var(--name-w); height: 1.1em; }
-.study-axis-mark { position: absolute; transform: translateX(-50%); font-variant-numeric: tabular-nums; }
-.study-lane { align-items: center; padding: 0.95rem 0; border-bottom: 1px solid var(--mj-rule); }
-.study-lane-label {
-  font-weight: 700;
-  font-size: 1.02rem;
-  color: var(--domain);
-  text-decoration: none;
-}
-.study-lane-label:hover { text-decoration: underline; }
-.study-lane-courses { display: grid; row-gap: 0.6rem; }
-.study-course {
-  display: grid;
-  grid-template-columns: var(--name-w) minmax(0, 1fr);
-  align-items: center;
-}
-.study-course-name {
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--mj-ink);
-  text-decoration: none;
-}
-a.study-course-name:hover { text-decoration: underline; text-decoration-color: var(--domain); }
-.study-course.is-empty .study-course-name { font-weight: 500; font-style: italic; color: var(--mj-muted); }
-.study-segment {
-  width: var(--span);
-  height: var(--bar-h);
-  display: grid;
-  grid-template-columns: repeat(var(--n, 1), 1fr);
-  gap: 3px;
-}
-.study-segment.is-empty { border: 1.5px dashed color-mix(in srgb, var(--domain) 45%, var(--mj-ground)); }
-.slot { display: block; height: 100%; min-width: 0; }
-.slot.is-published { background: var(--domain); }
-.slot.is-progress {
-  border: 2px dotted var(--domain);
-  background: color-mix(in srgb, var(--domain) 14%, transparent);
-}
-.slot.is-planned { border: 1.5px dashed color-mix(in srgb, var(--domain) 50%, var(--mj-ground)); }
-a.slot.is-published:hover,
-a.slot:focus-visible { outline: 2px solid var(--mj-ink); outline-offset: 2px; }
-.study-lane-note {
-  margin: 0;
-  font-size: 0.85rem;
-  line-height: 1.4;
-  color: var(--mj-muted);
-  font-variant-numeric: tabular-nums;
-}
-.study-lane-note a { color: var(--domain); }
-.study-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1.5rem;
-  margin-top: 0.85rem;
-  font-size: 0.82rem;
-  color: var(--mj-muted);
-}
-.study-legend span { display: inline-flex; align-items: center; gap: 0.45rem; }
-.study-legend .slot { width: 1.1rem; height: 0.85rem; }
-.study-legend .slot.is-published { background: var(--mj-ink); }
-.study-legend .slot.is-progress { border-color: var(--mj-ink); background: transparent; }
-.study-legend .slot.is-planned { border-color: var(--mj-muted); }
-
 /* Captions: the journal's italic serif, label upright */
-.study-map figcaption,
+.concept-graph figcaption,
 .lab-plate figcaption,
 .ledger caption {
   font-family: "Source Serif 4", Georgia, serif;
@@ -201,8 +107,8 @@ a.slot:focus-visible { outline: 2px solid var(--mj-ink); outline-offset: 2px; }
   color: var(--mj-muted);
   max-width: 72ch;
 }
-.study-map figcaption { margin-top: 0.6rem; }
-.study-map figcaption strong,
+
+.concept-graph figcaption strong,
 .lab-plate figcaption strong,
 .ledger caption strong {
   font-family: var(--font-label);
@@ -380,11 +286,7 @@ div.sourceCode { border: 1px solid var(--mj-rule); border-radius: 2px; }
 
 /* ---------- Narrow screens ---------- */
 @media (max-width: 760px) {
-  .home-opening { grid-template-columns: 1fr; align-items: start; }
-  .study-map { --label-w: 0px; --note-w: 0px; --name-w: 4.5rem; }
-  .study-axis, .study-lane { grid-template-columns: minmax(0, 1fr); row-gap: 0.4rem; }
-  .study-axis-title { display: none; }
-  .study-axis-scale { grid-column: 1; }
+
   .lab-plate.is-empty { grid-template-columns: 1fr; }
 
   .ledger-domain { display: none; }
@@ -397,9 +299,7 @@ div.sourceCode { border: 1px solid var(--mj-rule); border-radius: 2px; }
 
 /* Home runs full-layout; hold its blocks to one readable measure */
 .home main.content > * { max-width: 74rem; margin-left: auto; margin-right: auto; }
-
 /* Pandoc wraps inline template output in <p>; let its children join the flex/grid flow */
-.study-lane-track > p,
 .lab-plates > p,
 .lab-plate > p { display: contents; }
 
@@ -415,23 +315,12 @@ body.domain-lab main.content p a { color: var(--mj-ink); }
 /* Tab intros */
 .tab-intro { display: block; color: var(--mj-muted); font-size: 1.05rem; max-width: 60ch; }
 
-/* Empty lane: the label sits on the dashed slot it describes */
-.study-segment.is-empty { display: flex; align-items: center; padding: 0 0.6rem; }
-.study-empty-label { font-size: 0.85rem; font-style: italic; color: var(--mj-muted); }
-
-/* Legend samples carry their own ink (no domain on Home) */
-.study-legend .slot.is-progress { border: 2px dotted var(--mj-ink); background: transparent; }
-.study-legend .slot.is-planned { border: 1.5px dashed var(--mj-muted); background: transparent; }
-
 /* One section rhythm on Home: listings add no margin of their own */
 .home .quarto-listing,
-.home div[id="study-map"],
 .home div[id="lab-featured"],
-.home div[id="latest"] { margin-top: 0 !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
+.home div[id="notes-map"] { margin-top: 0 !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
 .home section.level2 { margin-top: 3rem; }
 .home section.level2 > h2 { margin-top: 0; }
-.study-segment.is-empty { height: auto; min-height: var(--bar-h); padding: 0.4rem 0.75rem; }
-
 
 /* Ledgers share one column grid wherever they stack */
 .ledger { table-layout: fixed; }
@@ -524,26 +413,6 @@ body.domain-system #nav-menu-system {
   }
 }
 
-/* ---------- Home opening: who I am, then contact ---------- */
-.home-about h1.home-name {
-  font-size: clamp(2.4rem, 1.6rem + 2.4vw, 3.4rem);
-  line-height: 1.05;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  margin: 0;
-  border: 0;
-}
-.home-role {
-  display: block;
-  font-family: var(--font-label);
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--mj-muted);
-  margin: 0.45rem 0 1.25rem;
-}
-.home-about p { font-size: 1.12rem; line-height: 1.6; max-width: 60ch; margin: 0; }
-.home-about p + p { margin-top: 0.4rem; }
-
 /* ---------- Home: Start here (generated from page headers) ---------- */
 .start-here {
   border-top: 2px solid var(--mj-rule-strong);
@@ -578,10 +447,90 @@ body.domain-system #nav-menu-system {
   background: var(--domain);
 }
 
-/* ---------- Study map: latest lecture named in the lane note ---------- */
-.study-latest { display: block; margin-top: 0.15rem; }
-.study-latest a { color: var(--mj-ink); font-weight: 600; text-decoration-color: var(--domain); }
-.study-lane-note.is-empty { visibility: hidden; }
+/* ---------- Concept graph (Home; static SVG laid out at render) ----------
+   Tab → Topic → Lecture. Labels are hidden until a node is hovered or focused;
+   the template emits one :has() rule per node that reveals it, its ancestors and its
+   children, and dims the rest. Only published work. A container query swaps in the list. */
+.concept-graph {
+  --cg-ground: var(--mj-ground); /* whatever surface the graph is drawn on */
+  container: concept-graph / inline-size;
+  margin: 0;
+  border-top: 2px solid var(--mj-rule-strong);
+}
+.concept-graph-frame { overflow: hidden; padding: 0.75rem 0 0.5rem; }
+/* Natural size only (labels keep the type scale), aligned with the section head */
+.concept-graph svg { display: block; width: 100%; max-width: var(--w); height: auto; margin: 0; overflow: visible; }
+
+/* Edges carry meaning: 70% graphite keeps them at 3:1 or better on paper in both themes */
+.cg-edges line { stroke: color-mix(in srgb, var(--mj-muted) 70%, var(--cg-ground)); stroke-width: 1.25; }
+
+/* Marks: tab (large, filled), topic (ring), lecture (filled) */
+.cg-dot { fill: var(--domain); }
+.cg-topic .cg-dot { fill: var(--cg-ground); stroke: var(--domain); stroke-width: 2.5; }
+
+/* Labels: hidden until traced; each sits on paper so edges stop at its box */
+.cg-label { visibility: hidden; }
+/* The pointed-at label: domain ink with a little ink, at least 5:1 on the panel in both themes */
+.cg-label-node { --cg-trace: color-mix(in srgb, var(--domain) 92%, var(--mj-ink)); }
+.cg-label rect { fill: var(--cg-ground); }
+.cg-label text { fill: var(--mj-ink); }
+.cg-domain .cg-label text { font-family: "Source Serif 4", Georgia, serif; font-size: 14px; font-weight: 600; }
+.cg-topic .cg-label text { font-family: var(--font-label); font-size: 12px; font-weight: 600; }
+.cg-page .cg-label text { font-family: "Source Serif 4", Georgia, serif; font-size: 12.5px; font-weight: 600; }
+
+/* Tracing: while any node is pointed at or focused, everything not on its path dims */
+/* :where keeps this below the per-node reveal rules the template emits */
+.concept-graph svg:has(.cg-node > a:hover, .cg-node > a:focus-visible) :where(.cg-node, .cg-edges line) { opacity: 0.18; }
+.concept-graph a { cursor: pointer; }
+.concept-graph a text { text-decoration: none; }
+/* Labels live in their own top layer; the pointer always targets the dots beneath */
+.cg-labels { pointer-events: none; }
+/* Hit area and focus ring: a larger invisible circle around each dot */
+.cg-hit { fill: transparent; stroke: none; pointer-events: all; }
+.concept-graph a:focus { outline: none; }
+.concept-graph a:focus-visible .cg-hit { stroke: var(--mj-ink); stroke-width: 2; }
+/* No hover (touch): show every label; layout already keeps them from overlapping */
+@media (hover: none) { .cg-label { visibility: visible; } }
+
+/* Header row: the key (only the domains present, each in its ink) */
+.cg-head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.5rem; padding-top: 0.25rem; }
+.cg-key { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; list-style: none; margin: 0; padding: 0; font-family: var(--font-label); font-size: 0.85rem; font-weight: 500; color: var(--mj-muted); }
+.cg-key li::before { content: ""; display: inline-block; width: 0.6rem; height: 0.6rem; margin-right: 0.45rem; border-radius: 50%; background: var(--domain); vertical-align: 0.02em; }
+/* Draggable nodes once the script runs: grab cursor on nodes, no text selection; touch
+   drags a node instead of scrolling only when the finger starts on one */
+.concept-graph svg.is-draggable { user-select: none; -webkit-user-select: none; }
+.concept-graph svg.is-draggable .cg-node a { cursor: grab; }
+.concept-graph svg.is-draggable .cg-node { touch-action: none; }
+.concept-graph svg.is-dragging, .concept-graph svg.is-dragging a { cursor: grabbing; }
+
+/* Narrow columns: the same content as a list; a scaled-down graph would be unreadable */
+.cg-list { display: none; list-style: none; margin: 0; padding: 0.4rem 0 0; }
+.cg-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--mj-rule); }
+.cg-list li:last-child { border-bottom: 0; }
+.cg-list-page { display: block; font-family: "Source Serif 4", Georgia, serif; font-size: 1.05rem; font-weight: 600; color: var(--mj-ink); text-decoration: none; }
+.cg-list-page::before { content: ""; display: inline-block; width: 0.55rem; height: 0.55rem; margin-right: 0.5rem; border-radius: 50%; background: var(--domain); vertical-align: 0.1em; }
+.cg-list-terms { display: block; font-family: var(--font-label); font-size: 0.85rem; color: var(--mj-muted); margin-top: 0.2rem; line-height: 1.7; }
+.cg-list-domain { font-weight: 600; color: var(--mj-ink); }
+/* Home: the section's hairline opens the graph; no second rule */
+.home .concept-graph { border-top: 0; }
+.concept-graph figcaption { margin-top: 0.4rem; }
+.home div[id="concept-graph"] { margin: 0 !important; padding: 0 !important; }
+
+/* ---------- Concepts page: A–Z, one anchored entry per concept ---------- */
+.concepts { border-top: 2px solid var(--mj-rule-strong); padding-top: 0.75rem; }
+.concepts-letter { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); padding: 0.6rem 0; border-bottom: 1px solid var(--mj-rule); }
+.concepts-letter:last-child { border-bottom: 0; }
+.concepts-letter-mark { font-family: "Source Serif 4", Georgia, serif; font-size: 1.5rem; font-weight: 600; line-height: 1.2; }
+.concepts-entry { padding: 0.25rem 0.5rem 0.6rem; margin-left: -0.5rem; scroll-margin-top: 5rem; }
+/* The concept you arrived at from the graph is marked on Wash, without motion */
+.concepts-entry:target { background: var(--mj-wash); }
+.concepts-term { font-family: "Source Serif 4", Georgia, serif; font-size: 1.1rem; font-weight: 600; margin: 0 0 0.2rem; }
+.concepts-entry ul { list-style: none; margin: 0; padding: 0; }
+.concepts-entry li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.75rem; padding: 0.15rem 0; }
+.concepts-entry li a { color: var(--mj-ink); text-decoration-color: var(--domain, var(--mj-ink)); }
+.concepts-locator { font-family: var(--font-label); font-size: 0.8rem; font-weight: 500; color: var(--mj-muted); }
+.concepts-locator::before { content: ""; display: inline-block; width: 0.9rem; height: 3px; margin-right: 0.4rem; vertical-align: middle; background: var(--domain, var(--mj-ink)); }
+div[id="concepts"] { margin-top: 0 !important; }
 
 /* ---------- Navbar: Math is a plain link for now ---------- */
 .navbar .nav-link[href$="math/index.html"] { --domain: var(--ink-math); }
@@ -595,26 +544,12 @@ body.domain-math .navbar .nav-link[href$="math/index.html"] { color: var(--mj-in
 
 /* ---------- Phones: study map sized for touch ---------- */
 @media (max-width: 760px) {
-  .study-course { grid-template-columns: var(--name-w) minmax(0, 1fr); }
-  .study-course.is-empty { grid-template-columns: minmax(0, 1fr); }
-  .study-course.is-empty .study-course-name { display: none; }
-  .study-segment:not(.is-empty) {
-    width: 100%;
-    height: auto;
-    grid-template-columns: repeat(10, minmax(0, 1fr));
-    grid-auto-rows: 24px;
-    gap: 4px;
-  }
-  .study-segment .slot { min-height: 24px; }
-  .study-lane-note.is-empty { display: none; }
+
   .start-here { margin-top: 0; }
 }
 /* Undated ledgers: the page title takes the room, extra fields stay compact */
 .ledger-undated thead th:first-child { width: 45%; }
 .ledger-undated thead th:not(:first-child) { width: auto; }
-
-/* Home: profile links under the bio */
-.home-links { display: block; margin-top: 1rem; font-family: var(--font-label); font-weight: 600; font-size: 0.95rem; }
 
 /* ---------- Owner source editor (_includes/owner-edit.html) ----------
    Only rendered in the owner's browser; visitors never see these. */
@@ -833,3 +768,100 @@ body:has(.navbar-collapse.show) .mj-notation-tab { display: none; }
   .mj-notation-body td.mj-tex { width: auto; padding: 0 0 0.15rem; white-space: normal; }
   .mj-notation-close { min-width: 44px; min-height: 44px; display: grid; place-items: center; }
 }
+
+/* Home: Lab link under the empty plate when captions are off */
+/* Home, captions off: the empty plate is the table with its link directly beneath */
+.lab-plate.is-empty.no-caption { grid-template-columns: minmax(14rem, 22rem); gap: 0.9rem; }
+.lab-open { margin: 0; font-family: var(--font-label); font-weight: 600; font-size: 0.95rem; }
+
+/* ---------- Home: the title card beside Start here (owner's layout, 2026-11-22) ----------
+   A navy card holds the site's name and line; GitHub sits beneath it. The type scales with
+   the card, so the name keeps the same share of it at every width. */
+.home-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 18rem);
+  gap: clamp(1.25rem, 2.2vw, 2rem);
+  align-items: stretch;
+  margin-bottom: 2.5rem;
+}
+.home-lead { display: flex; flex-direction: column; min-width: 0; }
+.home .home-lead section.home-card {
+  container: home-card / inline-size;
+  flex: 1; display: flex; flex-direction: column; justify-content: center;
+  margin: 0; padding: 2.25rem 3.75rem;
+  background: var(--mj-band); color: var(--mj-band-ink);
+}
+.home #quarto-content .home-card h1 {
+  margin: 0 0 0 -0.04em; padding: 0; border: 0;
+  font-family: var(--font-label); font-weight: 800; font-size: 31cqi; line-height: 0.82; letter-spacing: -0.04em;
+  color: var(--mj-band-ink);
+}
+.home-card p { margin: 0; }
+.home-card-line {
+  display: block; margin-top: clamp(0.9rem, 4.5cqi, 1.6rem);
+  font-family: var(--font-label); font-weight: 600; font-size: clamp(1rem, 4.05cqi, 1.6rem); line-height: 1.3;
+  color: var(--mj-band-muted);
+}
+.home-card ::selection { background: var(--mj-band-ink); color: var(--mj-band); }
+.home-lead > p { margin: 0.75rem 0 0; }
+.home-links { font-family: var(--font-label); font-size: 0.95rem; }
+.home-links a { font-weight: 600; }
+.home .start-here { margin-top: 0; }
+
+/* Home: a bold line opens each section (Overview, Concepts, From the Lab) */
+.home section.level2 > h2 { border-top: 2px solid var(--mj-rule-strong); }
+/* Home: the concept graph may grow a little to fill its section */
+.home .concept-graph svg { max-width: min(100%, calc(var(--w) * 1.1)); margin: 0 auto; }
+
+@media (max-width: 1100px) { .home .home-lead section.home-card { padding: 1.75rem 2.5rem; } }
+@media (max-width: 760px) {
+  .home-opening { grid-template-columns: minmax(0, 1fr); }
+  .home .home-lead section.home-card { padding: 1.5rem 1.4rem; }
+}
+
+/* ---------- Notes map: only lectures written up, one filled block each ---------- */
+.notes-map { border-top: 2px solid var(--mj-rule-strong); }
+.notes-row {
+  display: grid; grid-template-columns: minmax(10.5rem, 16rem) minmax(0, 1fr) minmax(12rem, 18rem); gap: 0.5rem 1.5rem;
+  align-items: center; padding: 0.95rem 0; border-bottom: 1px solid var(--mj-rule);
+}
+.notes-label { font-weight: 700; font-size: 1.02rem; line-height: 1.35; color: var(--domain); text-decoration: none; }
+.notes-label:hover { text-decoration: underline; }
+.notes-blocks { display: flex; flex-wrap: wrap; gap: 5px; list-style: none; margin: 0; padding: 0; }
+.notes-blocks li { margin: 0; padding: 0; }
+.notes-block { display: block; width: 2.4rem; height: 1.6rem; background: var(--domain); }
+.notes-block.is-progress { border: 2px dotted var(--domain); background: color-mix(in srgb, var(--domain) 14%, transparent); }
+.notes-block:hover, .notes-block:focus-visible { outline: 2px solid var(--mj-ink); outline-offset: 2px; }
+.notes-note { margin: 0; font-size: 0.85rem; line-height: 1.4; color: var(--mj-muted); font-variant-numeric: tabular-nums; }
+.notes-latest { display: block; margin-top: 0.15rem; }
+.notes-latest a { color: var(--mj-ink); font-weight: 600; text-decoration-color: var(--domain); }
+.notes-none { font-style: italic; color: var(--mj-muted); }
+@media (max-width: 760px) { .notes-row { grid-template-columns: minmax(0, 1fr); } }
+
+/* Wide pages: clear of the left menu, and of the Notation tab where there is no right-hand list */
+@media (min-width: 992px) {
+  body:not(.home) #quarto-content main.content { padding-left: 0.75rem; }
+  body.fullcontent:not(.home) #quarto-content main.content { padding-right: 2rem; }
+}
+section.level2 .notes-map { border-top: 0; }
+
+/* The right-hand list is narrow so the writing area can be wide; long words wrap */
+#TOC a { overflow-wrap: anywhere; hyphens: auto; }
+/* Small laptops: a slimmer menu so the notes keep the room */
+@media (min-width: 992px) and (max-width: 1199.98px) { #quarto-sidebar { font-size: 0.92em; } }
+
+/* ---------- Left menu: more room between entries ---------- */
+#quarto-sidebar .sidebar-item { margin-top: 0.5rem; }
+#quarto-sidebar .sidebar-item-container { line-height: 1.4; padding: 0.15rem 0; }
+#quarto-sidebar .sidebar-section .sidebar-item { margin-top: 0.6rem; }
+
+/* ---------- Wide formula tables on lecture pages ----------
+   Scroll inside their own box on phones. Positioned, so KaTeX's hidden (absolute) copies stay
+   inside it instead of widening the page. */
+.table-responsive { position: relative; }
+.table-responsive td { line-height: 1.75; }
+@media (max-width: 767.98px) { .table-responsive > table { min-width: 44rem; } }
+
+/* Footer: line up with the navbar, and drop its empty columns where they would stack */
+.home footer.footer .nav-footer { padding-left: 32px; padding-right: 32px; }
+@media (max-width: 767.98px) { .home .nav-footer > :not(:has(*)) { display: none; } }

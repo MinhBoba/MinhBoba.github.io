@@ -29,11 +29,40 @@
   },
   {
     "listing": "/math/calculus/index.html",
-    "items": []
+    "items": [
+      "/math/calculus/lecture16-six-functions-six-rules-six.html"
+    ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/math/calculus/lecture16-six-functions-six-rules-six.html",
+      "/math/calculus/index.html",
+      "/ml/cs229/index.html",
+      "/math/ee364a/index.html",
+      "/data/index.html",
+      "/ml/dlsys/index.html",
+      "/ml/deep-learning-book/index.html",
+      "/ml/efficient-ml/index.html",
+      "/math/information-theory/index.html",
+      "/ml/jax/index.html",
+      "/ml/llm-agents/index.html",
+      "/ml/cs336/index.html",
+      "/math/mit1806/index.html",
+      "/ml/cs229/lecture02-linear-regression.html",
+      "/ml/index.html",
+      "/math/index.html",
+      "/math/mit18065/index.html",
+      "/ml/nlp/index.html",
+      "/math/mit6041/index.html",
+      "/ml/rl/index.html",
+      "/system/index.html"
+    ]
+  },
+  {
+    "listing": "/concepts.html",
+    "items": [
+      "/math/calculus/lecture16-six-functions-six-rules-six.html",
       "/math/calculus/index.html",
       "/ml/cs229/index.html",
       "/math/ee364a/index.html",
@@ -71,6 +100,7 @@
   {
     "listing": "/math/index.html",
     "items": [
+      "/math/calculus/lecture16-six-functions-six-rules-six.html",
       "/math/calculus/index.html",
       "/math/ee364a/index.html",
       "/math/information-theory/index.html",

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Lecture notes with the video, maths and code on one page, and paper reproductions set against their reported results.">
+<meta name="description" content="Lecture notes with the video, maths and code, and paper reproductions set against their reported results.">
 
-<title>mdrat · MinhJ, ML engineer and data scientist – mdrat</title>
+<title>mdrat · Minh, digital notebook for learning and researches – mdrat</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -52,9 +52,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-91e9b039683610e0c3b71a7e5bce793a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0719612456cf30a1f5d518b633a3d8db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-93f839647bc3a930b1a01e5a6aba629a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-0719612456cf30a1f5d518b633a3d8db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-635e83d0155ff97d7aad78873f25f6fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-530c27d82cecfeee2dedd46cbac4b6f1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-635e83d0155ff97d7aad78873f25f6fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,20 +84,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-study-map .list');
+    const listingTargetEl = window.document.querySelector('#listing-start-here .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-body-classes','listing-title','listing-description','listing-kind','listing-course','listing-lectures-total','listing-toc','listing-listing','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-subtitle','listing-lecture','listing-date','listing-categories','listing-date-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-body-classes','listing-title','listing-description','listing-kind','listing-course','listing-lectures-total','listing-toc','listing-listing','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-subtitle','listing-lecture','listing-date','listing-categories','listing-index','listing-date-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-body-classes","listing-title","listing-description","listing-kind","listing-course","listing-lectures-total","listing-toc","listing-listing","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-subtitle","listing-lecture","listing-date","listing-categories","listing-date-modified"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-body-classes","listing-title","listing-description","listing-kind","listing-course","listing-lectures-total","listing-toc","listing-listing","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-subtitle","listing-lecture","listing-date","listing-categories","listing-index","listing-date-modified"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-study-map'] = new List('listing-study-map', options);
+    window['quarto-listings']['listing-start-here'] = new List('listing-start-here', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -106,20 +106,42 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-start-here .list');
+    const listingTargetEl = window.document.querySelector('#listing-notes-map .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-body-classes','listing-title','listing-description','listing-kind','listing-course','listing-lectures-total','listing-toc','listing-listing','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-subtitle','listing-lecture','listing-date','listing-categories','listing-date-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-body-classes','listing-title','listing-description','listing-kind','listing-course','listing-lectures-total','listing-toc','listing-listing','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-subtitle','listing-lecture','listing-date','listing-categories','listing-index','listing-date-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-body-classes","listing-title","listing-description","listing-kind","listing-course","listing-lectures-total","listing-toc","listing-listing","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-subtitle","listing-lecture","listing-date","listing-categories","listing-date-modified"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-body-classes","listing-title","listing-description","listing-kind","listing-course","listing-lectures-total","listing-toc","listing-listing","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-subtitle","listing-lecture","listing-date","listing-categories","listing-index","listing-date-modified"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-start-here'] = new List('listing-start-here', options);
+    window['quarto-listings']['listing-notes-map'] = new List('listing-notes-map', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-concept-graph .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-body-classes','listing-title','listing-description','listing-kind','listing-course','listing-lectures-total','listing-toc','listing-listing','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-subtitle','listing-lecture','listing-date','listing-categories','listing-index','listing-date-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-body-classes","listing-title","listing-description","listing-kind","listing-course","listing-lectures-total","listing-toc","listing-listing","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-subtitle","listing-lecture","listing-date","listing-categories","listing-index","listing-date-modified"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-concept-graph'] = new List('listing-concept-graph', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -578,7 +600,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Lecture notes with the video, maths and code on one page, and paper reproductions set against their reported results.
+    Lecture notes with the video, maths and code, and paper reproductions set against their reported results.
   </div>
 </div>
 
@@ -596,24 +618,28 @@ window.Quarto = {
 
 
 <div class="home-opening">
-<section id="minhj" class="level1 home-name home-about">
-<h1 class="home-name">MinhJ</h1>
-<p><span class="home-role">ML engineer and data scientist</span></p>
-<p>I work with data and machine learning. This site holds the hands-on work, paper reproductions and projects in the <a href="./lab/index.html">Lab</a>, and structured notes from the courses I study: each lecture page puts the video, my notes, the maths and the code together, with its sources at the end.</p>
-<p><span class="home-links"><a href="https://github.com/MinhBoba">GitHub</a></span></p>
+<div class="home-lead">
+<section id="mdrat" class="level1 home-card-title home-card">
+<h1 class="home-card-title">mdrat</h1>
+<p><span class="home-card-line">Minh · Digital notebook for learning and researches</span></p>
 </section>
 <!-- TODO: add email, LinkedIn and CV beside GitHub once the owner confirms them. -->
+<p><span class="home-links"><a href="https://github.com/MinhBoba">GitHub</a></span></p>
+</div>
 <div id="listing-start-here" class="quarto-listing quarto-listing-container-custom">
 <nav class="start-here" aria-labelledby="start-here-title">
 <p class="start-here-title" id="start-here-title">
 Start here
 </p>
 <ol>
-<li class="domain-ml">
-<a href="ml/cs229/lecture02-linear-regression.html">Linear Regression and Gradient Descent</a><span class="start-here-meta">Latest lecture, 15 Nov 2026</span>
+<li class="domain-math">
+<a href="math/calculus/lecture16-six-functions-six-rules-six.html">6 Functions, 6 Rules, 6 Theorems</a><span class="start-here-meta">Latest lecture, 22 Nov 2026</span>
+</li>
+<li class="domain-math">
+<a href="math/calculus/index.html">Calculus</a><span class="start-here-meta">Course, 1 lecture written up</span>
 </li>
 <li class="domain-ml">
-<a href="ml/cs229/index.html">Classical Machine Learning</a><span class="start-here-meta">Course, 1 of 20 lectures written up</span>
+<a href="ml/cs229/index.html">Classical Machine Learning</a><span class="start-here-meta">Course, 1 lecture written up</span>
 </li>
 <li class="domain-lab">
 <a href="lab/index.html">The Lab</a><span class="start-here-meta">Paper reproductions and projects</span>
@@ -623,106 +649,166 @@ Start here
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </div>
-<div id="listing-study-map" class="quarto-listing quarto-listing-container-custom">
-<figure class="study-map figure" aria-labelledby="study-map-caption-1">
-<div class="study-axis" aria-hidden="true">
-<span class="study-axis-title">Lecture</span><span class="study-axis-scale"><span class="study-axis-mark" style="left: 0.781%">1</span><span class="study-axis-mark" style="left: 7.031%">5</span><span class="study-axis-mark" style="left: 14.844%">10</span><span class="study-axis-mark" style="left: 22.656%">15</span><span class="study-axis-mark" style="left: 30.469%">20</span><span class="study-axis-mark" style="left: 38.281%">25</span><span class="study-axis-mark" style="left: 46.094%">30</span><span class="study-axis-mark" style="left: 53.906%">35</span><span class="study-axis-mark" style="left: 61.719%">40</span></span>
-</div>
-<div class="study-lane domain-ml">
-<a class="study-lane-label" href="ml/index.html">Machine Learning</a>
-<div class="study-lane-courses">
-<div class="study-course">
-<a class="study-course-name" href="ml/cs229/index.html">Classical Machine Learning</a><span class="study-segment" style="--span: 31.250%; --n: 20" role="list" aria-label="Classical Machine Learning, 1 of 20 lectures"><span class="slot is-planned" aria-hidden="true"></span><a role="listitem" class="slot is-published" href="ml/cs229/lecture02-linear-regression.html" title="Lecture 2: Linear Regression and Gradient Descent" aria-label="Lecture 2: Linear Regression and Gradient Descent"></a><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="ml/dlsys/index.html">Deep Learning Systems</a><span class="study-segment" style="--span: 32.813%; --n: 21" role="list" aria-label="Deep Learning Systems, 0 of 21 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="ml/deep-learning-book/index.html">Deep Learning Theory</a><span class="study-segment" style="--span: 100.000%; --n: 64" role="list" aria-label="Deep Learning Theory, 0 of 64 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="ml/efficient-ml/index.html">Efficient ML</a><span class="study-segment" style="--span: 32.813%; --n: 21" role="list" aria-label="Efficient ML, 0 of 21 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="ml/jax/index.html">JAX</a><span class="study-segment" style="--span: 6.250%; --n: 4" role="list" aria-label="JAX, 0 of 4 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="ml/llm-agents/index.html">LLM Agents</a><span class="study-segment" style="--span: 18.750%; --n: 12" role="list" aria-label="LLM Agents, 0 of 12 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="ml/cs336/index.html">Large Language Models</a><span class="study-segment" style="--span: 26.563%; --n: 17" role="list" aria-label="Large Language Models, 0 of 17 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="ml/nlp/index.html">Natural Language Processing</a><span class="study-segment" style="--span: 18.750%; --n: 12" role="list" aria-label="Natural Language Processing, 0 of 12 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="ml/rl/index.html">Reinforcement Learning</a><span class="study-segment" style="--span: 15.625%; --n: 10" role="list" aria-label="Reinforcement Learning, 0 of 10 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-</div>
-<p class="study-lane-note">
-1 of 181 lectures<span class="study-latest">Latest: <a href="ml/cs229/lecture02-linear-regression.html" title="15 Nov 2026">Linear Regression and Gradient Descent</a></span>
+<section id="overview" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="overview">Overview</h2>
+<div id="listing-notes-map" class="quarto-listing quarto-listing-container-custom">
+<div class="notes-map">
+<div class="notes-row domain-ml">
+<a class="notes-label" href="ml/index.html">Machine Learning</a>
+<ul class="notes-blocks" aria-label="Machine Learning, 1 lecture">
+<li>
+<a class="notes-block" href="ml/cs229/lecture02-linear-regression.html" title="Linear Regression and Gradient Descent" aria-label="Linear Regression and Gradient Descent"></a>
+</li>
+</ul>
+<p class="notes-note">
+1 lecture
 </p>
 </div>
-<div class="study-lane domain-math">
-<a class="study-lane-label" href="math/index.html">Math</a>
-<div class="study-lane-courses">
-<div class="study-course">
-<a class="study-course-name" href="math/calculus/index.html">Calculus</a><span class="study-segment" style="--span: 25.000%; --n: 16" role="list" aria-label="Calculus, 0 of 16 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="math/ee364a/index.html">Convex Optimization</a><span class="study-segment" style="--span: 29.688%; --n: 19" role="list" aria-label="Convex Optimization, 0 of 19 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="math/information-theory/index.html">Information Theory</a><span class="study-segment" style="--span: 9.375%; --n: 6" role="list" aria-label="Information Theory, 0 of 6 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="math/mit1806/index.html">Linear Algebra</a><span class="study-segment" style="--span: 53.125%; --n: 34" role="list" aria-label="Linear Algebra, 0 of 34 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="math/mit18065/index.html">Matrix Methods for Data</a><span class="study-segment" style="--span: 50.000%; --n: 32" role="list" aria-label="Matrix Methods for Data, 0 of 32 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-<div class="study-course">
-<a class="study-course-name" href="math/mit6041/index.html">Probability</a><span class="study-segment" style="--span: 39.063%; --n: 25" role="list" aria-label="Probability, 0 of 25 lectures"><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span><span class="slot is-planned" aria-hidden="true"></span></span>
-</div>
-</div>
-<p class="study-lane-note">
-0 of 132 lectures
+<div class="notes-row domain-math">
+<a class="notes-label" href="math/index.html">Math</a>
+<ul class="notes-blocks" aria-label="Math, 1 lecture">
+<li>
+<a class="notes-block" href="math/calculus/lecture16-six-functions-six-rules-six.html" title="6 Functions, 6 Rules, 6 Theorems" aria-label="6 Functions, 6 Rules, 6 Theorems"></a>
+</li>
+</ul>
+<p class="notes-note">
+1 lecture
 </p>
 </div>
-<div class="study-lane domain-data">
-<a class="study-lane-label" href="data/index.html">Data</a>
-<div class="study-lane-courses">
-<div class="study-course is-empty">
-<span class="study-course-name" aria-hidden="true"></span><span class="study-segment is-empty" style="--span: 100%"><span class="study-empty-label">Planned</span></span>
 </div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
-<p class="study-lane-note is-empty">
-</p>
+</section>
+<section id="concepts" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="concepts">Concepts</h2>
+<div id="listing-concept-graph" class="quarto-listing quarto-listing-container-custom">
+<figure class="concept-graph figure">
+<style>
+@container concept-graph (max-width: 443px) { .concept-graph-frame { display: none; } .cg-list { display: block; } }
+.concept-graph svg:has(.n0 > a:hover, .n0 > a:focus-visible) .r0 { opacity: 1; } .concept-graph svg:has(.n0 > a:hover, .n0 > a:focus-visible) .r0 .cg-label { visibility: visible; } .concept-graph svg:has(.n0 > a:hover, .n0 > a:focus-visible) .l0 text { fill: var(--cg-trace); text-decoration: underline; }
+.concept-graph svg:has(.n1 > a:hover, .n1 > a:focus-visible) .r1 { opacity: 1; } .concept-graph svg:has(.n1 > a:hover, .n1 > a:focus-visible) .r1 .cg-label { visibility: visible; } .concept-graph svg:has(.n1 > a:hover, .n1 > a:focus-visible) .l1 text { fill: var(--cg-trace); text-decoration: underline; }
+.concept-graph svg:has(.n2 > a:hover, .n2 > a:focus-visible) .r2 { opacity: 1; } .concept-graph svg:has(.n2 > a:hover, .n2 > a:focus-visible) .r2 .cg-label { visibility: visible; } .concept-graph svg:has(.n2 > a:hover, .n2 > a:focus-visible) .l2 text { fill: var(--cg-trace); text-decoration: underline; }
+.concept-graph svg:has(.n3 > a:hover, .n3 > a:focus-visible) .r3 { opacity: 1; } .concept-graph svg:has(.n3 > a:hover, .n3 > a:focus-visible) .r3 .cg-label { visibility: visible; } .concept-graph svg:has(.n3 > a:hover, .n3 > a:focus-visible) .l3 text { fill: var(--cg-trace); text-decoration: underline; }
+.concept-graph svg:has(.n4 > a:hover, .n4 > a:focus-visible) .r4 { opacity: 1; } .concept-graph svg:has(.n4 > a:hover, .n4 > a:focus-visible) .r4 .cg-label { visibility: visible; } .concept-graph svg:has(.n4 > a:hover, .n4 > a:focus-visible) .l4 text { fill: var(--cg-trace); text-decoration: underline; }
+.concept-graph svg:has(.n5 > a:hover, .n5 > a:focus-visible) .r5 { opacity: 1; } .concept-graph svg:has(.n5 > a:hover, .n5 > a:focus-visible) .r5 .cg-label { visibility: visible; } .concept-graph svg:has(.n5 > a:hover, .n5 > a:focus-visible) .l5 text { fill: var(--cg-trace); text-decoration: underline; }
+</style>
+<div class="cg-head">
+<ul class="cg-key" aria-label="Domains">
+<li class="domain-ml">
+Machine Learning
+</li>
+<li class="domain-math">
+Math
+</li>
+</ul>
 </div>
-<div class="study-lane domain-system">
-<a class="study-lane-label" href="system/index.html">System</a>
-<div class="study-lane-courses">
-<div class="study-course is-empty">
-<span class="study-course-name" aria-hidden="true"></span><span class="study-segment is-empty" style="--span: 100%"><span class="study-empty-label">Planned</span></span>
+<a class="cg-skip visually-hidden-focusable" href="#concept-graph-end">Skip the concept graph</a>
+<div class="concept-graph-frame">
+<svg viewbox="0 0 553 183" style="--w: 553px" role="group" aria-label="Concept graph: 2 tabs, 2 topics, 2 lectures">
+<g class="cg-edges" aria-hidden="true"><line class="r0 r1 r2" data-a="0" data-b="1" x1="210.6" y1="78.5" x2="110.5" y2="45.0"></line><line class="r1 r2" data-a="1" data-b="2" x1="110.5" y1="45.0" x2="89.0" y2="121.9"></line><line class="r3 r4 r5" data-a="3" data-b="4" x1="353.1" y1="78.5" x2="453.7" y2="46.9"></line><line class="r4 r5" data-a="4" data-b="5" x1="453.7" y1="46.9" x2="473.8" y2="125.1"></line></g> <g class="cg-domains"><g class="cg-node cg-domain domain-ml n0 r0 r1 r2" data-id="0"><a href="ml/index.html" aria-label="Machine Learning, tab"><circle class="cg-hit" cx="210.6" cy="78.5" r="16"></circle><circle class="cg-dot" cx="210.6" cy="78.5" r="9"></circle></a></g><g class="cg-node cg-domain domain-math n3 r3 r4 r5" data-id="3"><a href="math/index.html" aria-label="Math, tab"><circle class="cg-hit" cx="353.1" cy="78.5" r="16"></circle><circle class="cg-dot" cx="353.1" cy="78.5" r="9"></circle></a></g></g><g class="cg-topics"><g class="cg-node cg-topic domain-ml n1 r1 r0 r2" data-id="1"><a href="ml/cs229/index.html" aria-label="Classical ML, topic"><circle class="cg-hit" cx="110.5" cy="45.0" r="13"></circle><circle class="cg-dot" cx="110.5" cy="45.0" r="6"></circle></a></g><g class="cg-node cg-topic domain-math n4 r4 r3 r5" data-id="4"><a href="math/calculus/index.html" aria-label="Calculus, topic"><circle class="cg-hit" cx="453.7" cy="46.9" r="13"></circle><circle class="cg-dot" cx="453.7" cy="46.9" r="6"></circle></a></g></g><g class="cg-pages"><g class="cg-node cg-page domain-ml n2 r2 r1" data-id="2"><a href="ml/cs229/lecture02-linear-regression.html" aria-label="Linear Regression and Gradient Descent"><circle class="cg-hit" cx="89.0" cy="121.9" r="12"></circle><circle class="cg-dot" cx="89.0" cy="121.9" r="5"></circle></a></g><g class="cg-node cg-page domain-math n5 r5 r4" data-id="5"><a href="math/calculus/lecture16-six-functions-six-rules-six.html" aria-label="6 Functions, 6 Rules, 6 Theorems"><circle class="cg-hit" cx="473.8" cy="125.1" r="12"></circle><circle class="cg-dot" cx="473.8" cy="125.1" r="5"></circle></a></g></g> <g class="cg-labels" aria-hidden="true"><g class="cg-label-node cg-domain domain-ml l0 r0 r1 r2" data-id="0"><g class="cg-label"><rect x="145.0" y="91.5" width="131.2" height="20"></rect><text text-anchor="middle"><tspan x="210.6" y="105.9">Machine Learning</tspan></text></g></g><g class="cg-label-node cg-topic domain-ml l1 r1 r0 r2" data-id="1"><g class="cg-label"><rect x="65.1" y="16.0" width="90.8" height="17"></rect><text text-anchor="middle"><tspan x="110.5" y="28.2">Classical ML</tspan></text></g></g><g class="cg-label-node cg-page domain-ml l2 r2 r1" data-id="2"><g class="cg-label"><rect x="16.0" y="130.9" width="146.0" height="32"></rect><text text-anchor="middle"><tspan x="89.0" y="142.4">Linear Regression</tspan><tspan x="89.0" y="158.4">and Gradient Descent</tspan></text></g></g><g class="cg-label-node cg-domain domain-math l3 r3 r4 r5" data-id="3"><g class="cg-label"><rect x="333.7" y="91.5" width="38.8" height="20"></rect><text text-anchor="middle"><tspan x="353.1" y="105.9">Math</tspan></text></g></g><g class="cg-label-node cg-topic domain-math l4 r4 r3 r5" data-id="4"><g class="cg-label"><rect x="422.1" y="17.9" width="63.2" height="17"></rect><text text-anchor="middle"><tspan x="453.7" y="30.1">Calculus</tspan></text></g></g><g class="cg-label-node cg-page domain-math l5 r5 r4" data-id="5"><g class="cg-label"><rect x="411.1" y="134.1" width="125.3" height="32"></rect><text text-anchor="middle"><tspan x="473.8" y="145.6">6 Functions, 6</tspan><tspan x="473.8" y="161.6">Rules, 6 Theorems</tspan></text></g></g></g>
+</svg>
 </div>
-</div>
-<p class="study-lane-note is-empty">
-</p>
-</div>
-<div class="study-legend" aria-hidden="true">
-<span><i class="slot is-published"></i>Written up</span><span><i class="slot is-progress"></i>In progress</span><span><i class="slot is-planned"></i>Planned</span>
-</div>
-<figcaption id="study-map-caption-1">
-<strong>Figure 1.</strong> Study map. Each row is a domain and each bar a course, drawn to its real number of lectures; select a filled slot to open that lecture.
-</figcaption>
+<ul class="cg-list">
+<li class="domain-ml">
+<a class="cg-list-page" href="ml/cs229/lecture02-linear-regression.html">Linear Regression and Gradient Descent</a><span class="cg-list-terms"><span class="cg-list-domain">Machine Learning · Classical ML</span></span>
+</li>
+<li class="domain-math">
+<a class="cg-list-page" href="math/calculus/lecture16-six-functions-six-rules-six.html">6 Functions, 6 Rules, 6 Theorems</a><span class="cg-list-terms"><span class="cg-list-domain">Math · Calculus</span></span>
+</li>
+</ul>
+<span id="concept-graph-end"></span>
+<script>
+// Node dragging (progressive enhancement; without it the graph is a fixed static figure).
+// No JS template literals here: Quarto renders this file with lodash, which treats
+// dollar-brace placeholders as its own interpolation.
+// Grab a node to move it: its label moves with it and its edges stay attached. A click
+// without a drag still follows the node's link. A reload restores the layout.
+(() => {
+  const fig = document.currentScript.closest('figure');
+  const svg = fig && fig.querySelector('.concept-graph-frame svg');
+  if (!svg) return;
+  const [, , W, H] = svg.getAttribute('viewBox').split(/[\s,]+/).map(Number);
+  const DRAG_PX = 4;
+  const nodes = new Map(); // id -> { els, cx, cy, dx, dy }; els = the node's dot group and label group
+  for (const g of svg.querySelectorAll('.cg-node[data-id]')) {
+    const dot = g.querySelector('.cg-dot');
+    const els = [...svg.querySelectorAll('[data-id="' + g.dataset.id + '"]')].filter((el) => !el.matches('line'));
+    nodes.set(g.dataset.id, { els, cx: +dot.getAttribute('cx'), cy: +dot.getAttribute('cy'), dx: 0, dy: 0 });
+  }
+  const lines = [...svg.querySelectorAll('.cg-edges line[data-a]')].map((l) => ({
+    l, a: l.dataset.a, b: l.dataset.b,
+    x1: +l.getAttribute('x1'), y1: +l.getAttribute('y1'), x2: +l.getAttribute('x2'), y2: +l.getAttribute('y2'),
+  }));
+  const place = (id) => {
+    const n = nodes.get(id);
+    const tf = n.dx || n.dy ? 'translate(' + n.dx.toFixed(1) + ' ' + n.dy.toFixed(1) + ')' : '';
+    for (const el of n.els) el.setAttribute('transform', tf);
+    for (const e of lines) {
+      if (e.a === id) { e.l.setAttribute('x1', (e.x1 + n.dx).toFixed(1)); e.l.setAttribute('y1', (e.y1 + n.dy).toFixed(1)); }
+      if (e.b === id) { e.l.setAttribute('x2', (e.x2 + n.dx).toFixed(1)); e.l.setAttribute('y2', (e.y2 + n.dy).toFixed(1)); }
+    }
+  };
+
+  // Drag a node; pointer capture starts only once the pointer has really moved
+  let drag = null;
+  svg.addEventListener('pointerdown', (e) => {
+    if (e.button !== 0) return;
+    const g = e.target.closest('.cg-node[data-id]');
+    if (!g) return;
+    const n = nodes.get(g.dataset.id);
+    drag = { id: g.dataset.id, pid: e.pointerId, sx: e.clientX, sy: e.clientY, ox: n.dx, oy: n.dy, moving: false };
+  });
+  svg.addEventListener('pointermove', (e) => {
+    if (!drag || e.pointerId !== drag.pid) return;
+    if (!drag.moving) {
+      if (Math.hypot(e.clientX - drag.sx, e.clientY - drag.sy) < DRAG_PX) return;
+      drag.moving = true;
+      svg.setPointerCapture(e.pointerId);
+      svg.classList.add('is-dragging');
+    }
+    const r = svg.getBoundingClientRect();
+    const k = W / r.width; // screen px -> SVG units
+    const n = nodes.get(drag.id);
+    // Keep the dot inside the figure
+    n.dx = Math.min(Math.max(drag.ox + (e.clientX - drag.sx) * k, -n.cx), W - n.cx);
+    n.dy = Math.min(Math.max(drag.oy + (e.clientY - drag.sy) * k, -n.cy), H - n.cy);
+    place(drag.id);
+  });
+  const end = (e) => {
+    if (!drag || e.pointerId !== drag.pid) return;
+    if (drag.moving) {
+      svg.classList.remove('is-dragging');
+      // Swallow the click that may follow a drag so it does not open the link; disarm right
+      // after, so a drag that produced no click never eats the next real one
+      const swallow = (c) => { c.preventDefault(); c.stopPropagation(); };
+      svg.addEventListener('click', swallow, { capture: true, once: true });
+      setTimeout(() => svg.removeEventListener('click', swallow, { capture: true }), 0);
+    }
+    drag = null;
+  };
+  svg.addEventListener('pointerup', end);
+  svg.addEventListener('pointercancel', end);
+  svg.addEventListener('dragstart', (e) => e.preventDefault());
+  svg.classList.add('is-draggable');
+
+  // Quarto's link-external-newwindow reads an SVG link's href as an object, so it marks every
+  // node as external (new tab). These links are internal: undo that once Quarto has run.
+  const unmark = () => svg.querySelectorAll('a[target]').forEach((a) => {
+    a.removeAttribute('target'); a.removeAttribute('rel'); a.removeAttribute('aria-describedby');
+  });
+  document.addEventListener('DOMContentLoaded', unmark);
+  window.addEventListener('load', unmark);
+})();
+</script>
 </figure>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
+</section>
 <section id="from-the-lab" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="from-the-lab">From the Lab</h2>
 <div id="listing-lab-featured" class="quarto-listing quarto-listing-container-custom">
 <div class="lab-plates">
-<figure class="lab-plate is-empty figure">
+<figure class="lab-plate is-empty no-caption figure" aria-label="Lab results, none published yet">
 <table class="lab-skeleton" aria-hidden="true">
 <thead>
 <tr>
@@ -764,9 +850,9 @@ Mine
 </tr>
 </tbody>
 </table>
-<figcaption>
-<strong>Figure 2.</strong> Lab, not yet published. Each paper reproduction will report its metrics in this form, the paper’s number beside mine, with projects alongside. <a href="lab/index.html">Open the Lab</a>
-</figcaption>
+<p class="lab-open">
+<a href="lab/index.html">Open the Lab</a>
+</p>
 </figure>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>

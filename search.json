@@ -14,7 +14,7 @@
     "href": "system/index.html#courses",
     "title": "System",
     "section": "Courses",
-    "text": "Courses\n\n\n\nLecture15101520\n\n\nSystem\n\n\nPlanned\n\n\n\n\n\n\nWritten upIn progressPlanned\n\n\nFigure 1. System courses, each drawn to its real number of lectures; select a filled slot to open that lecture.\n\n\nNo matching items",
+    "text": "Courses\n\n\nNothing written up yet.\n\nNo matching items",
     "crumbs": [
       "System"
     ]
@@ -24,7 +24,7 @@
     "href": "system/index.html#case-studies",
     "title": "System",
     "section": "Case studies",
-    "text": "Case studies\n\n\n\nTable 1. Case studies, newest first: how a real system is designed.\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\nNo case studies written up yet.\n\n\n\n\nNo matching items",
+    "text": "Case studies\n\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\nNo case studies written up yet.\n\n\n\n\nNo matching items",
     "crumbs": [
       "System"
     ]
@@ -34,7 +34,7 @@
     "href": "system/index.html#applications",
     "title": "System",
     "section": "Applications",
-    "text": "Applications\n\n\n\nTable 2. Applications, newest first: my own builds and walkthroughs.\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\nNo applications written up yet.\n\n\n\n\nNo matching items",
+    "text": "Applications\n\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\nNo applications written up yet.\n\n\n\n\nNo matching items",
     "crumbs": [
       "System"
     ]
@@ -106,11 +106,83 @@
     ]
   },
   {
+    "objectID": "math/calculus/lecture16-six-functions-six-rules-six.html",
+    "href": "math/calculus/lecture16-six-functions-six-rules-six.html",
+    "title": "6 Functions, 6 Rules, 6 Theorems",
+    "section": "",
+    "text": "Study notes on Gilbert Strang’s review lecture (MIT OpenCourseWare, Highlights of Calculus): formulas, worked examples and real-world applications.",
+    "crumbs": [
+      "Math",
+      "Calculus",
+      "6 Functions, 6 Rules, 6 Theorems"
+    ]
+  },
+  {
+    "objectID": "math/calculus/lecture16-six-functions-six-rules-six.html#six-functions",
+    "href": "math/calculus/lecture16-six-functions-six-rules-six.html#six-functions",
+    "title": "6 Functions, 6 Rules, 6 Theorems",
+    "section": "Six functions",
+    "text": "Six functions\n\n\n\n\n\n\n\n\n\nItem and key formula\nExample\nApplication\n\n\n\n\n1. Power x^nd/dx: n x^{n-1}\\int: \\tfrac{x^{n+1}}{n+1}, fails at n = -1\nf = x^3 \\to f' = 3x^2,\\ \\int = \\tfrac{x^4}{4}\\int_0^2 x^3\\,dx = \\tfrac{16}{4} = \\mathbf{4}\nArea and volume (x^2, x^3), cost curves, falling bodies (d = \\tfrac12 g t^2), polynomial regression\n\n\n2. Sine \\sin xd/dx: \\cos x\\int: -\\cos x\nSlope at 0: \\cos 0 = \\mathbf{1}One arch: \\int_0^\\pi \\sin x\\,dx = [-\\cos x]_0^\\pi = \\mathbf{2}\nAnything that repeats: sound, AC electricity, vibration, seasonal or time-of-day demand\n\n\n3. Cosine \\cos xd/dx: -\\sin x\\int: \\sin x\nSlope at \\pi/2: -\\sin(\\pi/2) = \\mathbf{-1}\\int_0^{\\pi/2} \\cos x\\,dx = [\\sin x]_0^{\\pi/2} = \\mathbf{1}\nSame as sine (a shifted wave); oscillators, signal processing, Fourier analysis\n\n\n4. Exponential e^{cx}d/dx: c\\,e^{cx}\\int: \\tfrac{e^{cx}}{c}\nf = e^{2x} \\to f' = 2e^{2x} (growth proportional to size)\\int_0^1 e^{2x}\\,dx = \\tfrac{e^2 - 1}{2} \\approx \\mathbf{3.19}\nPopulation growth, compound interest, radioactive decay, drug clearance, exponential smoothing\n\n\n5. Logarithm \\ln xd/dx: \\tfrac{1}{x}\\int: x \\ln x - x(\\ln x fills the n = -1 gap)\nSlope at x = 2: \\mathbf{1/2}\\int_1^e \\ln x\\,dx = [x \\ln x - x]_1^e = 0 - (-1) = \\mathbf{1}\nLog scales (dB, pH, Richter), log-loss in ML, log-likelihood (turns products into sums)\n\n\n6. Step0 for x &lt; 0, 1 for x \\ge 0d/dx: delta (spike, area 1)\\int: ramp\nA switch turning on at t = 0Ramp: \\int_0^3 \\text{step}\\,dt = \\mathbf{3}Delta: a sudden kick (hammer hit) with total area \\mathbf{1}\nStep: switch-on, policy change. Ramp: ReLU in neural nets, overtime cost past a threshold. Delta: impulse or one-time shock",
+    "crumbs": [
+      "Math",
+      "Calculus",
+      "6 Functions, 6 Rules, 6 Theorems"
+    ]
+  },
+  {
+    "objectID": "math/calculus/lecture16-six-functions-six-rules-six.html#six-rules-of-differentiation",
+    "href": "math/calculus/lecture16-six-functions-six-rules-six.html#six-rules-of-differentiation",
+    "title": "6 Functions, 6 Rules, 6 Theorems",
+    "section": "Six rules of differentiation",
+    "text": "Six rules of differentiation\n\n\n\n\n\n\n\n\n\nItem and key formula\nExample\nApplication\n\n\n\n\n1. Sum(af + bg)' = af' + bg'\n(3x^2 + 5\\sin x)' = \\mathbf{6x + 5\\cos x}\nDerivative of a total cost or weighted score, e.g. w_1 a + w_2 b\n\n\n2. Product(fg)' = f'g + fg'\n(x^2 \\sin x)' = \\mathbf{2x \\sin x + x^2 \\cos x}\nRevenue = price × quantity (both changing); power = voltage × current\n\n\n3. Quotient\\left(\\tfrac{f}{g}\\right)' = \\tfrac{f'g - fg'}{g^2}\n\\left(\\tfrac{\\sin x}{x}\\right)' = \\tfrac{x\\cos x - \\sin x}{x^2}\nRates and ratios: cost per unit, efficiency, utilization = busy time / total time\n\n\n4. Chain\\tfrac{d}{dx} f(g(x)) = f'(g(x))\\,g'(x)\n\\tfrac{d}{dx}\\sin(x^2) = \\mathbf{2x\\cos(x^2)}(outer derivative × inner derivative)\nBackpropagation in neural networks; related rates (balloon radius as air is pumped in)\n\n\n5. Inverse\\tfrac{dx}{dy} = \\tfrac{1}{dy/dx}\ny = e^x,\\ x = \\ln y \\to \\tfrac{dx}{dy} = \\tfrac{1}{e^x} = \\tfrac{1}{y}(this proves (\\ln y)' = 1/y)\nDerivatives of \\ln, \\arcsin, \\sqrt{\\phantom{x}}; converting “time per task” ↔︎ “tasks per time”\n\n\n6. L’Hôpital0/0 form: \\lim \\tfrac{f}{g} = \\lim \\tfrac{f'}{g'}\n\\lim\\limits_{x\\to0} \\tfrac{\\sin x}{x} = \\tfrac{\\cos 0}{1} = \\mathbf{1}\\lim\\limits_{x\\to0} \\tfrac{e^x - 1}{x} = \\tfrac{e^0}{1} = \\mathbf{1}\nLimits that look like 0/0: continuous compounding → e^x; edge-case behavior of algorithms",
+    "crumbs": [
+      "Math",
+      "Calculus",
+      "6 Functions, 6 Rules, 6 Theorems"
+    ]
+  },
+  {
+    "objectID": "math/calculus/lecture16-six-functions-six-rules-six.html#six-theorems",
+    "href": "math/calculus/lecture16-six-functions-six-rules-six.html#six-theorems",
+    "title": "6 Functions, 6 Rules, 6 Theorems",
+    "section": "Six theorems",
+    "text": "Six theorems\n\n\n\n\n\n\n\n\n\nItem and key formula\nExample\nApplication\n\n\n\n\n1. Fundamental TheoremIf f(x) = \\int_a^x s(t)\\,dt then f' = s;\\int_a^b f'(x)\\,dx = f(b) - f(a)\n\\int_0^3 2x\\,dx = 3^2 - 0^2 = \\mathbf{9} (no Riemann sums)\\tfrac{d}{dx}\\int_0^x \\cos t\\,dt = \\mathbf{\\cos x}\nVelocity → distance; flow rate → total volume; demand rate → cumulative demand; PDF → CDF\n\n\n2. Max–min / intermediate valueContinuous f on [a, b] reaches a max and a min, and every value between\nx^2 on [-1, 2]: max \\mathbf{4} at x = 2, min \\mathbf{0} at x = 0Counterexample: the step on [-1, 1] never equals 0.5 (not continuous)\nGuarantees an optimum exists (basis of optimization); justifies bisection root-finding\n\n\n3. Mean Valuef'(c) = \\tfrac{f(b) - f(a)}{b - a} for some c in (a, b)\nx^2 on [0, 2]: average slope = 4/2 = 2; f'(c) = 2c = 2 \\to \\mathbf{c = 1}Drive 120 km in 2 h → at some instant exactly 60 km/h\nAverage-speed cameras; proving error bounds for numerical methods\n\n\n4. Taylor seriesf(x) = f(a) + f'(a)(x-a) + \\tfrac{f''(a)}{2!}(x-a)^2 + \\dots\ne^x \\approx 1 + x + \\tfrac{x^2}{2} \\to at x = 0.1: \\mathbf{1.105} (true 1.10517)\\sin x \\approx x - \\tfrac{x^3}{6}\nHow calculators compute \\sin, e^x, \\sqrt{\\phantom{x}}; \\sin\\theta \\approx \\theta for pendulums; gradient descent / Newton’s method\n\n\n5. Taylor remainderCut after x^2: error = \\tfrac{f'''(c)}{3!}(x-a)^3, c between a and x\ne^x at x = 0.1: error = \\tfrac{e^c}{6}\\cdot 0.001, between 0.000167 and 0.000184Actual error 0.000171 ✓\nKnowing how accurate an approximation is; choosing step size or number of terms in solvers\n\n\n6. Binomial(1+x)^p = 1 + px + \\tfrac{p(p-1)}{2!}x^2 + \\dots\np = 2: 1 + 2x + x^2 (stops)p = \\tfrac12: \\sqrt{1.1} \\approx 1 + 0.05 - 0.00125 = \\mathbf{1.04875} (true 1.04881)p = -1: 1 - x + x^2 - \\dots (never stops)\nQuick approximations, e.g. (1+r)^n \\approx 1 + nr; relativity \\gamma \\approx 1 + \\tfrac{v^2}{2c^2}; binomial distribution",
+    "crumbs": [
+      "Math",
+      "Calculus",
+      "6 Functions, 6 Rules, 6 Theorems"
+    ]
+  },
+  {
+    "objectID": "math/calculus/lecture16-six-functions-six-rules-six.html#the-big-picture",
+    "href": "math/calculus/lecture16-six-functions-six-rules-six.html#the-big-picture",
+    "title": "6 Functions, 6 Rules, 6 Theorems",
+    "section": "The big picture",
+    "text": "The big picture\nThe functions describe how things behave (growth, cycles, switches); the rules let you differentiate complex models built from those pieces; the theorems guarantee that optimization and approximation actually work.",
+    "crumbs": [
+      "Math",
+      "Calculus",
+      "6 Functions, 6 Rules, 6 Theorems"
+    ]
+  },
+  {
+    "objectID": "math/calculus/lecture16-six-functions-six-rules-six.html#sources",
+    "href": "math/calculus/lecture16-six-functions-six-rules-six.html#sources",
+    "title": "6 Functions, 6 Rules, 6 Theorems",
+    "section": "Sources",
+    "text": "Sources\n\nSix Functions, Six Rules, and Six Theorems, MIT OCW RES.18-005 (lecture video and summary PDF)\nHighlights of Calculus, Gilbert Strang, Spring 2010",
+    "crumbs": [
+      "Math",
+      "Calculus",
+      "6 Functions, 6 Rules, 6 Theorems"
+    ]
+  },
+  {
     "objectID": "math/calculus/index.html",
     "href": "math/calculus/index.html",
     "title": "Calculus",
     "section": "",
-    "text": "Source: Highlights of Calculus · Gilbert Strang (MIT OCW)\n\n\n    \n      \n      \n    \n\n\n\n\nLecture\nTitle\nDescription\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top",
+    "text": "Source: Highlights of Calculus · Gilbert Strang (MIT OCW)\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nLecture\n\n\n\nTitle\n\n\n\nDescription\n\n\n\n\n\n\n\n\nCalculus · Lecture 16\n\n\n6 Functions, 6 Rules, 6 Theorems\n\n\nThe calculus toolkit on one page: six functions, six differentiation rules and six theorems, each with a worked example and where it is used.\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Math",
       "Calculus"
@@ -121,14 +193,35 @@
     "href": "index.html",
     "title": "mdrat",
     "section": "",
-    "text": "ML engineer and data scientist\nI work with data and machine learning. This site holds the hands-on work, paper reproductions and projects in the Lab, and structured notes from the courses I study: each lecture page puts the video, my notes, the maths and the code together, with its sources at the end.\nGitHub\n\n\n\n\n\nStart here\n\n\n\nLinear Regression and Gradient DescentLatest lecture, 15 Nov 2026\n\n\nClassical Machine LearningCourse, 1 of 20 lectures written up\n\n\nThe LabPaper reproductions and projects\n\n\n\nNo matching items"
+    "text": "Minh · Digital notebook for learning and researches\n\n\nGitHub\n\n\n\n\nStart here\n\n\n\n6 Functions, 6 Rules, 6 TheoremsLatest lecture, 22 Nov 2026\n\n\nCalculusCourse, 1 lecture written up\n\n\nClassical Machine LearningCourse, 1 lecture written up\n\n\nThe LabPaper reproductions and projects\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "mdrat",
+    "section": "Overview",
+    "text": "Overview\n\n\n\nMachine Learning\n\n\n\n\n\n\n1 lecture\n\n\n\nMath\n\n\n\n\n\n\n1 lecture\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#concepts",
+    "href": "index.html#concepts",
+    "title": "mdrat",
+    "section": "Concepts",
+    "text": "Concepts\n\n\n\n\n\n\nMachine Learning\n\n\nMath\n\n\n\nSkip the concept graph\n\n\n  Machine LearningClassical MLLinear Regressionand Gradient DescentMathCalculus6 Functions, 6Rules, 6 Theorems\n\n\n\n\nLinear Regression and Gradient DescentMachine Learning · Classical ML\n\n\n6 Functions, 6 Rules, 6 TheoremsMath · Calculus\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#from-the-lab",
     "href": "index.html#from-the-lab",
     "title": "mdrat",
     "section": "From the Lab",
-    "text": "From the Lab\n\n\n\n\n\n\n\nMetric\n\n\nPaper\n\n\nMine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2. Lab, not yet published. Each paper reproduction will report its metrics in this form, the paper’s number beside mine, with projects alongside. Open the Lab\n\n\n\nNo matching items"
+    "text": "From the Lab\n\n\n\n\n\n\n\nMetric\n\n\nPaper\n\n\nMine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOpen the Lab\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "concepts.html",
+    "href": "concepts.html",
+    "title": "Concepts",
+    "section": "",
+    "text": "Every concept worked through on this site, A to Z, with the pages that cover it.\n\n\n\nB\n\n\n\nBinomial series\n\n\n\n6 Functions, 6 Rules, 6 TheoremsCalculus\n\n\n\n\n\n\nC\n\n\n\nChain rule\n\n\n\n6 Functions, 6 Rules, 6 TheoremsCalculus\n\n\n\n\n\n\nF\n\n\n\nFundamental theorem of calculus\n\n\n\n6 Functions, 6 Rules, 6 TheoremsCalculus\n\n\n\n\n\n\nG\n\n\n\nGradient descent\n\n\n\nLinear Regression and Gradient DescentClassical ML\n\n\n\n\n\n\nL\n\n\n\nLeast squares\n\n\n\nLinear Regression and Gradient DescentClassical ML\n\n\n\n\n\nLinear regression\n\n\n\nLinear Regression and Gradient DescentClassical ML\n\n\n\n\n\n\nM\n\n\n\nMean value theorem\n\n\n\n6 Functions, 6 Rules, 6 TheoremsCalculus\n\n\n\n\n\n\nN\n\n\n\nNormal equations\n\n\n\nLinear Regression and Gradient DescentClassical ML\n\n\n\n\n\n\nP\n\n\n\nProduct rule\n\n\n\n6 Functions, 6 Rules, 6 TheoremsCalculus\n\n\n\n\n\n\nS\n\n\n\nStochastic gradient descent\n\n\n\nLinear Regression and Gradient DescentClassical ML\n\n\n\n\n\n\nT\n\n\n\nTaylor series\n\n\n\n6 Functions, 6 Rules, 6 TheoremsCalculus\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "data/index.html",
@@ -145,7 +238,7 @@
     "href": "data/index.html#courses",
     "title": "Data",
     "section": "Courses",
-    "text": "Courses\n\n\n\nLecture15101520\n\n\nData\n\n\nPlanned\n\n\n\n\n\n\nWritten upIn progressPlanned\n\n\nFigure 1. Data courses, each drawn to its real number of lectures; select a filled slot to open that lecture.\n\n\nNo matching items",
+    "text": "Courses\n\n\nNothing written up yet.\n\nNo matching items",
     "crumbs": [
       "Data"
     ]
@@ -155,7 +248,7 @@
     "href": "data/index.html#data-structures-and-algorithms",
     "title": "Data",
     "section": "Data structures and algorithms",
-    "text": "Data structures and algorithms\n\n\n\nTable 1. Data structures and algorithms, by name, with their time and space complexity.\n\n\n\n\nPage\n\n\nTime\n\n\nSpace\n\n\n\n\n\n\nNo topics written up yet.\n\n\n\n\nNo matching items",
+    "text": "Data structures and algorithms\n\n\n\n\n\nPage\n\n\nTime\n\n\nSpace\n\n\n\n\n\n\nNo topics written up yet.\n\n\n\n\nNo matching items",
     "crumbs": [
       "Data"
     ]
@@ -165,7 +258,7 @@
     "href": "data/index.html#problems",
     "title": "Data",
     "section": "Problems",
-    "text": "Problems\n\n\n\nTable 2. Python and SQL problems, by name, with the solving pattern each one uses.\n\n\n\n\nPage\n\n\nLanguage\n\n\nDifficulty\n\n\nPattern\n\n\n\n\n\n\nNo problems written up yet.\n\n\n\n\nNo matching items",
+    "text": "Problems\n\n\n\n\n\nPage\n\n\nLanguage\n\n\nDifficulty\n\n\nPattern\n\n\n\n\n\n\nNo problems written up yet.\n\n\n\n\nNo matching items",
     "crumbs": [
       "Data"
     ]
@@ -175,7 +268,7 @@
     "href": "data/index.html#power-bi-reports",
     "title": "Data",
     "section": "Power BI reports",
-    "text": "Power BI reports\n\n\n\nTable 3. Power BI reports, newest first. Public or synthetic data only.\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\nNo reports published yet.\n\n\n\n\nNo matching items",
+    "text": "Power BI reports\n\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\nNo reports published yet.\n\n\n\n\nNo matching items",
     "crumbs": [
       "Data"
     ]
@@ -195,7 +288,7 @@
     "href": "lab/index.html#paper-reproductions",
     "title": "Lab",
     "section": "Paper reproductions",
-    "text": "Paper reproductions\n\n\n\n\n\n\n\nMetric\n\n\nPaper\n\n\nMine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1. Paper reproductions, not yet published. Each one will report its metrics in this form, the paper’s number beside mine, with a note on what differed and why.\n\n\n\nNo matching items",
+    "text": "Paper reproductions\n\n\n\n\n\n\n\nMetric\n\n\nPaper\n\n\nMine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaper reproductions, not yet published. Each one will report its metrics in this form, the paper’s number beside mine, with a note on what differed and why.\n\n\n\nNo matching items",
     "crumbs": [
       "Lab"
     ]
@@ -205,7 +298,7 @@
     "href": "lab/index.html#projects",
     "title": "Lab",
     "section": "Projects",
-    "text": "Projects\n\n\n\n\n\n\n\nProblem\n\n\nApproach\n\n\nStack\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2. Projects, not yet published. Each one will state the problem, the approach and the stack, with screenshots and a link to the repository.\n\n\n\nNo matching items",
+    "text": "Projects\n\n\n\n\n\n\n\nProblem\n\n\nApproach\n\n\nStack\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProjects, not yet published. Each one will state the problem, the approach and the stack, with screenshots and a link to the repository.\n\n\n\nNo matching items",
     "crumbs": [
       "Lab"
     ]
@@ -236,7 +329,7 @@
     "href": "math/index.html#courses",
     "title": "Math",
     "section": "Courses",
-    "text": "Courses\n\n\n\nLecture151015202530\n\n\nMath\n\n\nCalculus\n\n\nConvex Optimization\n\n\nInformation Theory\n\n\nLinear Algebra\n\n\nMatrix Methods for Data\n\n\nProbability\n\n\n\n0 of 132 lectures\n\n\n\nWritten upIn progressPlanned\n\n\nFigure 1. Math courses, each drawn to its real number of lectures; select a filled slot to open that lecture.\n\n\nNo matching items",
+    "text": "Courses\n\n\n\nCalculus\n\n\n\n\n\n\n1 lectureLatest: 6 Functions, 6 Rules, 6 Theorems\n\n\n\nNo matching items",
     "crumbs": [
       "Math"
     ]
@@ -246,7 +339,7 @@
     "href": "math/index.html#lectures",
     "title": "Math",
     "section": "Lectures",
-    "text": "Lectures\n\n\n\nTable 1. Math lectures, newest first.\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\nNo lectures written up yet.\n\n\n\n\nNo matching items",
+    "text": "Lectures\n\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\n22 Nov 2026\n\n\n6 Functions, 6 Rules, 6 Theorems Calculus · Lecture 16\n\n\n\n\nNo matching items",
     "crumbs": [
       "Math"
     ]
@@ -381,7 +474,7 @@
     "href": "ml/index.html#courses",
     "title": "Machine Learning",
     "section": "Courses",
-    "text": "Courses\n\n\n\nLecture1510152025303540\n\n\nMachine Learning\n\n\nClassical Machine Learning\n\n\nDeep Learning Systems\n\n\nDeep Learning Theory\n\n\nEfficient ML\n\n\nJAX\n\n\nLLM Agents\n\n\nLarge Language Models\n\n\nNatural Language Processing\n\n\nReinforcement Learning\n\n\n\n1 of 181 lecturesLatest: Linear Regression and Gradient Descent\n\n\n\nWritten upIn progressPlanned\n\n\nFigure 1. Machine Learning courses, each drawn to its real number of lectures; select a filled slot to open that lecture.\n\n\nNo matching items",
+    "text": "Courses\n\n\n\nClassical Machine Learning\n\n\n\n\n\n\n1 lectureLatest: Linear Regression and Gradient Descent\n\n\n\nNo matching items",
     "crumbs": [
       "Machine Learning"
     ]
@@ -391,7 +484,7 @@
     "href": "ml/index.html#lectures",
     "title": "Machine Learning",
     "section": "Lectures",
-    "text": "Lectures\n\n\n\nTable 1. Machine Learning lectures, newest first.\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\n15 Nov 2026\n\n\nLinear Regression and Gradient Descent Classical ML · Lecture 2\n\n\n\n\nNo matching items",
+    "text": "Lectures\n\n\n\n\n\nDate\n\n\nPage\n\n\n\n\n\n\n15 Nov 2026\n\n\nLinear Regression and Gradient Descent Classical ML · Lecture 2\n\n\n\n\nNo matching items",
     "crumbs": [
       "Machine Learning"
     ]
