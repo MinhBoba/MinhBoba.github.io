@@ -1,8 +1,0 @@
----
-title: "Elimination with matrices"
-subtitle: "Linear Algebra · Lecture 2"
-lecture: 2
-draft: true
-description: ""
-categories: ["Linear Algebra"]
----

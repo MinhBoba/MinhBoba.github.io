@@ -1,8 +1,0 @@
----
-title: "Similar matrices and Jordan form"
-subtitle: "Linear Algebra · Lecture 28"
-lecture: 28
-draft: true
-description: ""
-categories: ["Linear Algebra"]
----

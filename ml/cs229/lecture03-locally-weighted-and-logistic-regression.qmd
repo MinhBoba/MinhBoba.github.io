@@ -1,8 +1,0 @@
----
-title: "Locally weighted and logistic regression"
-subtitle: "Classical ML · Lecture 3"
-lecture: 3
-draft: true
-description: ""
-categories: ["Classical ML"]
----

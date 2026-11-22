@@ -1,8 +1,0 @@
----
-title: "Data filtering and mixing"
-subtitle: "LLMs · Lecture 14"
-lecture: 14
-draft: true
-description: ""
-categories: ["LLMs"]
----

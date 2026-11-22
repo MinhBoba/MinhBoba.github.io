@@ -1,8 +1,0 @@
----
-title: "Motivation"
-subtitle: "DL Theory · Ch 9 · Section 30"
-lecture: 30
-draft: true
-description: ""
-categories: ["DL Theory"]
----

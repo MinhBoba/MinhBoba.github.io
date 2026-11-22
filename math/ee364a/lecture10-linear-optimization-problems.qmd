@@ -1,8 +1,0 @@
----
-title: "Linear optimization problems"
-subtitle: "Convex Optimization · Lecture 10"
-lecture: 10
-draft: true
-description: ""
-categories: ["Convex Optimization"]
----

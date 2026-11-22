@@ -1,8 +1,0 @@
----
-title: "Recurrent neural networks"
-subtitle: "DL Theory · Ch 10 · Section 40"
-lecture: 40
-draft: true
-description: ""
-categories: ["DL Theory"]
----

@@ -1,8 +1,0 @@
----
-title: "Computing eigenvalues and singular values"
-subtitle: "Matrix Methods · Lecture 12"
-lecture: 12
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

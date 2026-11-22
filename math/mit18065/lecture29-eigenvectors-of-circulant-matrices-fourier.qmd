@@ -1,8 +1,0 @@
----
-title: "Eigenvectors of circulant matrices: Fourier matrix"
-subtitle: "Matrix Methods · Lecture 29"
-lecture: 29
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

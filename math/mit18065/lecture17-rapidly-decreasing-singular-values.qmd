@@ -1,8 +1,0 @@
----
-title: "Rapidly decreasing singular values"
-subtitle: "Matrix Methods · Lecture 17"
-lecture: 17
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

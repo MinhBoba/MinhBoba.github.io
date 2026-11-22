@@ -1,8 +1,0 @@
----
-title: "Poisson process II"
-subtitle: "Probability · Lecture 15"
-lecture: 15
-draft: true
-description: ""
-categories: ["Probability"]
----

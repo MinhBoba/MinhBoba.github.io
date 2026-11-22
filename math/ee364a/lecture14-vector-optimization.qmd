@@ -1,8 +1,0 @@
----
-title: "Vector optimization"
-subtitle: "Convex Optimization · Lecture 14"
-lecture: 14
-draft: true
-description: ""
-categories: ["Convex Optimization"]
----

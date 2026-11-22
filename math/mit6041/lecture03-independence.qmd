@@ -1,8 +1,0 @@
----
-title: "Independence"
-subtitle: "Probability · Lecture 3"
-lecture: 3
-draft: true
-description: ""
-categories: ["Probability"]
----

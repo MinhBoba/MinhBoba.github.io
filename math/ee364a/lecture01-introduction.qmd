@@ -1,8 +1,0 @@
----
-title: "Introduction"
-subtitle: "Convex Optimization · Lecture 1"
-lecture: 1
-draft: true
-description: ""
-categories: ["Convex Optimization"]
----

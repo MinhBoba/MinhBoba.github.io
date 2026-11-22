@@ -1,8 +1,0 @@
----
-title: "Independence, basis and dimension"
-subtitle: "Linear Algebra · Lecture 9"
-lecture: 9
-draft: true
-description: ""
-categories: ["Linear Algebra"]
----

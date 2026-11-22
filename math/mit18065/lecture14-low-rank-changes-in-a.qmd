@@ -1,8 +1,0 @@
----
-title: "Low rank changes in A and its inverse"
-subtitle: "Matrix Methods · Lecture 14"
-lecture: 14
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

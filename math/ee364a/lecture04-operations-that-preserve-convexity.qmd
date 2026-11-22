@@ -1,8 +1,0 @@
----
-title: "Operations that preserve convexity"
-subtitle: "Convex Optimization · Lecture 4"
-lecture: 4
-draft: true
-description: ""
-categories: ["Convex Optimization"]
----

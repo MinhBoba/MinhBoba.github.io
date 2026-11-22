@@ -1,8 +1,0 @@
----
-title: "Markov decision processes"
-subtitle: "RL · Lecture 2"
-lecture: 2
-draft: true
-description: ""
-categories: ["RL"]
----

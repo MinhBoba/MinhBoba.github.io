@@ -1,8 +1,0 @@
----
-title: "Likelihood-based loss functions"
-subtitle: "DL Theory · Ch 6 · Section 2"
-lecture: 2
-draft: true
-description: ""
-categories: ["DL Theory"]
----

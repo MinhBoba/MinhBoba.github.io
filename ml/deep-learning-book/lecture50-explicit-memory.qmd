@@ -1,8 +1,0 @@
----
-title: "Explicit memory"
-subtitle: "DL Theory · Ch 10 · Section 50"
-lecture: 50
-draft: true
-description: ""
-categories: ["DL Theory"]
----

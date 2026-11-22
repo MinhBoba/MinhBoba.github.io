@@ -1,8 +1,0 @@
----
-title: "Bidirectional RNNs"
-subtitle: "DL Theory · Ch 10 · Section 41"
-lecture: 41
-draft: true
-description: ""
-categories: ["DL Theory"]
----

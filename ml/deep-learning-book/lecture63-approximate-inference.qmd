@@ -1,8 +1,0 @@
----
-title: "Approximate inference"
-subtitle: "DL Theory · Ch 13–20 · Section 63"
-lecture: 63
-draft: true
-description: ""
-categories: ["DL Theory"]
----

@@ -1,8 +1,0 @@
----
-title: "Kernels"
-subtitle: "Classical ML · Lecture 7"
-lecture: 7
-draft: true
-description: ""
-categories: ["Classical ML"]
----

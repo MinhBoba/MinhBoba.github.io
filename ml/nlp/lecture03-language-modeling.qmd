@@ -1,8 +1,0 @@
----
-title: "Language modeling"
-subtitle: "NLP · Lecture 3"
-lecture: 3
-draft: true
-description: ""
-categories: ["NLP"]
----

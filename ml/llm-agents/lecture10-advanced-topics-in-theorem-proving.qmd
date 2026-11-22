@@ -1,8 +1,0 @@
----
-title: "Advanced topics in theorem proving"
-subtitle: "LLM Agents · Lecture 10"
-lecture: 10
-draft: true
-description: ""
-categories: ["LLM Agents"]
----

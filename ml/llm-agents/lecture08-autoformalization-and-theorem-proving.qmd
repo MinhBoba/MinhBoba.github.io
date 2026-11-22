@@ -1,8 +1,0 @@
----
-title: "Autoformalization and theorem proving"
-subtitle: "LLM Agents · Lecture 8"
-lecture: 8
-draft: true
-description: ""
-categories: ["LLM Agents"]
----

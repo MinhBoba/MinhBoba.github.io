@@ -1,8 +1,0 @@
----
-title: "Introducing codes"
-subtitle: "Information Theory · Lecture 3"
-lecture: 3
-draft: true
-description: ""
-categories: ["Information Theory"]
----

@@ -1,8 +1,0 @@
----
-title: "Architectures and hyperparameters"
-subtitle: "LLMs · Lecture 3"
-lecture: 3
-draft: true
-description: ""
-categories: ["LLMs"]
----

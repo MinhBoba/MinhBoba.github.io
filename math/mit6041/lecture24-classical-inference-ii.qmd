@@ -1,8 +1,0 @@
----
-title: "Classical inference II"
-subtitle: "Probability · Lecture 24"
-lecture: 24
-draft: true
-description: ""
-categories: ["Probability"]
----

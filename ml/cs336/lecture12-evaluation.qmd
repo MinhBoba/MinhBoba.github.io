@@ -1,8 +1,0 @@
----
-title: "Evaluation"
-subtitle: "LLMs · Lecture 12"
-lecture: 12
-draft: true
-description: ""
-categories: ["LLMs"]
----

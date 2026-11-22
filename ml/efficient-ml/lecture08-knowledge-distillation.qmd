@@ -1,8 +1,0 @@
----
-title: "Knowledge distillation"
-subtitle: "Efficient ML · Lecture 8"
-lecture: 8
-draft: true
-description: ""
-categories: ["Efficient ML"]
----

@@ -1,8 +1,0 @@
----
-title: "The convolution operation"
-subtitle: "DL Theory · Ch 9 · Section 29"
-lecture: 29
-draft: true
-description: ""
-categories: ["DL Theory"]
----

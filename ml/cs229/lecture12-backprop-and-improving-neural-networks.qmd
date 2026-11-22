@@ -1,8 +1,0 @@
----
-title: "Backprop and improving neural networks"
-subtitle: "Classical ML · Lecture 12"
-lecture: 12
-draft: true
-description: ""
-categories: ["Classical ML"]
----

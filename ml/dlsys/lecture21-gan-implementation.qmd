@@ -1,8 +1,0 @@
----
-title: "GAN implementation"
-subtitle: "DL Systems · Lecture 21"
-lecture: 21
-draft: true
-description: ""
-categories: ["DL Systems"]
----

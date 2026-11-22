@@ -1,8 +1,0 @@
----
-title: "Neural architecture search II"
-subtitle: "Efficient ML · Lecture 7"
-lecture: 7
-draft: true
-description: ""
-categories: ["Efficient ML"]
----

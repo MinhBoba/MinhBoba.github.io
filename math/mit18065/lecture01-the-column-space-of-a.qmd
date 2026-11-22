@@ -1,8 +1,0 @@
----
-title: "The column space of A contains all vectors Ax"
-subtitle: "Matrix Methods · Lecture 1"
-lecture: 1
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

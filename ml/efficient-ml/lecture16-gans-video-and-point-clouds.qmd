@@ -1,8 +1,0 @@
----
-title: "GANs, video and point clouds"
-subtitle: "Efficient ML · Lecture 16"
-lecture: 16
-draft: true
-description: ""
-categories: ["Efficient ML"]
----

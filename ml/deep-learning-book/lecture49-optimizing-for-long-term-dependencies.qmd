@@ -1,8 +1,0 @@
----
-title: "Optimizing for long-term dependencies"
-subtitle: "DL Theory · Ch 10 · Section 49"
-lecture: 49
-draft: true
-description: ""
-categories: ["DL Theory"]
----

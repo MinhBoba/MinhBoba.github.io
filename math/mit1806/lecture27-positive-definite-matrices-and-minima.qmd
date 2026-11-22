@@ -1,8 +1,0 @@
----
-title: "Positive definite matrices and minima"
-subtitle: "Linear Algebra · Lecture 27"
-lecture: 27
-draft: true
-description: ""
-categories: ["Linear Algebra"]
----

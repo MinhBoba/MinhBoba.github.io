@@ -1,8 +1,0 @@
----
-title: "The JAX AI stack"
-subtitle: "JAX · Lecture 2"
-lecture: 2
-draft: true
-description: ""
-categories: ["JAX"]
----

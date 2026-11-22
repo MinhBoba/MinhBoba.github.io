@@ -1,8 +1,0 @@
----
-title: "Pretraining"
-subtitle: "NLP · Lecture 6"
-lecture: 6
-draft: true
-description: ""
-categories: ["NLP"]
----

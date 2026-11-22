@@ -1,8 +1,0 @@
----
-title: "Inverse functions f⁻¹(y) and derivatives of ln y, arcsin y"
-subtitle: "Calculus · Lecture 10"
-lecture: 10
-draft: true
-description: ""
-categories: ["Calculus"]
----

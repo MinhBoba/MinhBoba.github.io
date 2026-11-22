@@ -1,8 +1,0 @@
----
-title: "Weak law of large numbers"
-subtitle: "Probability · Lecture 19"
-lecture: 19
-draft: true
-description: ""
-categories: ["Probability"]
----

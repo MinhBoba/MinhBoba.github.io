@@ -1,8 +1,0 @@
----
-title: "Recurrent neural networks"
-subtitle: "NLP · Lecture 4"
-lecture: 4
-draft: true
-description: ""
-categories: ["NLP"]
----

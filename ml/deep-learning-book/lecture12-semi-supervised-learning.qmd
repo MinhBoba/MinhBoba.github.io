@@ -1,8 +1,0 @@
----
-title: "Semi-supervised learning"
-subtitle: "DL Theory · Ch 7 · Section 12"
-lecture: 12
-draft: true
-description: ""
-categories: ["DL Theory"]
----

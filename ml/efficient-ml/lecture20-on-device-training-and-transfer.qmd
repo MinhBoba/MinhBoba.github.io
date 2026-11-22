@@ -1,8 +1,0 @@
----
-title: "On-device training and transfer learning"
-subtitle: "Efficient ML · Lecture 20"
-lecture: 20
-draft: true
-description: ""
-categories: ["Efficient ML"]
----

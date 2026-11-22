@@ -1,8 +1,0 @@
----
-title: "Normalization and dropout"
-subtitle: "DL Systems · Lecture 8"
-lecture: 8
-draft: true
-description: ""
-categories: ["DL Systems"]
----

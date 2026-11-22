@@ -1,8 +1,0 @@
----
-title: "Derivatives of inverse and singular values"
-subtitle: "Matrix Methods · Lecture 16"
-lecture: 16
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

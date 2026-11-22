@@ -1,8 +1,0 @@
----
-title: "Introduction to reinforcement learning"
-subtitle: "RL · Lecture 1"
-lecture: 1
-draft: true
-description: ""
-categories: ["RL"]
----

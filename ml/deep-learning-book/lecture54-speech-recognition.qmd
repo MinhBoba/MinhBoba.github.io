@@ -1,8 +1,0 @@
----
-title: "Speech recognition"
-subtitle: "DL Theory · Ch 11–12 · Section 54"
-lecture: 54
-draft: true
-description: ""
-categories: ["DL Theory"]
----

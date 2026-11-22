@@ -1,8 +1,0 @@
----
-title: "Survey of difficulties with Ax = b"
-subtitle: "Matrix Methods · Lecture 10"
-lecture: 10
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

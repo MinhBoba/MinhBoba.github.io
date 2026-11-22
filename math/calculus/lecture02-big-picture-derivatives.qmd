@@ -1,8 +1,0 @@
----
-title: "Big picture: derivatives"
-subtitle: "Calculus · Lecture 2"
-lecture: 2
-draft: true
-description: ""
-categories: ["Calculus"]
----

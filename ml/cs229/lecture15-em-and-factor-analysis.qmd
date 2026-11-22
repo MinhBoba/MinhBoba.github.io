@@ -1,8 +1,0 @@
----
-title: "EM and factor analysis"
-subtitle: "Classical ML · Lecture 15"
-lecture: 15
-draft: true
-description: ""
-categories: ["Classical ML"]
----

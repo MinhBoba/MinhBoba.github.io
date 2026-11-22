@@ -19,6 +19,8 @@ Later 2026-11-22 (owner): no legends, no numbered captions on any page, no plann
 
 Also 2026-11-22 (owner): the notes map has the head "Overview" and no latest lecture on Home; a 2px rule opens each section; the graph is Tab → Topic → Lecture only, with smaller labels.
 
+Also 2026-11-22 (owner): "Minh · " removed from the card, "mdrat" smaller, no job title or introduction; the Concepts A-Z page removed.
+
 ## Direction contract
 
 THESIS: Home is the first page of a notebook-journal: the site's name as a title card, where to start, what is written per domain, then the concepts as a figure. It refuses the hero-plus-project-cards portfolio.
@@ -27,7 +29,7 @@ OWN-WORLD: The Figure Journal (near-white page, ink, Source Serif 4, hairline an
 
 STORY: The visitor reads whose notebook this is, picks a starting point, sees the lectures written up per domain, and traces a topic into a lecture.
 
-FIRST VIEWPORT: Left two thirds, the navy card with "mdrat" at about two thirds of its width and "Minh · Digital notebook for learning and researches" beneath; right third, Start here under a 2px rule; GitHub under the card; then the notes map.
+FIRST VIEWPORT: Left two thirds, the navy card with "mdrat" at under half of its width and "Digital notebook for learning and researches" beneath; right third, Start here under a 2px rule; GitHub under the card; then the notes map.
 
 FORM: seed: none (pinned). "I want the design to be like the image"; "left the lecture count in, but group by machine learning / data/math/.... instead of small lecture/topic"; "add the new concept graph to this version".
 

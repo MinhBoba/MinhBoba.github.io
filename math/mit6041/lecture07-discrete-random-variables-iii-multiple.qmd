@@ -1,8 +1,0 @@
----
-title: "Discrete random variables III: multiple variables"
-subtitle: "Probability · Lecture 7"
-lecture: 7
-draft: true
-description: ""
-categories: ["Probability"]
----

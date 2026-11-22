@@ -1,8 +1,0 @@
----
-title: "LSTM and GRU"
-subtitle: "DL Theory · Ch 10 · Section 48"
-lecture: 48
-draft: true
-description: ""
-categories: ["DL Theory"]
----

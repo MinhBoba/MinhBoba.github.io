@@ -1,8 +1,0 @@
----
-title: "NLP applications"
-subtitle: "DL Theory · Ch 11–12 · Section 55"
-lecture: 55
-draft: true
-description: ""
-categories: ["DL Theory"]
----

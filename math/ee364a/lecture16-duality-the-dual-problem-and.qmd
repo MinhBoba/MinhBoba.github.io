@@ -1,8 +1,0 @@
----
-title: "Duality: the dual problem and KKT conditions"
-subtitle: "Convex Optimization · Lecture 16"
-lecture: 16
-draft: true
-description: ""
-categories: ["Convex Optimization"]
----

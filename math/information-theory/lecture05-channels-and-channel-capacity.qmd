@@ -1,8 +1,0 @@
----
-title: "Channels and channel capacity"
-subtitle: "Information Theory · Lecture 5"
-lecture: 5
-draft: true
-description: ""
-categories: ["Information Theory"]
----

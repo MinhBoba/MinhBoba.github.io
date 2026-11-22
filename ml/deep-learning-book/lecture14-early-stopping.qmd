@@ -1,8 +1,0 @@
----
-title: "Early stopping"
-subtitle: "DL Theory · Ch 7 · Section 14"
-lecture: 14
-draft: true
-description: ""
-categories: ["DL Theory"]
----

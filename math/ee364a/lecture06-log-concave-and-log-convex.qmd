@@ -1,8 +1,0 @@
----
-title: "Log-concave and log-convex functions"
-subtitle: "Convex Optimization · Lecture 6"
-lecture: 6
-draft: true
-description: ""
-categories: ["Convex Optimization"]
----

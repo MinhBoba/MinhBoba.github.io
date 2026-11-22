@@ -1,8 +1,0 @@
----
-title: "Multi-task learning"
-subtitle: "DL Theory · Ch 7 · Section 13"
-lecture: 13
-draft: true
-description: ""
-categories: ["DL Theory"]
----

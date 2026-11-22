@@ -1,8 +1,0 @@
----
-title: "Markov chains I"
-subtitle: "Probability · Lecture 16"
-lecture: 16
-draft: true
-description: ""
-categories: ["Probability"]
----

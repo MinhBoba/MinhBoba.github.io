@@ -1,8 +1,0 @@
----
-title: "Norm penalties as constrained optimization"
-subtitle: "DL Theory · Ch 7 · Section 8"
-lecture: 8
-draft: true
-description: ""
-categories: ["DL Theory"]
----

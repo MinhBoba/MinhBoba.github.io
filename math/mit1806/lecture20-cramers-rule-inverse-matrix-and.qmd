@@ -1,8 +1,0 @@
----
-title: "Cramer's rule, inverse matrix and volume"
-subtitle: "Linear Algebra · Lecture 20"
-lecture: 20
-draft: true
-description: ""
-categories: ["Linear Algebra"]
----

@@ -1,8 +1,0 @@
----
-title: "Singular value decomposition"
-subtitle: "Linear Algebra · Lecture 29"
-lecture: 29
-draft: true
-description: ""
-categories: ["Linear Algebra"]
----

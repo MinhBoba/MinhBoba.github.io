@@ -1,8 +1,0 @@
----
-title: "Projection matrices and least squares"
-subtitle: "Linear Algebra · Lecture 16"
-lecture: 16
-draft: true
-description: ""
-categories: ["Linear Algebra"]
----

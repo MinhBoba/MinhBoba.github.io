@@ -1,8 +1,0 @@
----
-title: "Diagonalization and powers of A"
-subtitle: "Linear Algebra · Lecture 22"
-lecture: 22
-draft: true
-description: ""
-categories: ["Linear Algebra"]
----

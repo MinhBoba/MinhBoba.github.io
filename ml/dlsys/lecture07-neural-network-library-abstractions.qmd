@@ -1,8 +1,0 @@
----
-title: "Neural network library abstractions"
-subtitle: "DL Systems · Lecture 7"
-lecture: 7
-draft: true
-description: ""
-categories: ["DL Systems"]
----

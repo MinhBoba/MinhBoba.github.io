@@ -1,8 +1,0 @@
----
-title: "Counting parameters in SVD, LU, QR; saddle points"
-subtitle: "Matrix Methods · Lecture 18"
-lecture: 18
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

@@ -1,8 +1,0 @@
----
-title: "Back-propagation"
-subtitle: "DL Theory · Ch 6 · Section 5"
-lecture: 5
-draft: true
-description: ""
-categories: ["DL Theory"]
----

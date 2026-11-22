@@ -1,8 +1,0 @@
----
-title: "TinyEngine"
-subtitle: "Efficient ML · Lecture 10"
-lecture: 10
-draft: true
-description: ""
-categories: ["Efficient ML"]
----

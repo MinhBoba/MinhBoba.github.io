@@ -1,8 +1,0 @@
----
-title: "PyTorch and resource accounting"
-subtitle: "LLMs · Lecture 2"
-lecture: 2
-draft: true
-description: ""
-categories: ["LLMs"]
----

@@ -1,8 +1,0 @@
----
-title: "AlphaProof: RL for formal maths"
-subtitle: "LLM Agents · Lecture 9"
-lecture: 9
-draft: true
-description: ""
-categories: ["LLM Agents"]
----

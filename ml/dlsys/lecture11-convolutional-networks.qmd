@@ -1,8 +1,0 @@
----
-title: "Convolutional networks"
-subtitle: "DL Systems · Lecture 11"
-lecture: 11
-draft: true
-description: ""
-categories: ["DL Systems"]
----

@@ -1,8 +1,0 @@
----
-title: "Geometric problems"
-subtitle: "Convex Optimization · Lecture 19"
-lecture: 19
-draft: true
-description: ""
-categories: ["Convex Optimization"]
----

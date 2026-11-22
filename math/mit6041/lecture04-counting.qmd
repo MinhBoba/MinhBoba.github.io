@@ -1,8 +1,0 @@
----
-title: "Counting"
-subtitle: "Probability · Lecture 4"
-lecture: 4
-draft: true
-description: ""
-categories: ["Probability"]
----

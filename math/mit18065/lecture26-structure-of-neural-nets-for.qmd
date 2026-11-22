@@ -1,8 +1,0 @@
----
-title: "Structure of neural nets for deep learning"
-subtitle: "Matrix Methods · Lecture 26"
-lecture: 26
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

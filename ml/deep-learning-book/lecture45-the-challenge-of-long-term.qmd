@@ -1,8 +1,0 @@
----
-title: "The challenge of long-term dependencies"
-subtitle: "DL Theory · Ch 10 · Section 45"
-lecture: 45
-draft: true
-description: ""
-categories: ["DL Theory"]
----

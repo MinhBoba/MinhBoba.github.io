@@ -1,8 +1,0 @@
----
-title: "Encoder–decoder architectures"
-subtitle: "DL Theory · Ch 10 · Section 42"
-lecture: 42
-draft: true
-description: ""
-categories: ["DL Theory"]
----

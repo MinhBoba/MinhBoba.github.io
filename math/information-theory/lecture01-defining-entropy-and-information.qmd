@@ -1,8 +1,0 @@
----
-title: "Defining entropy and information"
-subtitle: "Information Theory · Lecture 1"
-lecture: 1
-draft: true
-description: ""
-categories: ["Information Theory"]
----

@@ -1,8 +1,0 @@
----
-title: "Duality: the Lagrange dual function"
-subtitle: "Convex Optimization · Lecture 15"
-lecture: 15
-draft: true
-description: ""
-categories: ["Convex Optimization"]
----

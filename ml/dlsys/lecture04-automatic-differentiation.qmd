@@ -1,8 +1,0 @@
----
-title: "Automatic differentiation"
-subtitle: "DL Systems · Lecture 4"
-lecture: 4
-draft: true
-description: ""
-categories: ["DL Systems"]
----

@@ -1,8 +1,0 @@
----
-title: "Geometric programming"
-subtitle: "Convex Optimization · Lecture 12"
-lecture: 12
-draft: true
-description: ""
-categories: ["Convex Optimization"]
----

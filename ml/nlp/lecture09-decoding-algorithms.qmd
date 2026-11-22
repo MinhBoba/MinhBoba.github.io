@@ -1,8 +1,0 @@
----
-title: "Decoding algorithms"
-subtitle: "NLP · Lecture 9"
-lecture: 9
-draft: true
-description: ""
-categories: ["NLP"]
----

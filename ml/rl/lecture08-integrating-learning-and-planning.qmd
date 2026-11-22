@@ -1,8 +1,0 @@
----
-title: "Integrating learning and planning"
-subtitle: "RL · Lecture 8"
-lecture: 8
-draft: true
-description: ""
-categories: ["RL"]
----

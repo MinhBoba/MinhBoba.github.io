@@ -1,8 +1,0 @@
----
-title: "Practical methodology"
-subtitle: "DL Theory · Ch 11–12 · Section 51"
-lecture: 51
-draft: true
-description: ""
-categories: ["DL Theory"]
----

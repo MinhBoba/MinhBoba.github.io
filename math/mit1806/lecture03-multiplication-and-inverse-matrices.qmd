@@ -1,8 +1,0 @@
----
-title: "Multiplication and inverse matrices"
-subtitle: "Linear Algebra · Lecture 3"
-lecture: 3
-draft: true
-description: ""
-categories: ["Linear Algebra"]
----

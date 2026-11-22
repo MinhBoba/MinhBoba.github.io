@@ -1,8 +1,0 @@
----
-title: "Neural network library implementation"
-subtitle: "DL Systems · Lecture 9"
-lecture: 9
-draft: true
-description: ""
-categories: ["DL Systems"]
----

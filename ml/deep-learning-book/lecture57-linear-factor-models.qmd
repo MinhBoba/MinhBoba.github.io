@@ -1,8 +1,0 @@
----
-title: "Linear factor models"
-subtitle: "DL Theory · Ch 13–20 · Section 57"
-lecture: 57
-draft: true
-description: ""
-categories: ["DL Theory"]
----

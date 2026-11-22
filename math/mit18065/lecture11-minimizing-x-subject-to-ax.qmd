@@ -1,8 +1,0 @@
----
-title: "Minimizing ‖x‖ subject to Ax = b"
-subtitle: "Matrix Methods · Lecture 11"
-lecture: 11
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

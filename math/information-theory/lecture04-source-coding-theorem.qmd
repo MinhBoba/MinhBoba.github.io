@@ -1,8 +1,0 @@
----
-title: "Source coding theorem"
-subtitle: "Information Theory · Lecture 4"
-lecture: 4
-draft: true
-description: ""
-categories: ["Information Theory"]
----

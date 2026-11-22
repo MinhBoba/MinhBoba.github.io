@@ -1,8 +1,0 @@
----
-title: "Reward model and linear dynamical systems"
-subtitle: "Classical ML · Lecture 19"
-lecture: 19
-draft: true
-description: ""
-categories: ["Classical ML"]
----

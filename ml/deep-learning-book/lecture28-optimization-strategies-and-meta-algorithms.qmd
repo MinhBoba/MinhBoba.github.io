@@ -1,8 +1,0 @@
----
-title: "Optimization strategies and meta-algorithms"
-subtitle: "DL Theory · Ch 8 · Section 28"
-lecture: 28
-draft: true
-description: ""
-categories: ["DL Theory"]
----

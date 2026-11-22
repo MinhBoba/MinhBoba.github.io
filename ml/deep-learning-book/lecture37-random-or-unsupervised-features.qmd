@@ -1,8 +1,0 @@
----
-title: "Random or unsupervised features"
-subtitle: "DL Theory · Ch 9 · Section 37"
-lecture: 37
-draft: true
-description: ""
-categories: ["DL Theory"]
----

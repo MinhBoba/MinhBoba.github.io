@@ -1,8 +1,0 @@
----
-title: "Parallelism II"
-subtitle: "LLMs · Lecture 8"
-lecture: 8
-draft: true
-description: ""
-categories: ["LLMs"]
----

@@ -1,8 +1,0 @@
----
-title: "Multimodality"
-subtitle: "LLMs · Lecture 17"
-lecture: 17
-draft: true
-description: ""
-categories: ["LLMs"]
----

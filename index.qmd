@@ -54,7 +54,7 @@ listing:
 ::: {.home-card}
 # mdrat {.home-card-title}
 
-[Minh · Digital notebook for learning and researches]{.home-card-line}
+[Digital notebook for learning and researches]{.home-card-line}
 :::
 
 <!-- TODO: add email, LinkedIn and CV beside GitHub once the owner confirms them. -->

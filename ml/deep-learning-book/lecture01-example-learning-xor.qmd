@@ -1,8 +1,0 @@
----
-title: "Example: learning XOR"
-subtitle: "DL Theory · Ch 6 · Section 1"
-lecture: 1
-draft: true
-description: ""
-categories: ["DL Theory"]
----

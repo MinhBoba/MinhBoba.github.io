@@ -1,8 +1,0 @@
----
-title: "Second-order methods"
-subtitle: "DL Theory · Ch 8 · Section 27"
-lecture: 27
-draft: true
-description: ""
-categories: ["DL Theory"]
----

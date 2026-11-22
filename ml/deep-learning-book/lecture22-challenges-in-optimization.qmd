@@ -1,8 +1,0 @@
----
-title: "Challenges in optimization"
-subtitle: "DL Theory · Ch 8 · Section 22"
-lecture: 22
-draft: true
-description: ""
-categories: ["DL Theory"]
----

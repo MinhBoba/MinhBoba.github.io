@@ -1,8 +1,0 @@
----
-title: "Safe and secure agentic AI"
-subtitle: "LLM Agents · Lecture 12"
-lecture: 12
-draft: true
-description: ""
-categories: ["LLM Agents"]
----

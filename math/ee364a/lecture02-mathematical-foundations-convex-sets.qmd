@@ -1,8 +1,0 @@
----
-title: "Mathematical foundations; convex sets"
-subtitle: "Convex Optimization · Lecture 2"
-lecture: 2
-draft: true
-description: ""
-categories: ["Convex Optimization"]
----

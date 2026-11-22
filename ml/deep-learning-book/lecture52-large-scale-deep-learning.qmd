@@ -1,8 +1,0 @@
----
-title: "Large-scale deep learning"
-subtitle: "DL Theory · Ch 11–12 · Section 52"
-lecture: 52
-draft: true
-description: ""
-categories: ["DL Theory"]
----

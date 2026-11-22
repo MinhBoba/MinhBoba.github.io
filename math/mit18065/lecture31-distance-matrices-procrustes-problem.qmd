@@ -1,8 +1,0 @@
----
-title: "Distance matrices; Procrustes problem"
-subtitle: "Matrix Methods · Lecture 31"
-lecture: 31
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

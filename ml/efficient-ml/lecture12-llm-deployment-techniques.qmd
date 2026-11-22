@@ -1,8 +1,0 @@
----
-title: "LLM deployment techniques"
-subtitle: "Efficient ML · Lecture 12"
-lecture: 12
-draft: true
-description: ""
-categories: ["Efficient ML"]
----

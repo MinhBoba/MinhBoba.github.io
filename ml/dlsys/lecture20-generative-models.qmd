@@ -1,8 +1,0 @@
----
-title: "Generative models"
-subtitle: "DL Systems · Lecture 20"
-lecture: 20
-draft: true
-description: ""
-categories: ["DL Systems"]
----

@@ -1,8 +1,0 @@
----
-title: "Max and min and second derivative"
-subtitle: "Calculus · Lecture 3"
-lecture: 3
-draft: true
-description: ""
-categories: ["Calculus"]
----

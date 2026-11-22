@@ -1,8 +1,0 @@
----
-title: "Transformer implementation"
-subtitle: "DL Systems · Lecture 18"
-lecture: 18
-draft: true
-description: ""
-categories: ["DL Systems"]
----

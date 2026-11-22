@@ -1,8 +1,0 @@
----
-title: "Multiplying and factoring matrices"
-subtitle: "Matrix Methods · Lecture 2"
-lecture: 2
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

@@ -1,8 +1,0 @@
----
-title: "Norms of vectors and matrices"
-subtitle: "Matrix Methods · Lecture 8"
-lecture: 8
-draft: true
-description: ""
-categories: ["Matrix Methods"]
----

@@ -1,8 +1,0 @@
----
-title: "Eigenvalues and eigenvectors"
-subtitle: "Linear Algebra · Lecture 21"
-lecture: 21
-draft: true
-description: ""
-categories: ["Linear Algebra"]
----

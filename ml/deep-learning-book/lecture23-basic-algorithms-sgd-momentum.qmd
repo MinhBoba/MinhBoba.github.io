@@ -1,8 +1,0 @@
----
-title: "Basic algorithms (SGD, momentum)"
-subtitle: "DL Theory · Ch 8 · Section 23"
-lecture: 23
-draft: true
-description: ""
-categories: ["DL Theory"]
----

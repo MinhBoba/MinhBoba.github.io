@@ -1,8 +1,0 @@
----
-title: "Convex functions"
-subtitle: "Convex Optimization · Lecture 3"
-lecture: 3
-draft: true
-description: ""
-categories: ["Convex Optimization"]
----

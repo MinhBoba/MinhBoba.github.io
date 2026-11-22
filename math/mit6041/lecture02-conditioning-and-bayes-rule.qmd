@@ -1,8 +1,0 @@
----
-title: "Conditioning and Bayes' rule"
-subtitle: "Probability · Lecture 2"
-lecture: 2
-draft: true
-description: ""
-categories: ["Probability"]
----

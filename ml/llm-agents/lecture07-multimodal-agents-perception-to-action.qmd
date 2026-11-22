@@ -1,8 +1,0 @@
----
-title: "Multimodal agents: perception to action"
-subtitle: "LLM Agents · Lecture 7"
-lecture: 7
-draft: true
-description: ""
-categories: ["LLM Agents"]
----

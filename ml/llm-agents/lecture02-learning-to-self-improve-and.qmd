@@ -1,8 +1,0 @@
----
-title: "Learning to self-improve and reason"
-subtitle: "LLM Agents · Lecture 2"
-lecture: 2
-draft: true
-description: ""
-categories: ["LLM Agents"]
----
