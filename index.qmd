@@ -1,21 +1,13 @@
 ---
 title: "mdrat"
-pagetitle: "mdrat · MinhJ, ML engineer and data scientist"
-description: "Lecture notes with the video, maths and code on one page, and paper reproductions set against their reported results."
+pagetitle: "mdrat · Minh, digital notebook for learning and researches"
+description: "Lecture notes with the video, maths and code, and paper reproductions set against their reported results."
 kind: index
 toc: false
 body-classes: home
 title-block-banner: false
 page-layout: full
 listing:
-  - id: study-map
-    contents:
-      - "ml/**/*.qmd"
-      - "math/**/*.qmd"
-      - "data/**/*.qmd"
-      - "system/**/*.qmd"
-    type: custom
-    template: _templates/study-map.ejs
   - id: start-here
     contents:
       - "ml/**/*.qmd"
@@ -24,6 +16,22 @@ listing:
       - "system/**/*.qmd"
     type: custom
     template: _templates/start-here.ejs
+  - id: notes-map
+    contents:
+      - "ml/**/*.qmd"
+      - "math/**/*.qmd"
+      - "data/**/*.qmd"
+      - "system/**/*.qmd"
+    type: custom
+    template: _templates/notes-map.ejs
+  - id: concept-graph
+    contents:
+      - "ml/**/*.qmd"
+      - "math/**/*.qmd"
+      - "data/**/*.qmd"
+      - "system/**/*.qmd"
+    type: custom
+    template: _templates/concept-graph.ejs
   - id: lab-featured
     contents: "lab/**/*.qmd"
     include:
@@ -35,29 +43,37 @@ listing:
     sort: "date desc"
     max-items: 3
     template-params:
-      figure: "2"
       link: true
+      caption: false
 ---
 
 ::: {.home-opening}
 
-::: {.home-about}
-# MinhJ {.home-name}
+::: {.home-lead}
 
-[ML engineer and data scientist]{.home-role}
+::: {.home-card}
+# mdrat {.home-card-title}
 
-I work with data and machine learning. This site holds the hands-on work, paper reproductions and projects in the [Lab](lab/index.qmd), and structured notes from the courses I study: each lecture page puts the video, my notes, the maths and the code together, with its sources at the end.
-
-[[GitHub](https://github.com/MinhBoba)]{.home-links}
+[Minh · Digital notebook for learning and researches]{.home-card-line}
 :::
 
 <!-- TODO: add email, LinkedIn and CV beside GitHub once the owner confirms them. -->
+[[GitHub](https://github.com/MinhBoba)]{.home-links}
+:::
+
 ::: {#start-here}
 :::
 
 :::
 
-::: {#study-map}
+## Overview {.unnumbered .unlisted}
+
+::: {#notes-map}
+:::
+
+## Concepts {.unnumbered .unlisted}
+
+::: {#concept-graph}
 :::
 
 ## From the Lab {.unnumbered .unlisted}

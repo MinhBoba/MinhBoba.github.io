@@ -1,0 +1,57 @@
+<%
+// Lectures written up, generated from page headers (no hand edits). Only published lectures
+// are drawn: one filled block each, linking to the lecture. No totals, no planned slots.
+// Course: <domain>/<folder>/index.qmd with `course: true`. Lecture: any other .qmd in it.
+// `status: in progress` draws a dotted block.
+// template-params: domain (a tab: one row per course, with its latest lecture). Without it
+// (Home): one row per domain, counts only.
+const params = (typeof templateParams !== 'undefined' && templateParams) || {};
+const ALL = [
+{ key: 'ml', label: 'Machine Learning' },
+{ key: 'math', label: 'Math' },
+{ key: 'data', label: 'Data' },
+{ key: 'system', label: 'System' },
+];
+const ROOT = params.domain ? '../' : '';
+const EXTRA = new Set(['notes', 'dsa', 'problems', 'reports', 'case-studies', 'applications']);
+const norm = (p) => String(p || '').replace(/\\/g, '/').replace(/^\/+/, '');
+const href = (item) => ROOT + norm(item.outputHref || item.path).replace(/\.qmd$/, '.html');
+const shortName = (t) => String(t || '').split(':')[0].replace(/^Stanford\s+/i, '').trim();
+const plural = (n) => n + (n === 1 ? ' lecture' : ' lectures');
+const when = (l) => new Date(l.item.date || 0);
+const lectureNo = (item, file) => {
+const n = Number(item.lecture);
+if (n > 0) return n;
+const m = String(item.subtitle || '').match(/lecture\s*(\d+)/i) || String(file).match(/lecture[-_ ]?0*(\d+)/i);
+return m ? Number(m[1]) : 0;
+};
+const courses = {};
+for (const item of items) {
+const parts = norm(item.path).split('/');
+if (item.draft || parts.length < 3 || EXTRA.has(parts[1]) || !ALL.some((d) => d.key === parts[0])) continue;
+const key = parts[0] + '/' + parts[1];
+const file = parts[parts.length - 1];
+courses[key] = courses[key] || { domain: parts[0], item: null, lectures: [] };
+if (file === 'index.qmd') { if (item.course) courses[key].item = item; continue; }
+courses[key].lectures.push({ item, n: lectureNo(item, file) });
+}
+const list = Object.values(courses).filter((c) => c.item && c.lectures.length);
+for (const c of list) c.lectures.sort((a, b) => a.n - b.n);
+const rows = params.domain
+? list.filter((c) => c.domain === params.domain).map((c) => ({ domain: c.domain, label: shortName(c.item.title), link: href(c.item), lectures: c.lectures }))
+: ALL.map((d) => ({ domain: d.key, label: d.label, link: ROOT + d.key + '/index.html', lectures: list.filter((c) => c.domain === d.key).flatMap((c) => c.lectures) })).filter((r) => r.lectures.length);
+for (const r of rows) r.latest = [...r.lectures].sort((a, b) => when(b) - when(a))[0];
+%>
+<% if (rows.length) { %>
+<div class="notes-map">
+<% for (const r of rows) { %>
+<div class="notes-row domain-<%= r.domain %>">
+<a class="notes-label" href="<%= r.link %>"><%= r.label %></a>
+<ul class="notes-blocks" aria-label="<%= r.label %>, <%= plural(r.lectures.length) %>"><% for (const l of r.lectures) { const prog = String(l.item.status || '').toLowerCase() === 'in progress'; %><li><a class="notes-block<%= prog ? ' is-progress' : '' %>" href="<%= href(l.item) %>" title="<%= l.item.title %>" aria-label="<%= l.item.title %><%= prog ? ' (in progress)' : '' %>"></a></li><% } %></ul>
+<p class="notes-note"><%= plural(r.lectures.length) %><% if (params.domain) { %><span class="notes-latest">Latest: <a href="<%= href(r.latest.item) %>"><%= r.latest.item.title %></a></span><% } %></p>
+</div>
+<% } %>
+</div>
+<% } else { %>
+<p class="notes-none">Nothing written up yet.</p>
+<% } %>

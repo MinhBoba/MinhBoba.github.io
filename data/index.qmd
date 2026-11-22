@@ -7,11 +7,9 @@ listing:
   - id: courses
     contents: "**/*.qmd"
     type: custom
-    template: ../_templates/study-map.ejs
+    template: ../_templates/notes-map.ejs
     template-params:
       domain: data
-      figure: "1"
-      caption: "Data courses, each drawn to its real number of lectures; select a filled slot to open that lecture."
   - id: dsa
     contents: "dsa/*.qmd"
     type: custom
@@ -21,8 +19,7 @@ listing:
       root: "../"
       hide-domain: true
       hide-date: true
-      table: "1"
-      caption: "Data structures and algorithms, by name, with their time and space complexity."
+      label: "Data structures and algorithms, by name, with their time and space complexity."
       empty: "No topics written up yet."
       fields:
         - { key: "time", label: "Time" }
@@ -36,8 +33,7 @@ listing:
       root: "../"
       hide-domain: true
       hide-date: true
-      table: "2"
-      caption: "Python and SQL problems, by name, with the solving pattern each one uses."
+      label: "Python and SQL problems, by name, with the solving pattern each one uses."
       empty: "No problems written up yet."
       fields:
         - { key: "language", label: "Language" }
@@ -51,8 +47,7 @@ listing:
     template-params:
       root: "../"
       hide-domain: true
-      table: "3"
-      caption: "Power BI reports, newest first. Public or synthetic data only."
+      label: "Power BI reports, newest first. Public or synthetic data only."
       empty: "No reports published yet."
 ---
 

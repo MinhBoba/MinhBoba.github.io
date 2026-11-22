@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-11-21T13:03:07.213Z",
+        "reason": "Claude triage: .lab-status line-form status tag (3px solid / 2px dotted / 2px dashed, in ink) on an inline label, not a card; predates the Poster Session redesign and belongs to Lab pages not yet redesigned"
+      }
+    ]
+  }
+}

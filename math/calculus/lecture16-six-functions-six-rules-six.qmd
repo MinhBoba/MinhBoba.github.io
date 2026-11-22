@@ -1,8 +1,67 @@
 ---
-title: "Six functions, six rules, six theorems"
+title: "6 Functions, 6 Rules, 6 Theorems"
 subtitle: "Calculus · Lecture 16"
 lecture: 16
-draft: true
-description: ""
-categories: ["Calculus"]
+date: "2026-11-22"
+description: "The calculus toolkit on one page: six functions, six differentiation rules and six theorems, each with a worked example and where it is used."
+categories: ["Calculus", Derivatives, Integrals, Series]
+index: [Chain rule, Product rule, Fundamental theorem of calculus, Mean value theorem, Taylor series, Binomial series]
 ---
+
+{{< video https://www.youtube.com/watch?v=LgWFurXHX8U title="Six Functions, Six Rules, and Six Theorems (MIT OpenCourseWare)" >}}
+
+Study notes on Gilbert Strang's review lecture (MIT OpenCourseWare, Highlights of Calculus): formulas, worked examples and real-world applications.
+
+## Six functions
+
+::: {.table-responsive}
+
+| Item and key formula | Example | Application |
+|:----------------------------|:--------------------------------|:--------------------------|
+| **1. Power** $x^n$<br>$d/dx$: $n x^{n-1}$<br>$\int$: $\tfrac{x^{n+1}}{n+1}$, fails at $n = -1$ | $f = x^3 \to f' = 3x^2,\ \int = \tfrac{x^4}{4}$<br>$\int_0^2 x^3\,dx = \tfrac{16}{4} = \mathbf{4}$ | Area and volume ($x^2$, $x^3$), cost curves, falling bodies ($d = \tfrac12 g t^2$), polynomial regression |
+| **2. Sine** $\sin x$<br>$d/dx$: $\cos x$<br>$\int$: $-\cos x$ | Slope at 0: $\cos 0 = \mathbf{1}$<br>One arch: $\int_0^\pi \sin x\,dx = [-\cos x]_0^\pi = \mathbf{2}$ | Anything that repeats: sound, AC electricity, vibration, seasonal or time-of-day demand |
+| **3. Cosine** $\cos x$<br>$d/dx$: $-\sin x$<br>$\int$: $\sin x$ | Slope at $\pi/2$: $-\sin(\pi/2) = \mathbf{-1}$<br>$\int_0^{\pi/2} \cos x\,dx = [\sin x]_0^{\pi/2} = \mathbf{1}$ | Same as sine (a shifted wave); oscillators, signal processing, Fourier analysis |
+| **4. Exponential** $e^{cx}$<br>$d/dx$: $c\,e^{cx}$<br>$\int$: $\tfrac{e^{cx}}{c}$ | $f = e^{2x} \to f' = 2e^{2x}$ (growth proportional to size)<br>$\int_0^1 e^{2x}\,dx = \tfrac{e^2 - 1}{2} \approx \mathbf{3.19}$ | Population growth, compound interest, radioactive decay, drug clearance, exponential smoothing |
+| **5. Logarithm** $\ln x$<br>$d/dx$: $\tfrac{1}{x}$<br>$\int$: $x \ln x - x$<br>($\ln x$ fills the $n = -1$ gap) | Slope at $x = 2$: $\mathbf{1/2}$<br>$\int_1^e \ln x\,dx = [x \ln x - x]_1^e = 0 - (-1) = \mathbf{1}$ | Log scales (dB, pH, Richter), log-loss in ML, log-likelihood (turns products into sums) |
+| **6. Step**<br>0 for $x < 0$, 1 for $x \ge 0$<br>$d/dx$: delta (spike, area 1)<br>$\int$: ramp | A switch turning on at $t = 0$<br>Ramp: $\int_0^3 \text{step}\,dt = \mathbf{3}$<br>Delta: a sudden kick (hammer hit) with total area $\mathbf{1}$ | Step: switch-on, policy change. Ramp: ReLU in neural nets, overtime cost past a threshold. Delta: impulse or one-time shock |
+
+:::
+
+## Six rules of differentiation
+
+::: {.table-responsive}
+
+| Item and key formula | Example | Application |
+|:----------------------------|:--------------------------------|:--------------------------|
+| **1. Sum**<br>$(af + bg)' = af' + bg'$ | $(3x^2 + 5\sin x)' = \mathbf{6x + 5\cos x}$ | Derivative of a total cost or weighted score, e.g. $w_1 a + w_2 b$ |
+| **2. Product**<br>$(fg)' = f'g + fg'$ | $(x^2 \sin x)' = \mathbf{2x \sin x + x^2 \cos x}$ | Revenue = price × quantity (both changing); power = voltage × current |
+| **3. Quotient**<br>$\left(\tfrac{f}{g}\right)' = \tfrac{f'g - fg'}{g^2}$ | $\left(\tfrac{\sin x}{x}\right)' = \tfrac{x\cos x - \sin x}{x^2}$ | Rates and ratios: cost per unit, efficiency, utilization = busy time / total time |
+| **4. Chain**<br>$\tfrac{d}{dx} f(g(x)) = f'(g(x))\,g'(x)$ | $\tfrac{d}{dx}\sin(x^2) = \mathbf{2x\cos(x^2)}$<br>(outer derivative × inner derivative) | **Backpropagation** in neural networks; related rates (balloon radius as air is pumped in) |
+| **5. Inverse**<br>$\tfrac{dx}{dy} = \tfrac{1}{dy/dx}$ | $y = e^x,\ x = \ln y \to \tfrac{dx}{dy} = \tfrac{1}{e^x} = \tfrac{1}{y}$<br>(this proves $(\ln y)' = 1/y$) | Derivatives of $\ln$, $\arcsin$, $\sqrt{\phantom{x}}$; converting "time per task" ↔ "tasks per time" |
+| **6. L'Hôpital**<br>$0/0$ form: $\lim \tfrac{f}{g} = \lim \tfrac{f'}{g'}$ | $\lim\limits_{x\to0} \tfrac{\sin x}{x} = \tfrac{\cos 0}{1} = \mathbf{1}$<br>$\lim\limits_{x\to0} \tfrac{e^x - 1}{x} = \tfrac{e^0}{1} = \mathbf{1}$ | Limits that look like $0/0$: continuous compounding → $e^x$; edge-case behavior of algorithms |
+
+:::
+
+## Six theorems
+
+::: {.table-responsive}
+
+| Item and key formula | Example | Application |
+|:----------------------------|:--------------------------------|:--------------------------|
+| **1. Fundamental Theorem**<br>If $f(x) = \int_a^x s(t)\,dt$ then $f' = s;$<br>$\int_a^b f'(x)\,dx = f(b) - f(a)$ | $\int_0^3 2x\,dx = 3^2 - 0^2 = \mathbf{9}$ (no Riemann sums)<br>$\tfrac{d}{dx}\int_0^x \cos t\,dt = \mathbf{\cos x}$ | Velocity → distance; flow rate → total volume; demand rate → cumulative demand; PDF → CDF |
+| **2. Max–min / intermediate value**<br>Continuous $f$ on $[a, b]$ reaches a max and a min, and every value between | $x^2$ on $[-1, 2]$: max $\mathbf{4}$ at $x = 2$, min $\mathbf{0}$ at $x = 0$<br>Counterexample: the step on $[-1, 1]$ never equals 0.5 (not continuous) | Guarantees an optimum exists (basis of optimization); justifies bisection root-finding |
+| **3. Mean Value**<br>$f'(c) = \tfrac{f(b) - f(a)}{b - a}$ for some $c$ in $(a, b)$ | $x^2$ on $[0, 2]$: average slope $= 4/2 = 2$; $f'(c) = 2c = 2 \to \mathbf{c = 1}$<br>Drive 120 km in 2 h → at some instant exactly **60 km/h** | Average-speed cameras; proving error bounds for numerical methods |
+| **4. Taylor series**<br>$f(x) = f(a) + f'(a)(x-a) + \tfrac{f''(a)}{2!}(x-a)^2 + \dots$ | $e^x \approx 1 + x + \tfrac{x^2}{2} \to$ at $x = 0.1$: $\mathbf{1.105}$ (true 1.10517)<br>$\sin x \approx x - \tfrac{x^3}{6}$ | How calculators compute $\sin$, $e^x$, $\sqrt{\phantom{x}}$; $\sin\theta \approx \theta$ for pendulums; **gradient descent / Newton's method** |
+| **5. Taylor remainder**<br>Cut after $x^2$: error $= \tfrac{f'''(c)}{3!}(x-a)^3$, $c$ between $a$ and $x$ | $e^x$ at $x = 0.1$: error $= \tfrac{e^c}{6}\cdot 0.001$, between 0.000167 and 0.000184<br>Actual error 0.000171 ✓ | Knowing how accurate an approximation is; choosing step size or number of terms in solvers |
+| **6. Binomial**<br>$(1+x)^p = 1 + px + \tfrac{p(p-1)}{2!}x^2 + \dots$ | $p = 2$: $1 + 2x + x^2$ (stops)<br>$p = \tfrac12$: $\sqrt{1.1} \approx 1 + 0.05 - 0.00125 = \mathbf{1.04875}$ (true 1.04881)<br>$p = -1$: $1 - x + x^2 - \dots$ (never stops) | Quick approximations, e.g. $(1+r)^n \approx 1 + nr$; relativity $\gamma \approx 1 + \tfrac{v^2}{2c^2}$; binomial distribution |
+
+:::
+
+## The big picture
+
+The **functions** describe how things behave (growth, cycles, switches); the **rules** let you differentiate complex models built from those pieces; the **theorems** guarantee that optimization and approximation actually work.
+
+## Sources
+
+- [Six Functions, Six Rules, and Six Theorems](https://ocw.mit.edu/courses/res-18-005-highlights-of-calculus-spring-2010/resources/six-functions-six-rules-and-six-theorems/), MIT OCW RES.18-005 (lecture video and summary PDF)
+- [Highlights of Calculus](https://ocw.mit.edu/courses/res-18-005-highlights-of-calculus-spring-2010/), Gilbert Strang, Spring 2010

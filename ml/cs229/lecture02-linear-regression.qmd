@@ -5,6 +5,7 @@ lecture: 2
 date: "2026-11-15"
 description: "Least squares, batch and stochastic gradient descent, and the normal equations."
 categories: ["Classical ML", Regression, Optimization]
+index: [Least squares, Gradient descent, Stochastic gradient descent, Normal equations, Linear regression]
 ---
 
 {{< video https://www.youtube.com/watch?v=sDv4f4s2SB8 title="StatQuest: Gradient Descent, Step-by-Step" >}}

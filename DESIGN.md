@@ -13,6 +13,9 @@ colors:
   ink-data: "#17784e"
   ink-system: "#7a4cc2"
   ink-lab: "#15171c"
+  band: "#102a5c"
+  band-ink: "#ffffff"
+  band-muted: "#c9d4ea"
   code-ink: "#8a2d1c"
   ink-dark: "#e8e7e2"
   ground-dark: "#121417"
@@ -25,14 +28,17 @@ colors:
   ink-data-dark: "#4cc38a"
   ink-system-dark: "#b59aff"
   ink-lab-dark: "#e8e7e2"
+  band-dark: "#1a3566"
+  band-ink-dark: "#f2f4f8"
+  band-muted-dark: "#b9c6e2"
   code-ink-dark: "#ffb199"
 typography:
   display:
-    fontFamily: "Source Serif 4, Georgia, serif"
-    fontSize: "clamp(2rem, 1.3rem + 2.2vw, 3.1rem)"
-    fontWeight: 600
-    lineHeight: 1.12
-    letterSpacing: "-0.022em"
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
+    fontSize: "31cqi"
+    fontWeight: 800
+    lineHeight: 0.82
+    letterSpacing: "-0.04em"
   headline:
     fontFamily: "Source Serif 4, Georgia, serif"
     fontSize: "1.5rem"
@@ -120,16 +126,15 @@ components:
 
 **Creative North Star: "The Figure Journal"**
 
-Every page is a page from a research article. The home page opens with who the owner is and a Start-here list, then Figure 1, a study map read like a plotted figure, and Figure 2, the Lab's captioned plates; tab pages list their contents as ruled ledgers (Table 1, 2, ...). Reading comes first: a serif body at a generous 18px, a grotesk only for labels and chrome, a mono only for code. The page is near-white paper (dark: near-black slate) with ink type and hairline rules.
+Every page is a page from a research article. The home page opens with a navy title card (mdrat, "Minh · Digital notebook for learning and researches") beside a Start-here list, then the notes map with one row per domain, the concept graph, and the Lab. No page carries numbered captions ("Figure 1", "Table 1") or a written-up / planned legend, and nothing unwritten is drawn (owner, 2026-11-22). Home follows the owner's image (owner's layout, 2026-11-22, replacing the collection-only Home of 2026-11-21). Tab pages carry the same notes map, one row per course; tab pages list their contents as ruled ledgers. Reading comes first: a serif body at a generous 18px, a grotesk only for labels and chrome, a mono only for code. The page is near-white paper (dark: near-black slate) with ink type and hairline rules.
 
 Colour is semantic, never decorative. Four domain inks name the four study domains, Machine Learning, Math, Data and System, and appear wherever that domain is meant: lane labels, slots, the rule under a tab's title, the domain mark in a ledger row, prose links inside that tab. The Lab has no hue of its own; it is set in ink. Everything else is ink, muted grey and rule.
 
-Depth comes from rules and overlap. Heavy 2px ink rules open a figure or table; 1px hairlines separate its rows. Nothing floats: no shadows, no gradients, no card chrome. Status is drawn, not coloured: a solid fill is written up, a dotted outline is in progress, a dashed outline is planned, and an absent course still keeps its dashed slot.
+Depth comes from rules and overlap. Heavy 2px ink rules open a figure or table; 1px hairlines separate its rows. Nothing floats: no shadows, no gradients, no card chrome. Status is drawn, not coloured: a solid fill is written up, a dotted outline is in progress, a dashed outline is planned. On Home it shows only as the filled and dashed parts of each domain's bar.
 
 **Key Characteristics:**
 - Serif reading voice (Source Serif 4) for body, headings and captions; Hanken Grotesk for labels and chrome; JetBrains Mono for code only.
 - Four semantic domain inks, each with a light and a dark value; Lab in ink.
-- Numbered Figure and Table captions in italic serif with an upright grotesk label.
 - Status by line form (solid, dotted, dashed), never by hue.
 - Flat paper: 2px ink rules open blocks, 1px hairlines divide rows, no shadows or gradients.
 - A short domain-ink rule under every page title.
@@ -169,7 +174,7 @@ Ink on paper, with four semantic inks that each mean exactly one domain.
 **Character:** A journal serif carries every sentence a reader studies; a plain grotesk does the cataloguing work of labels, axes, headers and navigation, the way a journal sets its figure furniture.
 
 ### Hierarchy
-- **Display** (600, clamp(2.4rem, 1.6rem + 2.4vw, 3.4rem), 1.05, -0.025em): the owner's name on Home only. The role sits under it in grotesk 500 at 1.05rem in graphite.
+- **Display** (Hanken Grotesk 800, 31% of the title card's inner width, 0.82, -0.04em): the site's name on Home's title card only; every other heading is serif.
 - **Headline** (600, 1.5rem on Home; Bootstrap scale elsewhere, -0.012em, balanced wrap): section heads, each sitting under a 1px hairline on Home.
 - **Title** (600, 1.05–1.1rem): ledger page links and listing titles, in serif.
 - **Body** (400, 18px root, 1.6): all reading text. Ledes run 1.12rem at 1.55 in graphite, held to 58–60ch.
@@ -177,23 +182,23 @@ Ink on paper, with four semantic inks that each mean exactly one domain.
 - **Label** (Hanken Grotesk 600, 0.8rem): table headers, axis text (0.75rem), legend (0.82rem), lab status (0.8rem). Lane labels step up to 700 at 1.02rem in their domain ink.
 
 ### Named Rules
-**The Numbered Caption Rule.** Every figure and table carries a caption that opens with an upright grotesk label ("Figure 1.", "Figure 2a.", "Table 1.") in ink, followed by italic serif prose in graphite. Captions sit below the figure.
+**The No Numbers Rule.** Figures, tables and plates carry no "Figure N" or "Table N" label and no status legend. Tables keep an accessible name.
 
 **The Mono Is For Code Rule.** JetBrains Mono appears only in code blocks and inline code; numbers in tables use the grotesk with tabular figures instead.
 
 ## Layout
 
-Home runs full-width with every block held to a 74rem measure. The opening is a two-column grid: the About block (name, role, bio at 1.12rem held to 60ch) at minmax(0, 1fr) and the Start-here list at minmax(14rem, 18rem), gap clamp(1.5rem, 4vw, 4rem). The Start-here list opens with a 2px ink rule.
+Home runs full-width with every block held to a 74rem measure. The opening is a two-column grid: the title card at minmax(0, 1fr) and the Start-here list at minmax(14rem, 18rem), gap clamp(1.25rem, 2.2vw, 2rem). The list opens with a 2px ink rule. The concept graph is centred at its natural size within the measure, directly under its section head.
 
-The study map is a three-column grid per lane: label (10.5rem), track (1fr), note (11.5rem), with a 1.25rem gutter; inside the track each course is a name column (5.5rem) and a segment drawn to its real lecture count against a shared axis. Lab plates use an auto-fill grid of minmax(16rem, 1fr) with a 2rem gap; the empty state spans the row. Ledgers are fixed-layout tables with date (8.5rem) and domain (11rem) columns so stacked ledgers align; undated ledgers give the page column 45% and extra field columns share the rest.
+The notes map is three columns per row: name (10.5 to 16rem), blocks (1fr), note (12 to 18rem), 1.5rem gutter. Lab plates use an auto-fill grid of minmax(16rem, 1fr) with a 2rem gap; the empty state spans the row. Ledgers are fixed-layout tables with date (8.5rem) and domain (11rem) columns so stacked ledgers align; undated ledgers give the page column 45% and extra field columns share the rest.
 
 Sections on Home and tab pages share one rhythm: 3rem between level-2 sections, with listings adding no margin of their own.
 
-Below 760px the opening and the empty Lab plate collapse to one column; the study map stacks label, course and note, wraps each course into rows of 10 slots at least 24px tall (touch target), runs empty bars full width and hides their note; ledgers drop the domain column (and its ink mark), keeping date and page.
+Below 760px the opening and the empty Lab plate collapse to one column; the notes map stacks name, blocks and note; ledgers drop the domain column (and its ink mark), keeping date and page.
 
 ## Elevation & Depth
 
-The system is flat. There are no shadows and no gradients anywhere; Bootstrap's navbar and callout shadows are explicitly removed. Hierarchy and grouping come from rules: a 2px ink rule opens each figure, table header and the Start-here list; 1px hairlines separate rows, the navbar, the footer and section heads. The one tonal surface is Wash, used for code, empty plate frames and callout headers. In-progress slots use a 14% mix of the domain ink as a faint fill under the dotted outline.
+The system is flat. There are no shadows and no gradients anywhere; Bootstrap's navbar and callout shadows are explicitly removed. Hierarchy and grouping come from rules: a 2px ink rule opens each figure, table header and the Start-here list (on Home the same 2px rule opens Overview, Concepts and From the Lab); 1px hairlines separate rows, the navbar, the footer and section heads. The one tonal surface is Wash, used for code, empty plate frames and callout headers. In-progress slots use a 14% mix of the domain ink as a faint fill under the dotted outline.
 
 ### Named Rules
 **The Paper Rule.** Nothing lifts off the page. If an element needs separation, give it a rule, not a shadow; if it needs emphasis, give it ink weight, not elevation.
@@ -217,11 +222,24 @@ Square by default. Listing cards, plate frames and category labels have 0 radius
 - **Inside a tab:** Prose and list links and the active sidebar item take the tab's domain ink; the Lab keeps them in ink.
 - **Focus:** 2px outline in the domain ink (ink outside a domain), 3px offset.
 
-### Study Map (Figure 1, signature)
-A figure, not a card grid. Opens with a 2px ink rule and a grotesk lecture axis. Each lane is a domain: label in its ink, courses as segments of equal-width slots (1.6rem tall, 3px gaps). Published slots fill solid in the domain ink and link to the lecture; in-progress slots are a 2px dotted outline with a 14% tint; planned slots are a 1.5px dashed outline at 50% ink. A domain with no course keeps a full-width dashed slot labelled "Planned" in italic, with no separate note. Lane notes in graphite with tabular figures report counts and name the latest lecture as an ink link (date in its title). Legend and numbered caption follow.
+### Concept Graph (Home, signature)
+A static SVG laid out at render time by `_templates/concept-graph.ejs` (deterministic force layout; no browser JS), from published pages only. It is a hierarchy: **Tab → Topic → Lecture** (owner, 2026-11-22; concept nodes were removed).
+- **Levels:** a tab (Machine Learning, Math, Data, System) is a 9px filled dot in its ink and links to the tab; a topic (the course folder, labelled by the page subtitle, e.g. "Classical ML") is a 6px ring (2.5px stroke) and links to the course page; a lecture is a 5px filled dot and links to itself.
+- **Labels are hidden at rest.** Pointing at or focusing a node shows its label, the labels of all its ancestors (every path up to its domains) and of its direct children only; everything else dims to 18% opacity. The reveal is CSS: the template emits one `:has()` rule per node, and the dim rule sits in `:where()` so the reveal outranks it. Touch screens (`hover: none`) show every label instead. Every link carries an `aria-label`, so hidden text never leaves a link unnamed.
+- **Label type:** tab serif 600 14px; topic grotesk 600 12px; lecture serif 600 12.5px. A label sits on the side away from its node's lines (below the dot when they leave upwards), on a paper box. Layout reserves every label's box, so no reveal overlaps another.
+- **Layout:** a force layout with tabs pinned at stable anchors; no label overlaps another and no line touches a dot it does not join (checked on mocks of 23 and 36 nodes).
+- **Key:** an HTML row above the graph (so it never pans away): only the domains present, each as a dot in its ink with its name (grotesk 0.85rem graphite). No shape legend and no hint text (owner's call, 2026-11-21).
+- **Edges:** 1.25px lines at 70% graphite on paper (3.3:1 light, 4.7:1 dark). The pointed-at label is its domain ink mixed 92% with ink.
+- **Focus:** a separate 2px ink ring on an invisible hit circle (dot radius + 7), which is also the pointer target.
+- **Structure and keyboard:** dots and links sit in hierarchy order (tab, topic, lecture), which is the tab order; labels live in a separate top layer (`.cg-labels`, pointer-events off), so a revealed label is never painted under another dot and the pointer always targets dots. Every label keeps 16px clear of other dots, so it reads as its own dot's. A visually hidden "Skip the concept graph" link (shown on focus) jumps past the graph. Dragging has no keyboard equivalent by design; every node remains a link.
+- **Dragging nodes:** the one script on the site (inline, no library; progressive enhancement). Grabbing a node moves it, with its label, and its edges stay attached; the dot stays inside the figure; a click without a drag still follows the link. The canvas itself does not move or zoom. Moved nodes are not saved; a reload restores the layout (no Reset button, owner's call 2026-11-21). The script also undoes Quarto's `link-external-newwindow`, which misreads SVG links as external and would open every node in a new tab.
+- **Size:** centred, up to 1.1 times natural width on Home. In a column narrower than 80% of natural width it becomes a ruled list (domain dot, serif page title, "Domain · Topic" in ink).
 
-### Lab Plates (Figure 2)
-Each item is one complete captioned plate: a 4:3 frame with a 1px hairline (ink on hover), image covering, or a large serif initial on Wash when there is none; then a numbered caption ("Figure 2a.") with a serif title and a grotesk status tag marked by a left border in line form (3px solid, 2px dotted, 2px dashed). The empty state is a skeleton table with dashed placeholder cells beside its caption: Metric / Paper / Mine for reproductions, Problem / Approach / Stack for projects.
+### Concepts page (`concepts.qmd`)
+Generated by `_templates/concepts.ejs` from each page's `index:` header (fallback: categories minus the topic label). No page links to it since the graph dropped its concept nodes; it is reachable through search. A–Z under serif letters (1.5rem) in a 2.5rem gutter, one hairline-separated row per letter. Each concept is an anchored entry (serif 600 term) listing its pages as ink links underlined in the domain ink, each with a grotesk graphite locator (topic label behind a 0.9rem × 3px domain mark). An entry opened by its anchor is marked on Wash via `:target`, without motion.
+
+### Lab Plates
+Each item is one complete captioned plate: a 4:3 frame with a 1px hairline (ink on hover), image covering, or a large serif initial on Wash when there is none; then a serif title and a grotesk status tag marked by a left border in line form (3px solid, 2px dotted, 2px dashed). The empty state is a skeleton table with dashed placeholder cells beside its caption: Metric / Paper / Mine for reproductions, Problem / Approach / Stack for projects. On Home (`caption: false`) figure numbers and the empty caption are dropped; the empty plate is the table with an "Open the Lab" link beneath and an accessible name of its own.
 
 ### Ledger (tab pages)
 A ruled table with the caption below, generated from page headers; an empty ledger keeps its header and one italic "nothing yet" row. Optional columns (time and space for DSA; language, difficulty and pattern for problems) render in graphite. Grotesk headers in graphite under a 2px ink rule; 1px hairline rows; dates in graphite with tabular figures; domain column with a 3px ink mark before the domain name; page titles as serif 600 links in ink whose hover underline takes the domain ink; subtitles in graphite.
@@ -232,16 +250,23 @@ No card chrome: transparent ground, no border except a 2px ink rule on top, 0 ra
 ### Callouts
 - **Style:** 1px hairline box on all four sides, 2px radius, transparent body, no side stripe and no shadow. Header in grotesk on Wash with a hairline below.
 
+### Title Card (Home)
+The left two thirds of the opening: a square navy card (--mj-band #102a5c; dark #1a3566) holding "mdrat" (the page's h1) in Hanken Grotesk 800 at 31% of the card's inner width, -0.04em, 0.82 line height, in --mj-band-ink, and the owner's line beneath in 600 at 4.05% (1rem to 1.6rem) in --mj-band-muted. Type uses container units, so the name keeps the same share of the card at every width. GitHub sits under the card. No shadow, border or gradient. The band tokens appear nowhere else.
+
 ### Start Here (Home)
-A generated list under a 2px ink rule: the latest lecture, up to two courses with written-up lectures, and the Lab. Each item is a serif 600 link in ink with a grotesk graphite line beneath, led by a 0.9rem × 3px domain mark; rows separated by hairlines. Contact details join it only once the owner supplies them.
+A generated list under a 2px ink rule beside the title card: the latest lecture, up to two courses with written-up lectures ("Course, 1 lecture written up"), and the Lab. Each item is a serif 600 link in ink with a grotesk graphite line beneath, led by a 0.9rem × 3px domain mark; rows separated by hairlines. Drafts never appear.
+
+### Notes Map (Home and tabs)
+Only lectures written up (`_templates/notes-map.ejs`). One row per domain on Home, one per course on a tab: the name in its domain ink, one filled block per lecture (2.4 x 1.6rem, 5px apart, linking to it; a dotted block for `status: in progress`), and a note with the count ("2 lectures"), plus the latest lecture on tab pages only. On Home it sits under an "Overview" head. No totals, planned slots, axis, legend or caption. A domain or course with nothing written is left out; a tab with none says "Nothing written up yet." Below 760px each row stacks.
+
+### Page widths
+Set in `_quarto.yml` (`grid`): left menu 340px, body up to 1200px, right-hand list 140px, gutter 0.75rem, so the writing area is 987px at a 1440px window. Menu entries sit about 38px apart.
 
 ## Do's and Don'ts
 
 ### Do:
 - **Do** put a domain's work under its `domain-*` class so lane labels, slots, title rules, focus rings and prose links pick up the right ink automatically.
-- **Do** caption every figure and table with an upright grotesk number label and italic serif prose below it.
-- **Do** draw status as line form: solid fill for written up, 2px dotted for in progress, 1.5px dashed for planned.
-- **Do** draw absence: an empty domain or an unwritten lecture keeps its dashed slot rather than disappearing.
+- **Do** show only what is written; never a course's full lecture list as placeholders.
 - **Do** separate with rules: 2px ink to open a block, 1px hairline between rows.
 - **Do** keep reading text in Source Serif 4 at 18px / 1.6 and hold captions and ledes to 58–72ch.
 
@@ -249,7 +274,8 @@ A generated list under a 2px ink rule: the latest lecture, up to two courses wit
 - **Don't** use shadows or gradients on any element.
 - **Don't** use hue to encode status, and don't give the Lab a colour of its own.
 - **Don't** use a domain ink outside that domain, or as decoration on neutral elements.
-- **Don't** put eyebrow or kicker labels above headings; the numbered caption is the only label a figure carries.
+- **Don't** put eyebrow or kicker labels above headings.
+- **Don't** list individual courses in Home's lecture map; it is grouped by domain (Start here may name a course).
 - **Don't** set body, headings or captions in the grotesk, or anything but code in the mono.
 - **Don't** add card chrome (borders, fills, rounded corners) to listings; a top rule is the whole container.
 - **Don't** use pill or uppercase category tags, or callouts with a coloured side stripe.

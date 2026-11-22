@@ -10,6 +10,7 @@ const courses = {};
 const lectures = [];
 for (const item of items) {
 const parts = norm(item.path).split('/');
+if (item.draft) continue; // listings can include `draft: true` pages
 if (parts.length < 3 || EXTRA.has(parts[1])) continue;
 const key = parts[0] + '/' + parts[1];
 if (parts[parts.length - 1] === 'index.qmd') { if (item.course) courses[key] = { item, count: 0 }; continue; }
@@ -26,8 +27,8 @@ const active = Object.values(courses).filter((c) => c.count > 0).slice(0, 2);
 <% if (latest) { %>
 <li class="domain-<%= DOMAIN_OF(latest.item) %>"><a href="<%= href(latest.item) %>"><%= latest.item.title %></a><span class="start-here-meta">Latest lecture<% if (latest.item.date) { %>, <%= fmt(latest.item.date) %><% } %></span></li>
 <% } %>
-<% for (const c of active) { const total = Number(c.item['lectures-total']) || c.count; %>
-<li class="domain-<%= DOMAIN_OF(c.item) %>"><a href="<%= href(c.item) %>"><%= c.item.title %></a><span class="start-here-meta">Course, <%= c.count %> of <%= total %> lectures written up</span></li>
+<% for (const c of active) { %>
+<li class="domain-<%= DOMAIN_OF(c.item) %>"><a href="<%= href(c.item) %>"><%= c.item.title %></a><span class="start-here-meta">Course, <%= c.count %> <%= c.count === 1 ? 'lecture' : 'lectures' %> written up</span></li>
 <% } %>
 <li class="domain-lab"><a href="lab/index.html">The Lab</a><span class="start-here-meta">Paper reproductions and projects</span></li>
 </ol>

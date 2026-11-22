@@ -1,0 +1,20 @@
+---
+title: "Concepts"
+description: "Every concept worked through on this site, A to Z, with the pages that cover it."
+kind: index
+toc: false
+listing:
+  - id: concepts
+    contents:
+      - "ml/**/*.qmd"
+      - "math/**/*.qmd"
+      - "data/**/*.qmd"
+      - "system/**/*.qmd"
+    type: custom
+    template: _templates/concepts.ejs
+---
+
+[Every concept worked through on this site, A to Z, with the pages that cover it.]{.tab-intro}
+
+::: {#concepts}
+:::

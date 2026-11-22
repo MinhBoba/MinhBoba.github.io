@@ -7,11 +7,9 @@ listing:
   - id: courses
     contents: "**/*.qmd"
     type: custom
-    template: ../_templates/study-map.ejs
+    template: ../_templates/notes-map.ejs
     template-params:
       domain: ml
-      figure: "1"
-      caption: "Machine Learning courses, each drawn to its real number of lectures; select a filled slot to open that lecture."
   - id: lectures
     contents: "*/*.qmd"
     exclude:
@@ -22,8 +20,7 @@ listing:
     template-params:
       root: "../"
       hide-domain: true
-      table: "1"
-      caption: "Machine Learning lectures, newest first."
+      label: "Machine Learning lectures, newest first."
       empty: "No lectures written up yet."
 ---
 

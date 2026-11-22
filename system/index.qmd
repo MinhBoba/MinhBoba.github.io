@@ -7,11 +7,9 @@ listing:
   - id: courses
     contents: "**/*.qmd"
     type: custom
-    template: ../_templates/study-map.ejs
+    template: ../_templates/notes-map.ejs
     template-params:
       domain: system
-      figure: "1"
-      caption: "System courses, each drawn to its real number of lectures; select a filled slot to open that lecture."
   - id: case-studies
     contents: "case-studies/*.qmd"
     type: custom
@@ -20,8 +18,7 @@ listing:
     template-params:
       root: "../"
       hide-domain: true
-      table: "1"
-      caption: "Case studies, newest first: how a real system is designed."
+      label: "Case studies, newest first: how a real system is designed."
       empty: "No case studies written up yet."
   - id: applications
     contents: "applications/*.qmd"
@@ -31,8 +28,7 @@ listing:
     template-params:
       root: "../"
       hide-domain: true
-      table: "2"
-      caption: "Applications, newest first: my own builds and walkthroughs."
+      label: "Applications, newest first: my own builds and walkthroughs."
       empty: "No applications written up yet."
 ---
 

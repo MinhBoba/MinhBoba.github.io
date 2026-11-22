@@ -21,7 +21,7 @@ A static portfolio and learning hub. It shows hands-on work (paper reproductions
 
 ## Positioning
 
-Learning in the open, structured: each lecture page puts the video, the owner's notes, the maths and the code together, and Lab pages report reproduced results against the paper's reported ones. The domain map is the front door; the work is the proof.
+Learning in the open, structured: each lecture page puts the video, the owner's notes, the maths and the code together, and Lab pages report reproduced results against the paper's reported ones. Home opens with the mdrat title card and Start here, then the lectures written up per domain, the concept graph of published pages, and the Lab; the work is the proof.
 
 ## Operating Context
 
@@ -32,7 +32,7 @@ Learning in the open, structured: each lecture page puts the video, the owner's 
 ## Capabilities and Constraints
 
 - Six tabs: Home, Lab, Machine Learning, Math, Data, System. Data adds DSA, a problem bank by pattern, and Power BI reports; System adds case studies and applications.
-- Static only: no backend, no runnable code in the browser. Formulas via KaTeX; code is static, highlighted.
+- Static only: no backend, no runnable code in the browser. One approved exception (2026-11-21): a small inline script that lets visitors drag the Home concept graph's nodes; everything else, including its hover trace, is static. Formulas via KaTeX; code is static, highlighted.
 - YouTube embeds only where the owner allows embedding (many university channels, e.g. Stanford CS229, do not).
 - No page transitions, scroll effects or decorative motion; animation is limited to animated figures and algorithm step players inside notes.
 - Power BI embeds show public or synthetic data only.
@@ -42,7 +42,7 @@ Learning in the open, structured: each lecture page puts the video, the owner's 
 ## Brand Commitments
 
 - Site name: mdrat (renamed from MJ2706 on 2026-11-21). The owner presents as an ML engineer / data scientist.
-- Owner presents as "MinhJ" (confirmed 2026-11-16). GitHub: https://github.com/MinhBoba; site at https://minhboba.github.io.
+- Owner presents as "Minh" (changed from "MinhJ" on 2026-11-21); Home's line under the name is "Digital notebook for learning and researches". GitHub: https://github.com/MinhBoba; site at https://minhboba.github.io.
 - Public email, LinkedIn, photo and CV are not yet provided; do not invent them, and do not publish the owner's private email without confirmation.
 
 ## Evidence on Hand
@@ -52,7 +52,7 @@ Learning in the open, structured: each lecture page puts the video, the owner's 
 
 ## Product Principles
 
-1. Lead with the learning map; let the work prove it.
+1. Lead with the notebook: the title card, where to start, and only what has been learned and written up (no course totals or planned lectures), then the concept graph (owner, 2026-11-22).
 2. Every claim of skill links to an artifact (a reproduction, a repo, a notes page).
 3. Adding content must stay as cheap as dropping one Markdown file into a folder; no hand-maintained card grids or counts.
 4. Reading comes first: notes, formulas and code must be comfortable to study in both light and dark themes.

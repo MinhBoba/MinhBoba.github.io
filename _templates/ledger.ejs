@@ -1,6 +1,6 @@
 <%
 // A ruled ledger table: one row per page.
-// template-params: root (path prefix), table (number), caption, empty (empty-row text),
+// template-params: root (path prefix), label (accessible name), empty (empty-row text),
 // hide-domain, hide-date, fields (extra columns: list of { key, label } read from page headers).
 const params = (typeof templateParams !== 'undefined' && templateParams) || {};
 const ROOT = params.root || '';
@@ -12,8 +12,7 @@ const showDate = !params['hide-date'];
 const FIELDS = params.fields || [];
 const span = 1 + (showDate ? 1 : 0) + (showDomain ? 1 : 0) + FIELDS.length;
 %>
-<table class="ledger<%= showDomain ? '' : ' ledger-single' %><%= showDate ? '' : ' ledger-undated' %>">
-<caption><strong>Table <%= params.table || 1 %>.</strong> <%= params.caption || 'Pages, newest first.' %></caption>
+<table class="ledger<%= showDomain ? '' : ' ledger-single' %><%= showDate ? '' : ' ledger-undated' %>" aria-label="<%= params.label || 'Pages, newest first' %>">
 <thead><tr><% if (showDate) { %><th scope="col">Date</th><% } %><% if (showDomain) { %><th scope="col">Domain</th><% } %><th scope="col">Page</th><% for (const f of FIELDS) { %><th scope="col"><%= f.label %></th><% } %></tr></thead>
 <tbody>
 <% if (items.length === 0) { %>

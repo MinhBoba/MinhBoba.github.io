@@ -1,0 +1,57 @@
+<%
+// Concepts page: every concept from published pages' `index:` headers (fallback: categories
+// minus the topic label), A–Z, each with an anchor the concept graph links to and the pages
+// that work through it. Only published pages appear; nothing planned is drawn.
+// NOTE: keyOf/slugOf must match _templates/concept-graph.ejs so graph links land here.
+const params = (typeof templateParams !== 'undefined' && templateParams) || {};
+const ROOT = params.root || '';
+const DOMAINS = { ml: 'Machine Learning', math: 'Math', data: 'Data', system: 'System' };
+const norm = (p) => String(p || '').replace(/\\/g, '/').replace(/^\/+/, '');
+const href = (item) => ROOT + norm(item.outputHref || item.path).replace(/\.qmd$/, '.html');
+const asList = (v) => (Array.isArray(v) ? v : v ? [v] : []).map((t) => String(t).trim()).filter(Boolean);
+const topicOf = (item) => String(item.subtitle || '').split('·')[0].trim() || asList(item.categories)[0] || '';
+const singular = (w) => (w.length > 4 && /s$/.test(w) && !/(ss|is|us)$/.test(w) ? w.slice(0, -1) : w);
+const keyOf = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(' ').map(singular).join(' ');
+const slugOf = (key) => key.replace(/ /g, '-');
+const topics = new Map();
+for (const item of items) {
+  const parts = norm(item.path).split('/');
+  const domain = parts[0];
+  // Quarto listings include `draft: true` pages; only published pages are listed
+  if (!DOMAINS[domain] || item.draft || item.kind === 'index' || parts[parts.length - 1] === 'index.qmd') continue;
+  const own = asList(item.index);
+  const listed = own.length ? own : asList(item.categories).filter((c) => c !== topicOf(item));
+  for (const t of listed) {
+    const key = keyOf(t);
+    if (!key) continue;
+    if (!topics.has(key)) topics.set(key, { key, label: t, pages: [] });
+    const entry = topics.get(key);
+    if (!entry.pages.some((p) => p.item === item)) entry.pages.push({ item, domain, topic: topicOf(item) || DOMAINS[domain] });
+  }
+}
+const sorted = [...topics.values()].sort((a, b) => a.label.localeCompare(b.label, 'en', { sensitivity: 'base' }));
+const letters = [];
+for (const e of sorted) {
+  const ch = e.label.charAt(0).toUpperCase();
+  const letter = /[A-Z]/.test(ch) ? ch : '#';
+  if (!letters.length || letters[letters.length - 1].letter !== letter) letters.push({ letter, entries: [] });
+  letters[letters.length - 1].entries.push(e);
+}
+%>
+<div class="concepts">
+<% for (const g of letters) { %>
+<section class="concepts-letter" aria-label="<%= g.letter %>">
+<span class="concepts-letter-mark" aria-hidden="true"><%= g.letter %></span>
+<div class="concepts-entries">
+<% for (const e of g.entries) { %>
+<div class="concepts-entry" id="<%= slugOf(e.key) %>">
+<p class="concepts-term"><%= e.label %></p>
+<ul>
+<% for (const p of e.pages) { %><li class="domain-<%= p.domain %>"><a href="<%= href(p.item) %>"><%= p.item.title %></a><span class="concepts-locator"><%= p.topic %></span></li><% } %>
+</ul>
+</div>
+<% } %>
+</div>
+</section>
+<% } %>
+</div>
